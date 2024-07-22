@@ -8,14 +8,13 @@ def word_to_sequence(word):
 def check_subsequence(sequence_1, sequence_2):
     # Sequence_1 has to be longer or equal to sequence_2
     # Returns True if backwards sequence_2 is a subsequence of sequence_1, False otherwise
-    # if sequence_1 == sequence_2 or sequence_2 in sequence_1:
-    #     return None  # Words are the same or word 2 is part of word 1
-    if sequence_1 == sequence_2:
+
+    if sequence_1 == sequence_2 or sequence_2 in sequence_1:
         return None  # Words are the same or word 2 is part of word 1
 
     sequence_2_backw = sequence_2[::-1]
 
-    for i in range(len(sequence_2)):
+    for _ in range(len(sequence_2)):
         if sequence_2 in sequence_1:
             return False
         elif sequence_2_backw in sequence_1:
@@ -33,8 +32,8 @@ def bite_off_byte(list1, list2):
 
     for word1, sequence1 in zip(list1, sequence_list1):
         for word2, sequence2 in zip(list2, sequence_list2):
-            # Check which word is longer
             length_difference = len(word1) - len(word2)
+
             if length_difference < 0:
                 length_difference = -length_difference
                 backwards = check_subsequence(sequence2, sequence1)
