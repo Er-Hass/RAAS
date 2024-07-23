@@ -28,19 +28,21 @@ def check_subsequence(sequence, sub_sequence):
         return True
 
 
-def bite_off_byte(list1, list2, upper_variations=False, name="Bites"):
+def bite_off_byte(list1, list2, case_variations=False, name="Bites"):
     column_names = ['word_1', 'word_2', 'backwards', 'length_difference']
     results = []
 
     # Generate sequences for all words in list1 and list2
     if list1 == list2:
-        if upper_variations:
+        same = True
+        if case_variations:
             list1 = [variation for word in list1 for variation in generate_case_variations(word)]
             list2 = list1.copy()
         sequence_list1 = [word_to_sequence(word) for word in list1]
         sequence_list2 = sequence_list1.copy()
     else:
-        if upper_variations:
+        same = False
+        if case_variations:
             list1 = [variation for word in list1 for variation in generate_case_variations(word)]
             list2 = [variation for word in list2 for variation in generate_case_variations(word)]
         sequence_list1 = [word_to_sequence(word) for word in list1]
@@ -53,18 +55,23 @@ def bite_off_byte(list1, list2, upper_variations=False, name="Bites"):
             length_difference = len(word1) - len(word2)
 
             if length_difference < 0:
-                if word1 == word2 or check_circle_sequence(word2, word1):
+                if word1 == word2 or check_subsequence(word2, word1):
                     continue
                 length_difference = -length_difference
                 backwards = check_subsequence(sequence2, sequence1)
             else:
-                if word1 == word2 or check_circle_sequence(word1, word2):
+                if word1 == word2 or check_subsequence(word1, word2):
                     continue
                 backwards = check_subsequence(sequence1, sequence2)
 
             if backwards is not None:
                 results.append([word1, word2, backwards, length_difference])
                 progress_bar.set_postfix({'bytes bitten': '{}'.format(len(results))})
+
+        # Delete word1 from the list2 to avoid duplicates
+        if same:
+            sequence_list2.remove(sequence1)
+            list2.remove(word1)
 
     found_bites = pd.DataFrame(results, columns=column_names)
     return found_bites
