@@ -9,18 +9,18 @@ if __name__ == '__main__':
     print(f"Got {len(de_words)} German words\n")
 
     # en-en
-    bitten_bytes = bite_off_byte(en_words, en_words)
+    bitten_bytes = bite_off_byte(en_words, en_words, name='en-en')
     bitten_bytes.to_csv('bitten_bytes/eng-eng.csv', index=False)
 
     # de-de
-    bitten_bytes = bite_off_byte(de_words, de_words)
+    bitten_bytes = bite_off_byte(de_words, de_words, name='de-de')
     bitten_bytes.to_csv('bitten_bytes/ger-ger.csv', index=False)
 
     # en-de
-    bitten_bytes = bite_off_byte(en_words, de_words)
+    bitten_bytes = bite_off_byte(en_words, de_words, name='en-de')
     bitten_bytes.to_csv('bitten_bytes/eng-ger.csv', index=False)
 
     # custom
     # custom_words = ['hass', 'erik', 'babysex']
-    # bitten_bytes = bite_off_byte(custom_words, de_words)
+    # bitten_bytes = bite_off_byte(custom_words, de_words, name='custom-ger')
     # bitten_bytes.to_csv('bitten_bytes/custom-ger.csv', index=False)

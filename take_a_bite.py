@@ -29,10 +29,11 @@ def check_subsequence(sequence, sub_sequence):
         return True
 
 
-def bite_off_byte(list1, list2, upper_variations=False):
+def bite_off_byte(list1, list2, upper_variations=False, name="Bites"):
     column_names = ['word_1', 'word_2', 'backwards', 'length_difference']
     results = []
 
+    # Generate sequences for all words in list1 and list2
     if list1 == list2:
         if upper_variations:
             list1 = [variation for word in list1 for variation in generate_case_variations(word)]
@@ -46,7 +47,9 @@ def bite_off_byte(list1, list2, upper_variations=False):
         sequence_list1 = [word_to_sequence(word) for word in list1]
         sequence_list2 = [word_to_sequence(word) for word in list2]
 
-    for word1, sequence1 in tqdm(zip(list1, sequence_list1), total=len(list1), bar_format="\033[92m{l_bar}{bar:25}{r_bar}\033[0m"):
+    # Compare all words in list1 with all words in list2
+    progress_bar = tqdm(zip(list1, sequence_list1), desc=name, total=len(list1), bar_format="\033[92m{l_bar}{bar:25}{r_bar}\033[0m")
+    for word1, sequence1 in progress_bar:
         for word2, sequence2 in zip(list2, sequence_list2):
             length_difference = len(word1) - len(word2)
 
@@ -62,6 +65,7 @@ def bite_off_byte(list1, list2, upper_variations=False):
 
             if backwards is not None:
                 results.append([word1, word2, backwards, length_difference])
+                progress_bar.set_postfix({'bytes bitten': '{}'.format(len(results))})
 
     found_bites = pd.DataFrame(results, columns=column_names)
     return found_bites
