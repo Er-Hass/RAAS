@@ -13,6 +13,11 @@ def generate_case_variations(word):
     return [''.join(variation) for variation in product(*((c.lower(), c.upper()) for c in word))]
 
 
+def check_circle_sequence(sequence, sub_sequence):
+    double_sequence = sequence + sequence  # To represent a circle
+    return sub_sequence in double_sequence
+
+
 def check_subsequence(sequence, sub_sequence):
     # Sequence_1 has to be longer or equal to sequence_2
     # Returns True if backwards sequence_2 is a subsequence of sequence_1, False otherwise
@@ -21,11 +26,10 @@ def check_subsequence(sequence, sub_sequence):
         return None  # Words are the same or word 2 is part of word 1
 
     sequence_2_backw = sub_sequence[::-1]
-    double_sequence = sequence + sequence  # To check for circular sequences
 
-    if sub_sequence in double_sequence:
+    if check_circle_sequence(sequence, sub_sequence):
         return False
-    elif sequence_2_backw in double_sequence:
+    elif check_circle_sequence(sequence, sequence_2_backw):
         return True
 
 
@@ -54,12 +58,12 @@ def bite_off_byte(list1, list2, upper_variations=False, name="Bites"):
             length_difference = len(word1) - len(word2)
 
             if length_difference < 0:
-                if word1 == word2 or word1 in word2:
+                if word1 == word2 or check_circle_sequence(word1, word2):
                     continue
                 length_difference = -length_difference
                 backwards = check_subsequence(sequence2, sequence1)
             else:
-                if word1 == word2 or word2 in word1:
+                if word1 == word2 or check_circle_sequence(word2, word1):
                     continue
                 backwards = check_subsequence(sequence1, sequence2)
 
