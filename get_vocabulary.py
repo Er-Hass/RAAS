@@ -21,14 +21,14 @@ def load_word_list(file_path):
 def get_meaningful_words(language_code='en'):
     if language_code == 'en':
         nlp = spacy.load('en_core_web_lg')
-        word_list = load_word_list('Vocabularies/en/EOWL.txt')
+        word_list = load_word_list('vocabularies/en/EOWL.txt')
     elif language_code == 'de':
         nlp = spacy.load('de_core_news_lg')
+        word_list = load_word_list('vocabularies/de/wordlist-german.txt')
     else:
         raise ValueError("Unsupported language code: Vocabulary")
 
     stop_words = load_stop_words(language_code)
-
     vocab = nlp.vocab
 
     # Extract meaningful words from the vocabulary
@@ -37,13 +37,17 @@ def get_meaningful_words(language_code='en'):
         if word.isalpha() and word.lower() not in stop_words
         and vocab[word].has_vector
         and word.lower() in word_list
-        and len(word) > 2
+        and len(word) > 3
     ]
 
     return meaningful_words
 
 
 if __name__ == '__main__':
-    words = get_meaningful_words()
-    print(len(words))
+    words = get_meaningful_words('en')
+    print(f"English: {len(words)}")
+    print(words[:500])
+
+    words = get_meaningful_words('de')
+    print(f"German: {len(words)}")
     print(words[:500])
