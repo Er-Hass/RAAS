@@ -13,11 +13,6 @@ def generate_case_variations(word):
     return [''.join(variation) for variation in product(*((c.lower(), c.upper()) for c in word))]
 
 
-def is_subsequence(small, large):
-    it = iter(large)
-    return all(char in it for char in small)
-
-
 def check_subsequence(sequence, sub_sequence):
     # Sequence_1 has to be longer or equal to sequence_2
     # Returns True if backwards sequence_2 is a subsequence of sequence_1, False otherwise
@@ -26,10 +21,11 @@ def check_subsequence(sequence, sub_sequence):
         return None  # Words are the same or word 2 is part of word 1
 
     sequence_2_backw = sub_sequence[::-1]
+    double_sequence = sequence + sequence  # To check for circular sequences
 
-    if is_subsequence(sub_sequence, sequence):
+    if sub_sequence in double_sequence:
         return False
-    elif is_subsequence(sequence, sequence_2_backw):
+    elif sequence_2_backw in double_sequence:
         return True
 
 
