@@ -33,18 +33,20 @@ def check_subsequence(sequence, sub_sequence):
         return True
 
 
-def bite_off_byte(list1, list2):
+def bite_off_byte(list1, list2, upper_variations=False):
     column_names = ['word_1', 'word_2', 'backwards', 'length_difference']
     results = []
 
     if list1 == list2:
-        list1 = [variation for word in list1 for variation in generate_case_variations(word)]
+        if upper_variations:
+            list1 = [variation for word in list1 for variation in generate_case_variations(word)]
+            list2 = list1.copy()
         sequence_list1 = [word_to_sequence(word) for word in list1]
-        list2 = list1.copy()
         sequence_list2 = sequence_list1.copy()
     else:
-        list1 = [variation for word in list1 for variation in generate_case_variations(word)]
-        list2 = [variation for word in list2 for variation in generate_case_variations(word)]
+        if upper_variations:
+            list1 = [variation for word in list1 for variation in generate_case_variations(word)]
+            list2 = [variation for word in list2 for variation in generate_case_variations(word)]
         sequence_list1 = [word_to_sequence(word) for word in list1]
         sequence_list2 = [word_to_sequence(word) for word in list2]
 
