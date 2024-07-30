@@ -28,7 +28,7 @@ def check_subsequence(sequence, sub_sequence):
         return True
 
 
-def bite_off_byte(list1, list2, case_variations=False, name="Bites"):
+def find_matches(list1, list2, case_variations=False, name="Search"):
     column_names = ['word_1', 'word_2', 'backwards', 'length_difference']
     results = []
 
@@ -75,3 +75,4 @@ def bite_off_byte(list1, list2, case_variations=False, name="Bites"):
 
     found_bites = pd.DataFrame(results, columns=column_names)
     return found_bites
+
