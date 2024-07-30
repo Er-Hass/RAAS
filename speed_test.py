@@ -19,9 +19,9 @@ def speed_test(load, process, hardware):
     # Save speed
     speed = time.time() - t
     run_name = f"{load}_{process}_{hardware}"
-    print(f"{run_name + ':':40}{speed:3.3f} seconds")
+    print(f"{run_name + ':':40}{speed:7.3f} seconds")
     with open('runs.txt', 'a') as file:
-        file.write(f"{run_name + ':':40}{speed:3.3f}\n")
+        file.write(f"{run_name + ':':40}{speed:7.3f}\n")
 
 
 if __name__ == '__main__':
