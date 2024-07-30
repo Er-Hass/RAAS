@@ -23,13 +23,13 @@ def check_subsequence(sequence, sub_sequence):
     sequence_2_backw = sub_sequence[::-1]
 
     if check_circle_sequence(sequence, sub_sequence):
-        return False
+        return 'forward'
     elif check_circle_sequence(sequence, sequence_2_backw):
-        return True
+        return 'reverse'
 
 
 def find_matches(list1, list2, case_variations=False, name="Search"):
-    column_names = ['word_1', 'word_2', 'backwards', 'length_difference']
+    column_names = ['word_1', 'word_2', 'direction', 'length_difference']
     results = []
 
     # Generate sequences for all words in list1 and list2
@@ -37,7 +37,7 @@ def find_matches(list1, list2, case_variations=False, name="Search"):
         same = True
         if case_variations:
             list1 = [variation for word in list1 for variation in generate_case_variations(word)]
-            list2 = list1.copy()
+        list2 = list1.copy()
         sequence_list1 = [word_to_sequence(word) for word in list1]
         sequence_list2 = sequence_list1.copy()
     else:
@@ -58,14 +58,14 @@ def find_matches(list1, list2, case_variations=False, name="Search"):
                 if word1 == word2 or check_subsequence(word2, word1):
                     continue
                 length_difference = -length_difference
-                backwards = check_subsequence(sequence2, sequence1)
+                direction = check_subsequence(sequence2, sequence1)
             else:
                 if word1 == word2 or check_subsequence(word1, word2):
                     continue
-                backwards = check_subsequence(sequence1, sequence2)
+                direction = check_subsequence(sequence1, sequence2)
 
-            if backwards is not None:
-                results.append([word1, word2, backwards, length_difference])
+            if direction is not None:
+                results.append([word1, word2, direction, length_difference])
                 progress_bar.set_postfix({'bytes bitten': '{}'.format(len(results))})
 
         # Delete word1 from the list2 to avoid duplicates
@@ -73,6 +73,6 @@ def find_matches(list1, list2, case_variations=False, name="Search"):
             sequence_list2.remove(sequence1)
             list2.remove(word1)
 
-    found_bites = pd.DataFrame(results, columns=column_names)
-    return found_bites
+    found_matches = pd.DataFrame(results, columns=column_names)
+    return found_matches
 
