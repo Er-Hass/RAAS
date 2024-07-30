@@ -1,6 +1,7 @@
 import spacy
 from spacy.lang.en.stop_words import STOP_WORDS as EN_STOP_WORDS
 from spacy.lang.es.stop_words import STOP_WORDS as DE_STOP_WORDS
+import os
 
 
 def load_stop_words(language_code):
@@ -14,17 +15,17 @@ def load_stop_words(language_code):
 
 def load_word_list(file_path):
     with open(file_path, 'r', encoding='utf-8') as file:
-        words = set(line.strip().lower() for line in file)
+        words = list(line.strip().lower() for line in file)
     return words
 
 
 def get_meaningful_words(language_code='en'):
     if language_code == 'en':
         nlp = spacy.load('en_core_web_lg')
-        word_list = load_word_list('vocabularies/en/EOWL.txt')
+        word_list = set(load_word_list('vocabularies/en/EOWL.txt'))
     elif language_code == 'de':
         nlp = spacy.load('de_core_news_lg')
-        word_list = load_word_list('vocabularies/de/wordlist-german.txt')
+        word_list = set(load_word_list('vocabularies/de/wordlist-german.txt'))
     else:
         raise ValueError("Unsupported language code: Vocabulary")
 
@@ -43,11 +44,21 @@ def get_meaningful_words(language_code='en'):
     return meaningful_words
 
 
-if __name__ == '__main__':
-    words = get_meaningful_words('en')
-    print(f"English: {len(words)}")
-    print(words[:500])
+def save_meaningful_words(language_code='en'):
+    words = get_meaningful_words(language_code)
 
-    words = get_meaningful_words('de')
-    print(f"German: {len(words)}")
-    print(words[:500])
+    directory = 'vocabularies/meaningful_words'
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+
+    with open(f'{directory}/{language_code}.txt', 'w', encoding='utf-8') as file:
+        for word in words:
+            file.write(f"{word}\n")
+
+    return words
+
+
+if __name__ == '__main__':
+    # Save all meaningful words to files
+    print(f"English words: {len(save_meaningful_words('en'))}")
+    print(f"German words: {len(save_meaningful_words('de'))}")
