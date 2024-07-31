@@ -1,5 +1,6 @@
 from check_sequences import *
 from get_vocabulary import *
+from check_WordCircles import *
 import time
 
 
@@ -14,7 +15,9 @@ def speed_test(load, process, hardware):
 
     # Process
     if process == 'inOperator':
-        find_matches(["test"], test_set, name='Speed-Test', case_variations=True)
+        find_matches(test_set, ["test"], name='Speed-Test', case_variations=True)
+    elif process == 'bitwise_xor':
+        find_matches_wc(test_set, ["test"], name='Speed-Test', case_variations=True)
 
     # Save speed
     speed = time.time() - t
@@ -25,5 +28,6 @@ def speed_test(load, process, hardware):
 
 
 if __name__ == '__main__':
-    speed_test('GetWords', 'inOperator', 'CPU')
-    speed_test('LoadMeaningful', 'inOperator', 'CPU')
+    # speed_test('GetWords', 'inOperator', 'CPU')
+    # speed_test('LoadMeaningful', 'inOperator', 'CPU')
+    speed_test('LoadMeaningful', 'bitwise_xor', 'CPU')

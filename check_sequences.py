@@ -54,10 +54,10 @@ def find_matches(list1, list2, case_variations=False, name="Search"):
         for word2, sequence2 in zip(list2, sequence_list2):
             length_difference = len(word1) - len(word2)
 
+            # Longer word compared with shorter one
             if length_difference < 0:
                 if word1 == word2 or check_subsequence(word2, word1):
                     continue
-                length_difference = -length_difference
                 direction = check_subsequence(sequence2, sequence1)
             else:
                 if word1 == word2 or check_subsequence(word1, word2):
@@ -65,8 +65,8 @@ def find_matches(list1, list2, case_variations=False, name="Search"):
                 direction = check_subsequence(sequence1, sequence2)
 
             if direction is not None:
-                results.append([word1, word2, direction, length_difference])
-                progress_bar.set_postfix({'bytes bitten': '{}'.format(len(results))})
+                results.append([word1, word2, direction, abs(length_difference)])
+                progress_bar.set_postfix({'matches found': '{}'.format(len(results))})
 
         # Delete word1 from the list2 to avoid duplicates
         if same:
