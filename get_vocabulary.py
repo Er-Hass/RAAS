@@ -38,7 +38,7 @@ def get_meaningful_words(language_code='en'):
         if word.isalpha() and word.lower() not in stop_words
         and vocab[word].has_vector
         and word.lower() in word_list
-        and len(word) > 3
+        and 10 > len(word) > 3
     ]
 
     return meaningful_words
