@@ -1,5 +1,5 @@
 from check_sequences import *
-from get_vocabulary import *
+from preprocess.get_vocabulary import *
 from check_WordCircles import *
 from check_SimpleCircle import *
 import time
@@ -17,8 +17,12 @@ def speed_test(load, process, hardware):
     l = time.time() - t
 
     # Process
-    if process == 'inOperator':
+    if process == 'inOpCaseVar':
         find_matches(test_set, ["test"], name='inOperator', case_variations=True)
+    elif process == 'inOpSimpleUpLow':
+        find_matches(test_set, ["test"], name='inOperatorSimple', upper_lower=True, simple=True)
+    elif process == 'inOpSimpleCaseVar':
+        find_matches(test_set, ["test"], name='inOpSimpleCaseVar', case_variations=True, simple=True)
     elif process == 'bitwise_xor':
         find_matches_wc(test_set, ["test"], name='bitwise_xor', case_variations=True)
     elif process == 'simpleCircle':
@@ -33,7 +37,9 @@ def speed_test(load, process, hardware):
 
 
 if __name__ == '__main__':
-    # speed_test('GetWords', 'inOperator', 'CPU')
-    # speed_test('LoadMeaningful', 'inOperator', 'CPU')
+    # speed_test('GetWords', 'inOp', 'CPU')
+    # speed_test('LoadMeaningful', 'inOp', 'CPU')
+    speed_test('LoadMeaningful', 'inOpSimpleUpLow', 'CPU')
+    speed_test('LoadMeaningful', 'inOpSimpleCaseVar', 'CPU')
     # speed_test('LoadMeaningful', 'bitwise_xor', 'CPU')
-    speed_test('LoadMeaningful', 'simpleCircle', 'CPU')
+    # speed_test('LoadMeaningful', 'simpleCircle', 'CPU')
