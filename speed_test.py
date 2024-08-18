@@ -12,7 +12,7 @@ def speed_test(load, process, hardware):
     if load == 'GetWords':
         test_set = get_meaningful_words('en')[0:1000]
     elif load == 'LoadMeaningful':
-        test_set = load_word_list('vocabularies/meaningful_words/en.txt')[0:1000]
+        test_set = load_word_list('preprocess/vocabularies/meaningful_words/en.txt')[0:1000]
 
     l = time.time() - t
 
