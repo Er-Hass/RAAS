@@ -30,17 +30,25 @@ def ascii_variations(word):
 
 
 def store_ascii_vector(word, vector):
-    # Save the tensor to a file
+    vector_np = vector.cpu().numpy()
+
     buffer = io.BytesIO()
-    torch.save(vector, buffer)
+    with h5py.File(buffer, 'w', libver='latest') as f:
+        f.create_dataset('vector', data=vector_np, compression='gzip')
     buffer.seek(0)
 
     response = (
         supabase.storage.from_("ascii_vectors")
-        .upload(f"{word}", buffer.getvalue())
+        .upload(f"{word}.h5", buffer.getvalue())
     )
 
     return response
+    # Get vector with:
+    # response = supabase.storage.from_("ascii_vectors").download(f"{storage_path}.h5")
+    # buffer = io.BytesIO(response)
+    # with h5py.File(buffer, 'r') as f:
+    #     vector_np = f['vector'][:]
+    # vector = torch.from_numpy(vector_np).to(device)
 
 
 def get_circle_variations(vocab, name=""):
@@ -71,14 +79,7 @@ def get_circle_variations(vocab, name=""):
 
 if __name__ == '__main__':
     en = load_word_list('vocabularies/meaningful_words/en.txt')
-    # de = load_word_list('vocabularies/meaningful_words/de.txt')
+    get_circle_variations(en, engine, name='English')
 
-    # get_circle_variations(en, engine, name='English')
-    # get_circle_variations(de, engine, name='Deutsch')
-    get_circle_variations(en[:1000], name='Test')
-
-    # circle_folder = 'vocabularies/ascii_variations'
-    # print(en_circles.head())
-    # print(de_circles.head())
-    # en.to_csv(os.path.join(circle_folder, 'en.csv'), index=False)
-    # de.to_csv(os.path.join(circle_folder, 'de.csv'), index=False)
+    de = load_word_list('vocabularies/meaningful_words/de.txt')
+    get_circle_variations(de, engine, name='Deutsch')
