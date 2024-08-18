@@ -1,11 +1,14 @@
 import os.path
+import multiprocessing as mp
 from tqdm import tqdm
-from preprocess.get_vocabulary import load_word_list
+from get_vocabulary import load_word_list
 import torch
 from itertools import product
 import pandas as pd
 from supabase import Client, create_client
 import io
+import h5py
+from concurrent.futures import ProcessPoolExecutor, as_completed
 
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -51,35 +54,68 @@ def store_ascii_vector(word, vector):
     # vector = torch.from_numpy(vector_np).to(device)
 
 
-def get_circle_variations(vocab, name=""):
-    df = pd.DataFrame(columns=['word', 'extended', 'backw_extended', 'len'])
-    progress_bar = tqdm(vocab, desc=f"Circle variations {name}", total=len(vocab), bar_format="\033[92m{l_bar}{bar:25}{r_bar}\033[0m")
+def process_word(word, language_code):
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-    for word in progress_bar:
-        variations = ascii_variations(word)
+    try:
+        variations = ascii_variations(word).to(device)
         extended = variations.repeat(variations.shape[0], 1)
         backw_interleave = torch.flip(variations, [1]).repeat_interleave(variations.shape[0], dim=0)
 
+        response = (
+            supabase.table(f"ascii_variations_{language_code}")
+            .insert({
+                "word": word,
+                "extended": f"{word}_extended.h5",
+                "backw_interleave": f"{word}_backw_interleave.h5",
+                "len": len(word)})
+            .execute()
+        )
+        store_ascii_vector(f"{word}_extended", extended.cpu())  # Move tensor to CPU before saving
+        store_ascii_vector(f"{word}_backw_interleave", backw_interleave.cpu())  # Move tensor to CPU before saving
+
+    except torch.cuda.OutOfMemoryError as e:
+        device = torch.device("cpu")
         try:
+            variations = ascii_variations(word).to(device)
+            extended = variations.repeat(variations.shape[0], 1)
+            backw_interleave = torch.flip(variations, [1]).repeat_interleave(variations.shape[0], dim=0)
+
             response = (
-                supabase.table("ascii_variations")
+                supabase.table(f"ascii_variations_{language_code}")
                 .insert({
                     "word": word,
-                    "extended": f"{word}_extended.pt",
-                    "backw_interleave": f"{word}_backw_interleave.pt",
+                    "extended": f"{word}_extended.h5",
+                    "backw_interleave": f"{word}_backw_interleave.h5",
                     "len": len(word)})
                 .execute()
             )
-            store_ascii_vector(f"{word}_extended.pt", extended)
-            store_ascii_vector(f"{word}_backw_interleave.pt", backw_interleave)
+            store_ascii_vector(f"{word}_extended", extended.cpu())  # Save tensor on CPU
+            store_ascii_vector(f"{word}_backw_interleave", backw_interleave.cpu())  # Save tensor on CPU
 
         except Exception as e:
-            print(f"Error inserting {word}: {e}")
+            print(f"Error processing {word} on CPU: {e}")
+
+    except Exception as e:
+        print(f"Error processing {word}: {e}")
 
 
-if __name__ == '__main__':
+def get_circle_variations(vocab, name="", language_code="en"):
+    with tqdm(total=len(vocab), desc=f"Processing {name}", bar_format="\033[92m{l_bar}{bar:25}{r_bar}\033[0m") as pbar:
+        with ProcessPoolExecutor(max_workers=12) as executor:
+            futures = [executor.submit(process_word, word, language_code) for word in vocab]
+            for _ in as_completed(futures):
+                pbar.update(1)
+
+
+def main():
     en = load_word_list('vocabularies/meaningful_words/en.txt')
-    get_circle_variations(en, engine, name='English')
+    # get_circle_variations(en[:1000], name='Test', language_code='en')
+    get_circle_variations(en, name='English', language_code='en')
 
     de = load_word_list('vocabularies/meaningful_words/de.txt')
-    get_circle_variations(de, engine, name='Deutsch')
+    get_circle_variations(de, name='Deutsch', language_code='de')
+
+if __name__ == '__main__':
+    mp.set_start_method('spawn')
+    main()

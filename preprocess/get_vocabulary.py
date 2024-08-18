@@ -22,10 +22,10 @@ def load_word_list(file_path):
 def get_meaningful_words(language_code='en'):
     if language_code == 'en':
         nlp = spacy.load('en_core_web_lg')
-        word_list = set(load_word_list('vocabularies/en/EOWL.txt'))
+        word_list = set(load_word_list('preprocess/vocabularies/en/EOWL.txt'))
     elif language_code == 'de':
         nlp = spacy.load('de_core_news_lg')
-        word_list = set(load_word_list('vocabularies/de/wordlist-german.txt'))
+        word_list = set(load_word_list('preprocess/vocabularies/de/wordlist-german.txt'))
     else:
         raise ValueError("Unsupported language code: Vocabulary")
 
@@ -45,9 +45,9 @@ def get_meaningful_words(language_code='en'):
 
 
 def save_meaningful_words(language_code='en'):
-    words = get_meaningful_words(language_code)
+    words = set(get_meaningful_words(language_code))
 
-    directory = 'vocabularies/meaningful_words'
+    directory = 'preprocess/vocabularies/meaningful_words'
     if not os.path.exists(directory):
         os.makedirs(directory)
 

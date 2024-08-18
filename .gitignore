@@ -164,3 +164,8 @@ cython_debug/
 # Datatypes
 *.csv
 *.png
+*.json
+
+# supabase
+node_modules
+supabase
