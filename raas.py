@@ -1,6 +1,7 @@
 from preprocess.get_vocabulary import load_word_list
 from cache.load import *
 import pandas as pd
+import numpy as np
 
 def generate_case_variations(word):
     variations = []
@@ -12,9 +13,6 @@ def generate_case_variations(word):
 
 def word_to_binary(word):
     return ''.join(format(ord(c), '08b') for c in word)
-
-# def binary_to_word(binary):
-#     return ''.join(chr(int(binary[i:i+8], 2)) for i in range(0, len(binary), 8))
 
 def check_char_pair(pair):
     pair_b = word_to_binary(pair)
@@ -76,10 +74,7 @@ def word_to_pairs(word):
 
     i = 0
     while potential_length >= 4 and i < word_length:
-        try:
-            pair = word[i] + word[(i + 1) % word_length]
-        except IndexError as e:
-            print(e)
+        pair = word[i] + word[(i + 1) % word_length]
 
         if pair in non_valid_pairs:
             pairs, potential_length, i = handle_non_valid_pairs(pairs, potential_length, i)
@@ -95,33 +90,30 @@ def word_to_pairs(word):
     return pairs, potential_length
 
 def pairs_to_sequences(pairs, potential_length):
-    if potential_length < 4:
-        return None
+    # Create the pair sequences
+    pair_sequences = []
+    none_indices = [j for j, v in pairs.items() if v is None]
+
+    if none_indices == []:
+        sequence = [v for v in pairs.values()]
+        pair_sequences.append(create_sequence_dataframe(pairs))
     else:
-        # Create the pair sequences
-        pair_sequences = []
-        none_indices = [j for j, v in pairs.items() if v is None]
+        # Rotational sequence
+        rotational_sequence = {}
+        if none_indices[0] > 0:
+            rotational_sequence.update({j: pairs[j] for j in range(none_indices[0])})
+        if none_indices[-1] < max(pairs.keys()):
+            rotational_sequence.update({j: pairs[j] for j in range(none_indices[-1] + 1, max(pairs.keys()) + 1)})
 
-        if none_indices == []:
-            sequence = [v for v in pairs.values()]
-            pair_sequences.append(create_sequence_dataframe(pairs))
-        else:
-            # Rotational sequence
-            rotational_sequence = {}
-            if none_indices[0] > 0:
-                rotational_sequence.update({j: pairs[j] for j in range(none_indices[0])})
-            if none_indices[-1] < max(pairs.keys()):
-                rotational_sequence.update({j: pairs[j] for j in range(none_indices[-1] + 1, max(pairs.keys()) + 1)})
+        if rotational_sequence:
+            pair_sequences.append(create_sequence_dataframe(rotational_sequence))
+        
+        # Add sequences between None values
+        for start, end in zip(none_indices, none_indices[1:]):
+            sequence = {j: pairs[j] for j in range(start + 1, end)}
+            pair_sequences.append(create_sequence_dataframe(sequence))
 
-            if rotational_sequence:
-                pair_sequences.append(create_sequence_dataframe(rotational_sequence))
-            
-            # Add sequences between None values
-            for start, end in zip(none_indices, none_indices[1:]):
-                sequence = {j: pairs[j] for j in range(start + 1, end)}
-                pair_sequences.append(create_sequence_dataframe(sequence))
-
-        return pair_sequences
+    return pair_sequences
 
 def create_sequence_dataframe(sequence):
     df_data = []
@@ -135,37 +127,50 @@ def create_sequence_dataframe(sequence):
     return pd.DataFrame(df_data)
 
 def sequences_to_words(pair_sequences):
-    new_words = []
+    new_words_data = []
 
     for sequence in pair_sequences:
         for offset in range(1, 8):
             for direction in ['forward', 'reverse']:
                 word = ''
-                for _, row in sequence.iterrows():
+                for index, row in sequence.iterrows():
                     chars = row['char']
                     offsets = row['offset']
                     directions = row['direction']
                     
-                    matching_char = next((char for char, char_offset, char_direction in zip(chars, offsets, directions)
-                                          if char_offset == offset and char_direction == direction), None)
+                    matching_chars = [char for char, char_offset, char_direction in zip(chars, offsets, directions)
+                                      if char_offset == offset and char_direction == direction]
                     
-                    if matching_char:
-                        word += matching_char
+                    if matching_chars:
+                        word += matching_chars[0]  # Add the first matching character
                     else:
                         if len(word) >= 4:
-                            new_words.append(word)
+                            for i in range(len(word) - 3):
+                                new_words_data.append({
+                                    'new_word': word[i:],
+                                    'starting_letter': index - len(word) + i,
+                                    'offset': offset,
+                                    'direction': direction
+                                })
                         word = ''
                 
                 if len(word) >= 4:
-                    new_words.append(word)
+                    for i in range(len(word) - 3):
+                        new_words_data.append({
+                            'new_word': word[i:],
+                            'starting_letter': sequence.index[-1] - len(word) + i + 1,
+                            'offset': offset,
+                            'direction': direction
+                        })
 
-    return list(set(new_words))  # Remove duplicates
+    return pd.DataFrame(new_words_data)
 
 if __name__ == '__main__':
-    # Example usage
     pairs, potential_length = word_to_pairs('Feuerwehrmanneinsatzfahrzeug')
+    print(potential_length)
+    print(pairs)
     pair_sequences = pairs_to_sequences(pairs, potential_length)
     for sequence in pair_sequences:
         print(sequence.to_string())
     new_words = sequences_to_words(pair_sequences)
-    print("New words found:", new_words)
+    print(new_words.to_string())
