@@ -1,6 +1,6 @@
 from preprocess.get_vocabulary import load_word_list
-from cache.load_and_save import *
-
+from cache.load import *
+import pandas as pd
 
 def generate_case_variations(word):
     variations = []
@@ -69,7 +69,7 @@ def handle_non_valid_pairs(pairs, potential_length, i):
 
     return pairs, potential_length-1, i+1
 
-def check_word(word):
+def word_to_pairs(word):
     word_length = len(word)
     potential_length = word_length
     pairs = {}
@@ -92,6 +92,9 @@ def check_word(word):
         else:
             check_char_pair(pair)
 
+    return pairs, potential_length
+
+def pairs_to_sequences(pairs, potential_length):
     if potential_length < 4:
         return None
     else:
@@ -100,28 +103,69 @@ def check_word(word):
         none_indices = [j for j, v in pairs.items() if v is None]
 
         if none_indices == []:
-            pair_sequences.append([v for v in pairs.values()])
+            sequence = [v for v in pairs.values()]
+            pair_sequences.append(create_sequence_dataframe(pairs))
         else:
             # Rotational sequence
-            rotational_sequence = []
+            rotational_sequence = {}
             if none_indices[0] > 0:
-                rotational_sequence.extend([pairs[j] for j in range(none_indices[0])])
+                rotational_sequence.update({j: pairs[j] for j in range(none_indices[0])})
             if none_indices[-1] < max(pairs.keys()):
-                rotational_sequence.extend([pairs[j] for j in range(none_indices[-1] + 1, max(pairs.keys()) + 1)])
+                rotational_sequence.update({j: pairs[j] for j in range(none_indices[-1] + 1, max(pairs.keys()) + 1)})
 
             if rotational_sequence:
-                pair_sequences.append(rotational_sequence)
+                pair_sequences.append(create_sequence_dataframe(rotational_sequence))
             
             # Add sequences between None values
             for start, end in zip(none_indices, none_indices[1:]):
-                pair_sequences.append([pairs[j] for j in range(start + 1, end)])
-    
-    for ind, seq in enumerate(pair_sequences):
-        print(f"{ind}: {seq}\n{len(seq)}")
-        
-        
+                sequence = {j: pairs[j] for j in range(start + 1, end)}
+                pair_sequences.append(create_sequence_dataframe(sequence))
 
+        return pair_sequences
 
+def create_sequence_dataframe(sequence):
+    df_data = []
+    for pair_index, pair_data in sequence.items():
+        chars, offsets, directions = zip(*pair_data)
+        df_data.append({
+            'char': list(chars),
+            'offset': list(offsets),
+            'direction': list(directions)
+        })
+    return pd.DataFrame(df_data)
+
+def sequences_to_words(pair_sequences):
+    new_words = []
+
+    for sequence in pair_sequences:
+        for offset in range(1, 8):
+            for direction in ['forward', 'reverse']:
+                word = ''
+                for _, row in sequence.iterrows():
+                    chars = row['char']
+                    offsets = row['offset']
+                    directions = row['direction']
+                    
+                    matching_char = next((char for char, char_offset, char_direction in zip(chars, offsets, directions)
+                                          if char_offset == offset and char_direction == direction), None)
+                    
+                    if matching_char:
+                        word += matching_char
+                    else:
+                        if len(word) >= 4:
+                            new_words.append(word)
+                        word = ''
+                
+                if len(word) >= 4:
+                    new_words.append(word)
+
+    return list(set(new_words))  # Remove duplicates
 
 if __name__ == '__main__':
-    check_word('Feuerwehrmann')
+    # Example usage
+    pairs, potential_length = word_to_pairs('Feuerwehrmanneinsatzfahrzeug')
+    pair_sequences = pairs_to_sequences(pairs, potential_length)
+    for sequence in pair_sequences:
+        print(sequence.to_string())
+    new_words = sequences_to_words(pair_sequences)
+    print("New words found:", new_words)
