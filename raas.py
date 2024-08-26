@@ -165,6 +165,18 @@ def sequences_to_words(pair_sequences):
 
     return pd.DataFrame(new_words_data)
 
+def verify_generated_word(original_word, new_word, direction):
+    original_binary = word_to_binary(original_word)
+    new_word_binary = word_to_binary(new_word)
+    
+    if direction == 'reverse':
+        new_word_binary = new_word_binary[::-1]
+    
+    # Double the original binary to handle rotation
+    rotational_binary = original_binary + original_binary
+    
+    return new_word_binary in rotational_binary
+
 if __name__ == '__main__':
     pairs, potential_length = word_to_pairs('Feuerwehrmanneinsatzfahrzeug')
     print(potential_length)

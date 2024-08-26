@@ -66,11 +66,38 @@ class MyTestCase(unittest.TestCase):
         pairs, potential_length = word_to_pairs(word)
         pair_sequences = pairs_to_sequences(pairs, potential_length)
         new_words = sequences_to_words(pair_sequences)
+        
         self.assertIsInstance(new_words, pd.DataFrame)
         self.assertEqual(list(new_words.columns), ['new_word', 'starting_letter', 'offset', 'direction'])
         self.assertGreater(len(new_words), 0)
-        self.assertIn('fWVW', new_words['new_word'].values)
-        self.assertIn('dkhggji', new_words['new_word'].values)
+        
+        # Test specific words from the output
+        expected_words = [
+            ('fWVW', 0, 4, 'forward'),
+            ('dkhggji', 8, 4, 'reverse'),
+            ('khggji', 9, 4, 'reverse'),
+            ('hggji', 10, 4, 'reverse'),
+            ('ggji', 11, 4, 'reverse')
+        ]
+        
+        for expected_word, start, offset, direction in expected_words:
+            self.assertIn(expected_word, new_words['new_word'].values)
+            word_row = new_words[new_words['new_word'] == expected_word].iloc[0]
+            self.assertEqual(word_row['starting_letter'], start)
+            self.assertEqual(word_row['offset'], offset)
+            self.assertEqual(word_row['direction'], direction)
+            
+            # Verify the generated word using the new function
+            self.assertTrue(verify_generated_word(word, expected_word, direction),
+                            f"Failed to verify {expected_word} in {word} with direction {direction}")
+        
+        # Test all generated words
+        for _, row in new_words.iterrows():
+            self.assertTrue(verify_generated_word(
+                word, 
+                row['new_word'], 
+                row['direction']
+            ))
 
     def test_handle_non_valid_pairs(self):
         pairs = {0: [('a', 1, 'forward')], 1: None, 2: [('a', 1, 'forward')], 3: [('b', 2, 'reverse')],

@@ -18,10 +18,10 @@ def process_word(word, check_vocab):
         if not new_words.empty and 'new_word' in new_words.columns:
             valid_new_words = new_words[new_words['new_word'].str.lower().isin(check_vocab)]
             for _, row in valid_new_words.iterrows():
-                results.add((word, row['new_word'], row['offset'], row['direction']))
+                results.add((word, row['new_word'], row['starting_letter'], row['offset'], row['direction']))
     
     # Convert the set of tuples to a DataFrame
-    df = pd.DataFrame(list(results), columns=['orig_word', 'new_word', 'offset', 'direction'])
+    df = pd.DataFrame(list(results), columns=['orig_word', 'starting_letter', 'new_word', 'offset', 'direction'])
     
     # Add a column for case variations
     df['case_variations'] = [case_variations] * len(df)
