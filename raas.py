@@ -11,11 +11,11 @@ def generate_case_variations(word):
         variations.append(variation)
     return variations
 
-def word_to_binary(word):
+def text_to_binary(word):
     return ''.join(format(ord(c), '08b') for c in word)
 
 def check_char_pair(pair):
-    pair_b = word_to_binary(pair)
+    pair_b = text_to_binary(pair)
     valid = False
 
     for offset in range(1, 8):
@@ -146,8 +146,11 @@ def sequences_to_words(pair_sequences):
                     else:
                         if len(word) >= 4:
                             for i in range(len(word) - 3):
+                                new_word = word[i:]
+                                if direction == 'reverse':
+                                    new_word = new_word[::-1]  # Reverse the word if direction is 'reverse'
                                 new_words_data.append({
-                                    'new_word': word[i:],
+                                    'new_word': new_word,
                                     'starting_letter': index - len(word) + i,
                                     'offset': offset,
                                     'direction': direction
@@ -156,8 +159,11 @@ def sequences_to_words(pair_sequences):
                 
                 if len(word) >= 4:
                     for i in range(len(word) - 3):
+                        new_word = word[i:]
+                        if direction == 'reverse':
+                            new_word = new_word[::-1]  # Reverse the word if direction is 'reverse'
                         new_words_data.append({
-                            'new_word': word[i:],
+                            'new_word': new_word,
                             'starting_letter': sequence.index[-1] - len(word) + i + 1,
                             'offset': offset,
                             'direction': direction
@@ -166,8 +172,8 @@ def sequences_to_words(pair_sequences):
     return pd.DataFrame(new_words_data)
 
 def verify_generated_word(original_word, new_word, direction):
-    original_binary = word_to_binary(original_word)
-    new_word_binary = word_to_binary(new_word)
+    original_binary = text_to_binary(original_word)
+    new_word_binary = text_to_binary(new_word)
     
     if direction == 'reverse':
         new_word_binary = new_word_binary[::-1]
