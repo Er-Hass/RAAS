@@ -171,6 +171,48 @@ def sequences_to_words(pair_sequences):
 
     return pd.DataFrame(new_words_data)
 
+def generate_new_words(word):
+    pairs, potential_length = word_to_pairs(word)
+    if potential_length < 4:
+        return pd.DataFrame()
+    pair_sequences = pairs_to_sequences(pairs, potential_length)
+    new_words = sequences_to_words(pair_sequences)
+
+    return new_words
+
+def add_or_update_entry(word, new_word_data, case_variation, valid_new_words):
+    key = (word, new_word_data['new_word'])  # Use tuple of 'original_word' and 'new_word' as unique key
+
+    # If the key already exists, update case variations
+    if key in valid_new_words:
+        valid_new_words[key]['case_variations'].append(case_variation)
+    else:
+        # If it doesn't exist, create a new entry
+        valid_new_words[key] = {
+            'original_word': word,
+            'new_word': new_word_data['new_word'],
+            'case_variations': [case_variation],
+            'starting_letter': new_word_data['starting_letter'],
+            'offset': new_word_data['offset'],
+            'direction': new_word_data['direction']
+        }
+
+    return valid_new_words
+
+def process_word(word, check_vocab):
+    valid_new_words = {}
+    case_variations = generate_case_variations(word)
+
+    for case_variation in case_variations:
+        new_words = generate_new_words(case_variation)
+        if not new_words.empty:
+            potential_words = list(new_words['new_word'].str.lower())
+            for ind, p_word in enumerate(potential_words):
+                if p_word in (check_vocab):
+                    valid_new_words = add_or_update_entry(word, new_words.iloc[ind], case_variation, valid_new_words)
+
+    return pd.DataFrame.from_dict(valid_new_words, orient='index').reset_index(drop=True)
+
 def verify_generated_word(original_word, new_word, direction):
     original_binary = text_to_binary(original_word)
     new_word_binary = text_to_binary(new_word)
@@ -183,8 +225,11 @@ def verify_generated_word(original_word, new_word, direction):
     
     return new_word_binary in rotational_binary
 
+
 if __name__ == '__main__':
-    pairs, potential_length = word_to_pairs('Feuerwehrmanneinsatzfahrzeug')
+    word = 'Feuerwehreinsatzfahrzeug'
+
+    pairs, potential_length = word_to_pairs(word)
     print(potential_length)
     print(pairs)
     pair_sequences = pairs_to_sequences(pairs, potential_length)
