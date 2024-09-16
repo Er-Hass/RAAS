@@ -52,12 +52,12 @@ def handle_non_valid_pairs(pairs, potential_length, i):
         none_distance = last_none - second_last_none - 1
         rotational_none_distance = (len(pairs) - last_none + first_none) % len(pairs)
 
-        if none_distance < 4 or rotational_none_distance < 4:  # Less than 4 pairs between
-            if none_distance < 4:
+        if none_distance < 5 or rotational_none_distance < 5:  # Less than 5 pairs between
+            if none_distance < 5:
                 for j in range(second_last_none + 1, last_none):
                     pairs[j] = None
                     potential_length -= 1
-            if rotational_none_distance < 4:
+            if rotational_none_distance < 5:
                 for j in range(last_none + 1, len(pairs)):
                     pairs[j] = None
                     potential_length -= 1
@@ -73,7 +73,7 @@ def word_to_pairs(word):
     pairs = {}
 
     i = 0
-    while potential_length >= 4 and i < word_length:
+    while potential_length >= 5 and i < word_length:
         pair = word[i] + word[(i + 1) % word_length]
 
         if pair in non_valid_pairs:
@@ -144,7 +144,7 @@ def sequences_to_words(pair_sequences):
                     if matching_chars:
                         word += matching_chars[0]  # Add the first matching character
                     else:
-                        if len(word) >= 4:
+                        if len(word) >= 5:
                             for i in range(len(word) - 3):
                                 new_word = word[i:]
                                 if direction == 'reverse':
@@ -157,7 +157,7 @@ def sequences_to_words(pair_sequences):
                                 })
                         word = ''
                 
-                if len(word) >= 4:
+                if len(word) >= 5:
                     for i in range(len(word) - 3):
                         new_word = word[i:]
                         if direction == 'reverse':
@@ -173,7 +173,7 @@ def sequences_to_words(pair_sequences):
 
 def generate_new_words(word):
     pairs, potential_length = word_to_pairs(word)
-    if potential_length < 4:
+    if potential_length < 5:
         return pd.DataFrame()
     pair_sequences = pairs_to_sequences(pairs, potential_length)
     new_words = sequences_to_words(pair_sequences)

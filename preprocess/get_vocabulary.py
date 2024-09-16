@@ -44,7 +44,7 @@ def get_meaningful_words(language_code='en', min=4, max=9):
     return meaningful_words
 
 
-def save_meaningful_words(language_code='en', min=4, max=9):
+def save_meaningful_words(language_code='en', min=5, max=12):
     words = set(get_meaningful_words(language_code, min, max))
 
     directory = 'vocabularies/meaningful_words'
