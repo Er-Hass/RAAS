@@ -10,14 +10,9 @@ def check_same_word(word1, word2):
     else:
         return False
 
-def sort_words_by_similarity(file_name, language_code='en'):
-    # Load the appropriate language model
-    if language_code == 'en':
-        nlp = spacy.load('en_core_web_lg')
-    elif language_code == 'de':
-        nlp = spacy.load('de_core_news_lg')
-    else:
-        raise ValueError("Unsupported language code")
+def sort_words_by_similarity(file_name):
+    en = spacy.load('en_core_web_lg')
+    de = spacy.load('de_core_news_lg')
 
     # Read CSV and calculate similarity scores
     df = pd.read_csv(f'{file_name}')
@@ -30,15 +25,26 @@ def sort_words_by_similarity(file_name, language_code='en'):
     # Calculate similarity scores with progress bar
     def calculate_similarity(row):
         try:
-            original = nlp(row['original_word'])
-            new = nlp(row['new_word'])
-            
+            original_word = row['original_word'].lower()
+            new_word = row['new_word'].lower()
+
             # Skip if one word contains the other
-            if row['original_word'] in row['new_word'] or row['new_word'] in row['original_word']:
+            if original_word in new_word or new_word in original_word:
                 return None
+
+            original = en(original_word)
+            new = en(new_word)
+
+            # Check if words are english, otherwise use german
+            if not original.has_vector:
+                original = de(original_word)
+            if not new.has_vector:
+                new = de(new_word)
             
             if original.has_vector and new.has_vector:
                 return original.similarity(new)
+            else:
+                raise Exception("No vector")
         except Exception as e:
             print(f"Error processing row: {row}. Error: {e}")
         return None
@@ -82,8 +88,8 @@ def filter_words_by_length(file_name, min_length):
 
 
 if __name__ == '__main__':
-    # sort_words_by_similarity('en.csv', 'en')
-    # sort_words_by_similarity('de.csv', 'de')
+    # sort_words_by_similarity('en.csv')
+    sort_words_by_similarity('de.csv')
 
-    filter_words_by_length('en_sorted.csv', 5)
-    filter_words_by_length('de_sorted.csv', 5)
+    # filter_words_by_length('en_sorted.csv', 5)
+    # filter_words_by_length('de_sorted.csv', 5)

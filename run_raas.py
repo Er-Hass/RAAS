@@ -15,7 +15,7 @@ def run_raas(name, input_vocab, check_vocab):
     output_dir = 'matches'
     os.makedirs(output_dir, exist_ok=True)
 
-    num_cores = cpu_count()
+    num_cores = cpu_count() - 1
     
     with Pool(num_cores) as pool:
         results = list(tqdm(
