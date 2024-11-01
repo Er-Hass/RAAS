@@ -1,0 +1,629 @@
+original_word,new_word,case_variations,starting_letter,offset,direction
+institutes,TEUER,"['instiTUTES', 'iNstiTUTES', 'inStiTUTES', 'iNStiTUTES', 'insTiTUTES', 'iNsTiTUTES', 'inSTiTUTES', 'iNSTiTUTES', 'instITUTES', 'iNstITUTES', 'inStITUTES', 'iNStITUTES', 'insTITUTES', 'iNsTITUTES', 'inSTITUTES', 'iNSTITUTES']",4,3,reverse
+sleepier,TRATT,"['sleEPIER', 'sLeEPIER', 'slEEPIER', 'sLEEPIER']",2,3,reverse
+supervisee,MITAU,"['suPERVIsee', 'SuPERVIsee', 'sUPERVIsee', 'SUPERVIsee', 'suPERVIsEe', 'SuPERVIsEe', 'sUPERVIsEe', 'SUPERVIsEe', 'suPERVIseE', 'SuPERVIseE', 'sUPERVIseE', 'SUPERVIseE', 'suPERVIsEE', 'SuPERVIsEE', 'sUPERVIsEE', 'SUPERVIsEE']",1,3,reverse
+content,ENTEN,"['ConTENT', 'COnTENT', 'CoNTENT', 'CONTENT']",2,3,reverse
+classicism,eIcKe,"['clasSicISm', 'ClasSicISm', 'cLasSicISm', 'CLasSicISm', 'clAsSicISm', 'ClAsSicISm', 'cLAsSicISm', 'CLAsSicISm', 'claSSicISm', 'ClaSSicISm', 'cLaSSicISm', 'CLaSSicISm', 'clASSicISm', 'ClASSicISm', 'cLASSicISm', 'CLASSicISm']",4,1,reverse
+trendiest,TRÄNT,"['treNDiESt', 'TreNDiESt', 'tReNDiESt', 'TReNDiESt', 'trENDiESt', 'TrENDiESt', 'tRENDiESt', 'TRENDiESt']",2,3,reverse
+teething,BETTE,"['tEETHIng', 'TEETHIng', 'tEETHInG', 'TEETHInG']",0,3,reverse
+attentions,RENTE,"['attENTIOns', 'AttENTIOns', 'aTtENTIOns', 'ATtENTIOns', 'atTENTIOns', 'AtTENTIOns', 'aTTENTIOns', 'ATTENTIOns', 'attENTIONs', 'AttENTIONs', 'aTtENTIONs', 'ATtENTIONs', 'atTENTIONs', 'AtTENTIONs', 'aTTENTIONs', 'ATTENTIONs', 'attENTIOnS', 'AttENTIOnS', 'aTtENTIOnS', 'ATtENTIOnS', 'atTENTIOnS', 'AtTENTIOnS', 'aTTENTIOnS', 'ATTENTIOnS', 'attENTIONS', 'AttENTIONS', 'aTtENTIONS', 'ATtENTIONS', 'atTENTIONS', 'AtTENTIONS', 'aTTENTIONS', 'ATTENTIONS']",2,3,reverse
+fielded,EDLeM,"['fieLdED', 'fIeLdED']",1,7,reverse
+potentiate,RENTE,"['potENTIAte', 'PotENTIAte', 'pOtENTIAte', 'POtENTIAte', 'poTENTIAte', 'PoTENTIAte', 'pOTENTIAte', 'POTENTIAte', 'potENTIAtE', 'PotENTIAtE', 'pOtENTIAtE', 'POtENTIAtE', 'poTENTIAtE', 'PoTENTIAtE', 'pOTENTIAtE', 'POTENTIAtE']",1,3,reverse
+potentiate,PRENT,"['poteNTIATe', 'PoteNTIATe', 'pOteNTIATe', 'POteNTIATe', 'poTeNTIATe', 'PoTeNTIATe', 'pOTeNTIATe', 'POTeNTIATe', 'potENTIATe', 'PotENTIATe', 'pOtENTIATe', 'POtENTIATe', 'poTENTIATe', 'PoTENTIATe', 'pOTENTIATe', 'POTENTIATe']",2,3,reverse
+jewelled,EDleM,"['jeweLlED', 'JeweLlED', 'jEweLlED', 'JEweLlED', 'jeWeLlED', 'JeWeLlED', 'jEWeLlED', 'JEWeLlED']",2,7,reverse
+deluded,DELETe,"['DeLUDeD', 'DELUDeD']",1,7,reverse
+deluded,DELETeD,['DELUDeD'],0,7,reverse
+seepages,PATTY,"['sEEPAGEs', 'SEEPAGEs', 'sEEPAGES', 'SEEPAGES']",0,3,reverse
+intermixed,VITEN,"['inTERMIxed', 'InTERMIxed', 'iNTERMIxed', 'INTERMIxed', 'inTERMIxEd', 'InTERMIxEd', 'iNTERMIxEd', 'INTERMIxEd', 'inTERMIxeD', 'InTERMIxeD', 'iNTERMIxeD', 'INTERMIxeD', 'inTERMIxED', 'InTERMIxED', 'iNTERMIxED', 'INTERMIxED']",1,3,reverse
+itemises,RÖTER,"['iTEMiSes', 'ITEMiSes', 'iTEMiSeS', 'ITEMiSeS']",0,3,reverse
+beseech,aSSeS,"['beSeeCh', 'BeSeeCh', 'beSeeCH', 'BeSeeCH']",1,1,reverse
+batterie,TRITE,"['BattERIE', 'BAttERIE', 'BaTtERIE', 'BATtERIE', 'BatTERIE', 'BAtTERIE', 'BaTTERIE', 'BATTERIE']",3,3,reverse
+intently,ENTEN,"['inTENTLy', 'InTENTLy', 'iNTENTLy', 'INTENTLy']",1,3,reverse
+redeemed,MEmEL,"['redeEmEd', 'RedeEmEd', 'rEdeEmEd', 'REdeEmEd', 'reDeEmEd', 'ReDeEmEd', 'rEDeEmEd', 'REDeEmEd']",2,7,reverse
+revelries,TRIFT,"['reveLRIES', 'rEveLRIES', 'reVeLRIES', 'rEVeLRIES', 'revELRIES', 'rEvELRIES', 'reVELRIES', 'rEVELRIES']",3,3,reverse
+coteries,TRITE,"['cotERIES', 'cOtERIES', 'coTERIES', 'cOTERIES']",2,3,reverse
+buckteeth,BETTE,"['BucktEETH', 'BUcktEETH', 'BuCktEETH', 'BUCktEETH', 'BucKtEETH', 'BUcKtEETH', 'BuCKtEETH', 'BUCKtEETH', 'BuckTEETH', 'BUckTEETH', 'BuCkTEETH', 'BUCkTEETH', 'BucKTEETH', 'BUcKTEETH', 'BuCKTEETH', 'BUCKTEETH']",4,3,reverse
+tweedledum,EDlEM,"['tweeDlEDum', 'TweeDlEDum', 'tWeeDlEDum', 'TWeeDlEDum', 'twEeDlEDum', 'TwEeDlEDum', 'tWEeDlEDum', 'TWEeDlEDum', 'tweeDlEDuM', 'TweeDlEDuM', 'tWeeDlEDuM', 'TWeeDlEDuM', 'twEeDlEDuM', 'TwEeDlEDuM', 'tWEeDlEDuM', 'TWEeDlEDuM']",2,7,reverse
+muleteer,ELUDe,"['muLETeEr', 'MuLETeEr', 'mULETeEr', 'MULETeEr', 'muLETeER', 'MuLETeER', 'mULETeER', 'MULETeER']",1,7,reverse
+cheerier,TRITT,"['cheERIER', 'cHeERIER', 'chEERIER', 'cHEERIER']",2,3,reverse
+dolled,DELle,"['DoLleD', 'DOLleD']",1,7,reverse
+intents,ENTEN,"['inTENTS', 'iNTENTS']",1,3,reverse
+aubrieta,PETRI,"['AubrIETA', 'AUbrIETA', 'AuBrIETA', 'AUBrIETA', 'AubRIETA', 'AUbRIETA', 'AuBRIETA', 'AUBRIETA']",3,3,reverse
+tapeta,ETAPE,['tAPETA'],0,3,reverse
+fescue,SWagS,"['fesCue', 'FesCue']",1,1,reverse
+mages,eSsAY,['MAgeS'],0,1,reverse
+fuelled,EDleM,"['fueLlED', 'fUeLlED']",1,7,reverse
+sicker,SicKe,"['SicKer', 'SicKeR']",0,1,reverse
+spatially,REPAY,"['sPATIAlly', 'SPATIAlly', 'sPATIAlLy', 'SPATIAlLy', 'sPATIAllY', 'SPATIAllY', 'sPATIAlLY', 'SPATIAlLY']",0,3,reverse
+spatially,PREPAY,"['sPATIALly', 'SPATIALly', 'sPATIALlY', 'SPATIALlY']",0,3,reverse
+titres,TIERE,['tITRES'],0,3,reverse
+butterfly,FLITE,"['buttERFLY', 'bUttERFLY', 'buTtERFLY', 'bUTtERFLY', 'butTERFLY', 'bUtTERFLY', 'buTTERFLY', 'bUTTERFLY']",3,3,reverse
+calcified,filch,"['calcifiEd', 'CalcifiEd', 'cAlcifiEd', 'CAlcifiEd', 'calcifiED', 'CalcifiED', 'cAlcifiED', 'CAlcifiED']",1,4,reverse
+weldment,EdLeM,"['weLdMEnt', 'WeLdMEnt', 'weLdMENt', 'WeLdMENt', 'weLdMEnT', 'WeLdMEnT', 'weLdMENT', 'WeLdMENT']",0,7,reverse
+mesenteric,RITEN,"['mesenTERIC', 'mEsenTERIC', 'meSenTERIC', 'mESenTERIC', 'mesEnTERIC', 'mEsEnTERIC', 'meSEnTERIC', 'mESEnTERIC', 'meseNTERIC', 'mEseNTERIC', 'meSeNTERIC', 'mESeNTERIC', 'mesENTERIC', 'mEsENTERIC', 'meSENTERIC', 'mESENTERIC']",4,3,reverse
+excluded,DELETe,"['ExcLUDeD', 'EXcLUDeD', 'ExCLUDeD', 'EXCLUDeD']",2,7,reverse
+essaying,IMAgeS,"['eSsAYIng', 'eSsAYINg', 'eSsAYInG', 'eSsAYING']",0,1,reverse
+essaying,IMAge,"['eSsAYIng', 'ESsAYIng', 'eSsAYINg', 'ESsAYINg', 'eSsAYInG', 'ESsAYInG', 'eSsAYING', 'ESsAYING']",1,1,reverse
+expat,EPACT,['EXPAT'],0,3,reverse
+nitride,DRIER,"['niTRIDE', 'nITRIDE']",1,3,reverse
+antigenic,TÜREN,"['anTIGeNic', 'AnTIGeNic', 'aNTIGeNic', 'ANTIGeNic', 'anTIGeNiC', 'AnTIGeNiC', 'aNTIGeNiC', 'ANTIGeNiC']",1,3,reverse
+votaries,TRIPE,"['votARIES', 'vOtARIES', 'voTARIES', 'vOTARIES']",2,3,reverse
+welded,EDLeM,['WeLdED'],0,7,reverse
+deleted,DELUDe,"['DeLETeD', 'DELETeD']",1,7,reverse
+deleted,DELUDeD,['DELETeD'],0,7,reverse
+solitarily,RIPER,"['soliTARILy', 'SoliTARILy', 'sOliTARILy', 'SOliTARILy', 'soLiTARILy', 'SoLiTARILy', 'sOLiTARILy', 'SOLiTARILy', 'solITARILy', 'SolITARILy', 'sOlITARILy', 'SOlITARILy', 'soLITARILy', 'SoLITARILy', 'sOLITARILy', 'SOLITARILy']",3,3,reverse
+supervised,MITAU,"['suPERVIsed', 'SuPERVIsed', 'sUPERVIsed', 'SUPERVIsed', 'suPERVIsEd', 'SuPERVIsEd', 'sUPERVIsEd', 'SUPERVIsEd', 'suPERVIseD', 'SuPERVIseD', 'sUPERVIseD', 'SUPERVIseD', 'suPERVIsED', 'SuPERVIsED', 'sUPERVIsED', 'SUPERVIsED']",1,3,reverse
+creepier,TRATT,"['creEPIER', 'cReEPIER', 'crEEPIER', 'cREEPIER']",2,3,reverse
+megastore,gAsSY,"['MegAstore', 'MegAsTore', 'MegAstOre', 'MegAsTOre', 'MegAstoRe', 'MegAsToRe', 'MegAstORe', 'MegAsTORe', 'MegAstorE', 'MegAsTorE', 'MegAstOrE', 'MegAsTOrE', 'MegAstoRE', 'MegAsToRE', 'MegAstORE', 'MegAsTORE']",0,1,reverse
+intermodal,VITEN,"['inTERMOdal', 'InTERMOdal', 'iNTERMOdal', 'INTERMOdal', 'inTERMODal', 'InTERMODal', 'iNTERMODal', 'INTERMODal', 'inTERMOdAl', 'InTERMOdAl', 'iNTERMOdAl', 'INTERMOdAl', 'inTERMODAl', 'InTERMODAl', 'iNTERMODAl', 'INTERMODAl', 'inTERMOdaL', 'InTERMOdaL', 'iNTERMOdaL', 'INTERMOdaL', 'inTERMODaL', 'InTERMODaL', 'iNTERMODaL', 'INTERMODaL', 'inTERMOdAL', 'InTERMOdAL', 'iNTERMOdAL', 'INTERMOdAL', 'inTERMODAL', 'InTERMODAL', 'iNTERMODAL', 'INTERMODAL']",1,3,reverse
+skewers,SuSie,"['SKeWers', 'SKeWeRs', 'SKeWerS', 'SKeWeRS']",0,1,reverse
+doodled,DELlE,"['DooDleD', 'DOoDleD', 'DoODleD', 'DOODleD']",2,7,reverse
+entries,TRIENT,['eNTRIES'],0,3,reverse
+saucepans,SaUCe,"['SaUCePans', 'SaUCepAns', 'SaUCePAns', 'SaUCePaNs', 'SaUCepANs', 'SaUCePANs', 'SaUCePanS', 'SaUCepAnS', 'SaUCePAnS', 'SaUCePaNS', 'SaUCepANS', 'SaUCePANS']",0,1,reverse
+deuces,eSaUS,"['deUCeS', 'DeUCeS']",1,1,reverse
+weldments,EdLeM,"['weLdMEnts', 'WeLdMEnts', 'weLdMENts', 'WeLdMENts', 'weLdMEnTs', 'WeLdMEnTs', 'weLdMENTs', 'WeLdMENTs', 'weLdMEntS', 'WeLdMEntS', 'weLdMENtS', 'WeLdMENtS', 'weLdMEnTS', 'WeLdMEnTS', 'weLdMENTS', 'WeLdMENTS']",0,7,reverse
+pummels,eMmeT,"['pUMmeLs', 'PUMmeLs', 'pUMmeLS', 'PUMmeLS']",0,7,reverse
+ammeter,LUMme,"['aMmeTer', 'AMmeTer', 'aMmeTeR', 'AMmeTeR']",0,7,reverse
+ammeter,DUMme,"['aMmeTEr', 'AMmeTEr', 'aMmeTER', 'AMmeTER']",0,7,reverse
+dehydrates,TEPID,"['dehydRATES', 'dEhydRATES', 'deHydRATES', 'dEHydRATES', 'dehYdRATES', 'dEhYdRATES', 'deHYdRATES', 'dEHYdRATES', 'dehyDRATES', 'dEhyDRATES', 'deHyDRATES', 'dEHyDRATES', 'dehYDRATES', 'dEhYDRATES', 'deHYDRATES', 'dEHYDRATES']",4,3,reverse
+architect,EXTER,"['ArchiTECT', 'ARchiTECT', 'ArChiTECT', 'ARChiTECT', 'ArcHiTECT', 'ARcHiTECT', 'ArCHiTECT', 'ARCHiTECT', 'ArchITECT', 'ARchITECT', 'ArChITECT', 'ARChITECT', 'ArcHITECT', 'ARcHITECT', 'ArCHITECT', 'ARCHITECT']",4,3,reverse
+megastores,gAsSY,"['MegAstores', 'MegAsTores', 'MegAstOres', 'MegAsTOres', 'MegAstoRes', 'MegAsToRes', 'MegAstORes', 'MegAsTORes', 'MegAstorEs', 'MegAsTorEs', 'MegAstOrEs', 'MegAsTOrEs', 'MegAstoREs', 'MegAsToREs', 'MegAstOREs', 'MegAsTOREs', 'MegAstoreS', 'MegAsToreS', 'MegAstOreS', 'MegAsTOreS', 'MegAstoReS', 'MegAsToReS', 'MegAstOReS', 'MegAsTOReS', 'MegAstorES', 'MegAsTorES', 'MegAstOrES', 'MegAsTOrES', 'MegAstoRES', 'MegAsToRES', 'MegAstORES', 'MegAsTORES']",0,1,reverse
+skewed,SuSie,"['SKeWed', 'SKeWeD']",0,1,reverse
+riveted,dUFTE,"['RivETeD', 'RIvETeD', 'RiVETeD', 'RIVETeD']",2,4,forward
+strummed,EMmeT,"['strUMmeD', 'StrUMmeD', 'sTrUMmeD', 'STrUMmeD', 'stRUMmeD', 'StRUMmeD', 'sTRUMmeD', 'STRUMmeD']",2,7,reverse
+nitriles,FRIER,"['niTRILEs', 'NiTRILEs', 'nITRILEs', 'NITRILEs']",1,3,reverse
+anteriorly,RITEN,"['anTERIOrly', 'AnTERIOrly', 'aNTERIOrly', 'ANTERIOrly', 'anTERIORly', 'AnTERIORly', 'aNTERIORly', 'ANTERIORly', 'anTERIOrLy', 'AnTERIOrLy', 'aNTERIOrLy', 'ANTERIOrLy', 'anTERIORLy', 'AnTERIORLy', 'aNTERIORLy', 'ANTERIORLy', 'anTERIOrlY', 'AnTERIOrlY', 'aNTERIOrlY', 'ANTERIOrlY', 'anTERIORlY', 'AnTERIORlY', 'aNTERIORlY', 'ANTERIORlY', 'anTERIOrLY', 'AnTERIOrLY', 'aNTERIOrLY', 'ANTERIOrLY', 'anTERIORLY', 'AnTERIORLY', 'aNTERIORLY', 'ANTERIORLY']",1,3,reverse
+trendier,TRÄNT,"['treNDiER', 'tReNDiER', 'trENDiER', 'tRENDiER']",2,3,reverse
+unexcelled,EDleM,"['unexceLlED', 'uNexceLlED', 'unExceLlED', 'uNExceLlED', 'uneXceLlED', 'uNeXceLlED', 'unEXceLlED', 'uNEXceLlED', 'unexCeLlED', 'uNexCeLlED', 'unExCeLlED', 'uNExCeLlED', 'uneXCeLlED', 'uNeXCeLlED', 'unEXCeLlED', 'uNEXCeLlED']",4,7,reverse
+vestibular,FUHRE,"['vestIBULAr', 'VestIBULAr', 'vEstIBULAr', 'VEstIBULAr', 'veStIBULAr', 'VeStIBULAr', 'vEStIBULAr', 'VEStIBULAr', 'vesTIBULAr', 'VesTIBULAr', 'vEsTIBULAr', 'VEsTIBULAr', 'veSTIBULAr', 'VeSTIBULAr', 'vESTIBULAr', 'VESTIBULAr']",3,3,reverse
+patristic,EYRIE,"['patRISTIc', 'PatRISTIc', 'pAtRISTIc', 'PAtRISTIc', 'paTRISTIc', 'PaTRISTIc', 'pATRISTIc', 'PATRISTIc']",1,3,reverse
+bantering,RITEN,"['banTERINg', 'BanTERINg', 'bAnTERINg', 'BAnTERINg', 'baNTERINg', 'BaNTERINg', 'bANTERINg', 'BANTERINg']",2,3,reverse
+peerage,PITTA,"['pEERAGE', 'PEERAGE']",0,3,reverse
+ossicles,cIggy,"['OssIcles', 'OssIcLes', 'OssIclEs', 'OssIcLEs', 'OssIcleS', 'OssIcLeS', 'OssIclES', 'OssIcLES']",0,1,reverse
+unrepaired,PATIN,"['unREPAIred', 'UnREPAIred', 'uNREPAIred', 'UNREPAIred', 'unREPAIrEd', 'UnREPAIrEd', 'uNREPAIrEd', 'UNREPAIrEd', 'unREPAIreD', 'UnREPAIreD', 'uNREPAIreD', 'UNREPAIreD', 'unREPAIrED', 'UnREPAIrED', 'uNREPAIrED', 'UNREPAIrED']",1,3,reverse
+fertility,FREIT,"['feRTILIty', 'FeRTILIty', 'fERTILIty', 'FERTILIty', 'feRTILItY', 'FeRTILItY', 'fERTILItY', 'FERTILItY']",1,3,reverse
+intent,ENTEN,"['InTENT', 'INTENT']",1,3,reverse
+systemize,KRÖTE,"['systEMiZE', 'sYstEMiZE', 'syStEMiZE', 'sYStEMiZE', 'sysTEMiZE', 'sYsTEMiZE', 'sySTEMiZE', 'sYSTEMiZE']",3,3,reverse
+interments,VITEN,"['inTERMEnts', 'InTERMEnts', 'iNTERMEnts', 'INTERMEnts', 'inTERMEnTs', 'InTERMEnTs', 'iNTERMEnTs', 'INTERMEnTs', 'inTERMEntS', 'InTERMEntS', 'iNTERMEntS', 'INTERMEntS', 'inTERMEnTS', 'InTERMEnTS', 'iNTERMEnTS', 'INTERMEnTS']",1,3,reverse
+identity,SEREN,"['IdenTITY', 'IDenTITY', 'IdEnTITY', 'IDEnTITY', 'IdeNTITY', 'IDeNTITY', 'IdENTITY', 'IDENTITY']",3,3,reverse
+woeful,töTeT,"['wOeFUL', 'WOeFUL']",0,4,forward
+misspelled,dELle,"['MisspeLleD', 'MIsspeLleD', 'MiSspeLleD', 'MISspeLleD', 'MisSpeLleD', 'MIsSpeLleD', 'MiSSpeLleD', 'MISSpeLleD', 'MissPeLleD', 'MIssPeLleD', 'MiSsPeLleD', 'MISsPeLleD', 'MisSPeLleD', 'MIsSPeLleD', 'MiSSPeLleD', 'MISSPeLleD', 'MisspELleD', 'MIsspELleD', 'MiSspELleD', 'MISspELleD', 'MisSpELleD', 'MIsSpELleD', 'MiSSpELleD', 'MISSpELleD', 'MissPELleD', 'MIssPELleD', 'MiSsPELleD', 'MISsPELleD', 'MisSPELleD', 'MIsSPELleD', 'MiSSPELleD', 'MISSPELleD']",5,7,reverse
+foresees,eSSeS,"['foreSeeS', 'ForeSeeS', 'fOreSeeS', 'FOreSeeS', 'foReSeeS', 'FoReSeeS', 'fOReSeeS', 'FOReSeeS']",3,1,reverse
+damages,eSsAY,"['daMAgeS', 'DaMAgeS', 'dAMAgeS', 'DAMAgeS']",2,1,reverse
+rescuers,SWagS,"['resCuers', 'ResCuers', 'resCueRs', 'ResCueRs', 'resCuerS', 'ResCuerS', 'resCueRS', 'ResCueRS']",1,1,reverse
+homages,eSsAY,"['hoMAgeS', 'HoMAgeS', 'hOMAgeS', 'HOMAgeS']",2,1,reverse
+brickyard,AMicI,"['brIcKYArd', 'BrIcKYArd', 'bRIcKYArd', 'BRIcKYArd', 'brIcKYARd', 'BrIcKYARd', 'bRIcKYARd', 'BRIcKYARd', 'brIcKYArD', 'BrIcKYArD', 'bRIcKYArD', 'BRIcKYArD', 'brIcKYARD', 'BrIcKYARD', 'bRIcKYARD', 'BRIcKYARD']",2,1,reverse
+supervises,MITAU,"['suPERVIses', 'SuPERVIses', 'sUPERVIses', 'SUPERVIses', 'suPERVIsEs', 'SuPERVIsEs', 'sUPERVIsEs', 'SUPERVIsEs', 'suPERVIseS', 'SuPERVIseS', 'sUPERVIseS', 'SUPERVIseS', 'suPERVIsES', 'SuPERVIsES', 'sUPERVIsES', 'SUPERVIsES']",1,3,reverse
+equalled,DELle,"['EquaLleD', 'EQuaLleD', 'EqUaLleD', 'EQUaLleD', 'EquALleD', 'EQuALleD', 'EqUALleD', 'EQUALleD']",3,7,reverse
+gelled,EDleM,['geLlED'],0,7,reverse
+tenrec,TINTE,['tENREC'],0,3,reverse
+middlemen,MeDdLE,"['miDdLEMen', 'MiDdLEMen', 'mIDdLEMen', 'MIDdLEMen', 'miDdLEMeN', 'MiDdLEMeN', 'mIDdLEMeN', 'MIDdLEMeN']",1,7,reverse
+gimmicky,MicKY,"['gimMicKY', 'GimMicKY', 'gImMicKY', 'GImMicKY', 'giMMicKY', 'GiMMicKY', 'gIMMicKY', 'GIMMicKY']",3,1,reverse
+morello,mädeL,"['moreLLO', 'mOreLLO', 'moReLLO', 'mOReLLO']",2,7,reverse
+sauce,SaUCe,['SaUCe'],0,1,reverse
+embedded,DELLE,"['EmbeDdeD', 'EMbeDdeD', 'EmBeDdeD', 'EMBeDdeD', 'EmbEDdeD', 'EMbEDdeD', 'EmBEDdeD', 'EMBEDdeD']",3,7,reverse
+parcelled,EDleM,"['parceLlED', 'ParceLlED', 'pArceLlED', 'PArceLlED', 'paRceLlED', 'PaRceLlED', 'pARceLlED', 'PARceLlED', 'parCeLlED', 'ParCeLlED', 'pArCeLlED', 'PArCeLlED', 'paRCeLlED', 'PaRCeLlED', 'pARCeLlED', 'PARCeLlED']",2,7,reverse
+contented,ENTEN,"['conTENTEd', 'ConTENTEd', 'cOnTENTEd', 'COnTENTEd', 'coNTENTEd', 'CoNTENTEd', 'cONTENTEd', 'CONTENTEd']",2,3,reverse
+plumages,eSsAY,"['pluMAgeS', 'PluMAgeS', 'pLuMAgeS', 'PLuMAgeS', 'plUMAgeS', 'PlUMAgeS', 'pLUMAgeS', 'PLUMAgeS']",3,1,reverse
+arpents,YENTA,"['ArpENTS', 'ARpENTS', 'ArPENTS', 'ARPENTS']",2,3,reverse
+seesawed,SwAgS,"['seesAwed', 'SeesAwed', 'sEesAwed', 'SEesAwed', 'seesAweD', 'SeesAweD', 'sEesAweD', 'SEesAweD']",2,1,reverse
+retention,RENTE,"['retENTIOn', 'RetENTIOn', 'rEtENTIOn', 'REtENTIOn', 'reTENTIOn', 'ReTENTIOn', 'rETENTIOn', 'RETENTIOn', 'retENTION', 'RetENTION', 'rEtENTION', 'REtENTION', 'reTENTION', 'ReTENTION', 'rETENTION', 'RETENTION']",2,3,reverse
+septate,PEATY,"['sEPTATe', 'SEPTATe']",0,3,reverse
+aftertaste,EITEL,"['afTERTAste', 'AfTERTAste', 'aFTERTAste', 'AFTERTAste', 'afTERTAsTe', 'AfTERTAsTe', 'aFTERTAsTe', 'AFTERTAsTe', 'afTERTAstE', 'AfTERTAstE', 'aFTERTAstE', 'AFTERTAstE', 'afTERTAsTE', 'AfTERTAsTE', 'aFTERTAsTE', 'AFTERTAsTE']",1,3,reverse
+septation,PEATY,"['sEPTATion', 'SEPTATion', 'sEPTATiOn', 'SEPTATiOn', 'sEPTATioN', 'SEPTATioN', 'sEPTATiON', 'SEPTATiON']",0,3,reverse
+septation,REPEAT,"['sePTATIOn', 'SePTATIOn', 'sEPTATIOn', 'SEPTATIOn', 'sePTATION', 'SePTATION', 'sEPTATION', 'SEPTATION']",1,3,reverse
+dilute,ELUTe,"['DiLUTe', 'DILUTe']",1,7,reverse
+annuities,RERUN,"['annUITIEs', 'AnnUITIEs', 'aNnUITIEs', 'ANnUITIEs', 'anNUITIEs', 'AnNUITIEs', 'aNNUITIEs', 'ANNUITIEs']",2,3,reverse
+weepies,TRATT,"['weEPIES', 'wEEPIES']",1,3,reverse
+calcific,filch,"['calcifiC', 'CalcifiC', 'cAlcifiC', 'CAlcifiC']",1,4,reverse
+delete,ELUDe,"['DeLETe', 'DELETe']",1,7,reverse
+delete,ELUDeD,['DELETe'],0,7,reverse
+omegas,gAsSY,"['oMegAs', 'OMegAs']",1,1,reverse
+megaspore,gAsSY,"['MegAspore', 'MegAsPore', 'MegAspOre', 'MegAsPOre', 'MegAspoRe', 'MegAsPoRe', 'MegAspORe', 'MegAsPORe', 'MegAsporE', 'MegAsPorE', 'MegAspOrE', 'MegAsPOrE', 'MegAspoRE', 'MegAsPoRE', 'MegAspORE', 'MegAsPORE']",0,1,reverse
+seisin,KeKSe,"['SeiSin', 'SeiSiN']",0,1,reverse
+hummel,eMmeT,"['hUMmeL', 'HUMmeL']",0,7,reverse
+tapetum,ETAPE,"['tAPETUm', 'TAPETUm']",0,3,reverse
+rescue,SWagS,"['resCue', 'ResCue']",1,1,reverse
+prostitute,TEUER,"['ProstiTUTE', 'PRostiTUTE', 'PrOstiTUTE', 'PROstiTUTE', 'ProStiTUTE', 'PRoStiTUTE', 'PrOStiTUTE', 'PROStiTUTE', 'ProsTiTUTE', 'PRosTiTUTE', 'PrOsTiTUTE', 'PROsTiTUTE', 'ProSTiTUTE', 'PRoSTiTUTE', 'PrOSTiTUTE', 'PROSTiTUTE', 'ProstITUTE', 'PRostITUTE', 'PrOstITUTE', 'PROstITUTE', 'ProStITUTE', 'PRoStITUTE', 'PrOStITUTE', 'PROStITUTE', 'ProsTITUTE', 'PRosTITUTE', 'PrOsTITUTE', 'PROsTITUTE', 'ProSTITUTE', 'PRoSTITUTE', 'PrOSTITUTE', 'PROSTITUTE']",5,3,reverse
+schlocky,local,"['schlocky', 'Schlocky', 'sChlocky', 'SChlocky', 'schlockY', 'SchlockY', 'sChlockY', 'SChlockY']",1,4,reverse
+refuelled,EDleM,"['refueLlED', 'RefueLlED', 'rEfueLlED', 'REfueLlED', 'reFueLlED', 'ReFueLlED', 'rEFueLlED', 'REFueLlED', 'refUeLlED', 'RefUeLlED', 'rEfUeLlED', 'REfUeLlED', 'reFUeLlED', 'ReFUeLlED', 'rEFUeLlED', 'REFUeLlED']",3,7,reverse
+repents,YENTA,"['RepENTS', 'REpENTS', 'RePENTS', 'REPENTS']",2,3,reverse
+official,chili,"['official', 'oFficial', 'ofFicial', 'oFFicial', 'offIcial', 'oFfIcial', 'ofFIcial', 'oFFIcial']",3,4,reverse
+moggie,SIssy,"['mOggIe', 'MOggIe']",1,1,reverse
+epact,EXPAT,['EPACT'],0,3,reverse
+destitute,TEUER,"['DestiTUTE', 'DEstiTUTE', 'DeStiTUTE', 'DEStiTUTE', 'DesTiTUTE', 'DEsTiTUTE', 'DeSTiTUTE', 'DESTiTUTE', 'DestITUTE', 'DEstITUTE', 'DeStITUTE', 'DEStITUTE', 'DesTITUTE', 'DEsTITUTE', 'DeSTITUTE', 'DESTITUTE']",4,3,reverse
+retentions,RENTE,"['retENTIOns', 'RetENTIOns', 'rEtENTIOns', 'REtENTIOns', 'reTENTIOns', 'ReTENTIOns', 'rETENTIOns', 'RETENTIOns', 'retENTIONs', 'RetENTIONs', 'rEtENTIONs', 'REtENTIONs', 'reTENTIONs', 'ReTENTIONs', 'rETENTIONs', 'RETENTIONs', 'retENTIOnS', 'RetENTIOnS', 'rEtENTIOnS', 'REtENTIOnS', 'reTENTIOnS', 'ReTENTIOnS', 'rETENTIOnS', 'RETENTIOnS', 'retENTIONS', 'RetENTIONS', 'rEtENTIONS', 'REtENTIONS', 'reTENTIONS', 'ReTENTIONS', 'rETENTIONS', 'RETENTIONS']",2,3,reverse
+clostridia,PRÄRIE,"['ClostRIDiA', 'CLostRIDiA', 'ClOstRIDiA', 'CLOstRIDiA', 'CloStRIDiA', 'CLoStRIDiA', 'ClOStRIDiA', 'CLOStRIDiA', 'ClosTRIDiA', 'CLosTRIDiA', 'ClOsTRIDiA', 'CLOsTRIDiA', 'CloSTRIDiA', 'CLoSTRIDiA', 'ClOSTRIDiA', 'CLOSTRIDiA']",4,3,reverse
+tertian,REITE,"['tERTIAn', 'TERTIAn']",0,3,reverse
+seepage,PATTY,"['sEEPAGE', 'SEEPAGE']",0,3,reverse
+yelping,RAFTS,"['yELPINg', 'YELPINg']",0,3,reverse
+afterpiece,TRAIT,"['afteRPIECe', 'AfteRPIECe', 'aFteRPIECe', 'AFteRPIECe', 'afTeRPIECe', 'AfTeRPIECe', 'aFTeRPIECe', 'AFTeRPIECe', 'aftERPIECe', 'AftERPIECe', 'aFtERPIECe', 'AFtERPIECe', 'afTERPIECe', 'AfTERPIECe', 'aFTERPIECe', 'AFTERPIECe']",3,3,reverse
+judicially,chili,"['judicially', 'Judicially', 'jUdicially', 'JUdicially', 'juDicially', 'JuDicially', 'jUDicially', 'JUDicially', 'judIcially', 'JudIcially', 'jUdIcially', 'JUdIcially', 'juDIcially', 'JuDIcially', 'jUDIcially', 'JUDIcially', 'judiciallY', 'JudiciallY', 'jUdiciallY', 'JUdiciallY', 'juDiciallY', 'JuDiciallY', 'jUDiciallY', 'JUDiciallY', 'judIciallY', 'JudIciallY', 'jUdIciallY', 'JUdIciallY', 'juDIciallY', 'JuDIciallY', 'jUDIciallY', 'JUDIciallY']",3,4,reverse
+physicist,eIcKe,"['phySicISt', 'PhySicISt', 'pHySicISt', 'PHySicISt', 'phYSicISt', 'PhYSicISt', 'pHYSicISt', 'PHYSicISt', 'phySicIST', 'PhySicIST', 'pHySicIST', 'PHySicIST', 'phYSicIST', 'PhYSicIST', 'pHYSicIST', 'PHYSicIST']",3,1,reverse
+chiselled,EDleM,"['chiseLlED', 'ChiseLlED', 'cHiseLlED', 'CHiseLlED', 'chIseLlED', 'ChIseLlED', 'cHIseLlED', 'CHIseLlED', 'chiSeLlED', 'ChiSeLlED', 'cHiSeLlED', 'CHiSeLlED', 'chISeLlED', 'ChISeLlED', 'cHISeLlED', 'CHISeLlED']",3,7,reverse
+cancelled,EDleM,"['canceLlED', 'CanceLlED', 'cAnceLlED', 'CAnceLlED', 'caNceLlED', 'CaNceLlED', 'cANceLlED', 'CANceLlED', 'canCeLlED', 'CanCeLlED', 'cAnCeLlED', 'CAnCeLlED', 'caNCeLlED', 'CaNCeLlED', 'cANCeLlED', 'CANCeLlED']",3,7,reverse
+whiskeys,eMSig,"['whisKeYS', 'WhisKeYS', 'wHisKeYS', 'WHisKeYS', 'whIsKeYS', 'WhIsKeYS', 'wHIsKeYS', 'WHIsKeYS']",3,1,reverse
+apiaries,RIPRAP,"['aPIARIEs', 'APIARIEs']",0,3,reverse
+fascial,chill,"['fascial', 'fAscial', 'faScial', 'fAScial']",2,4,reverse
+esteemed,DEEmED,"['EstEEmED', 'EStEEmED', 'EsTEEmED', 'ESTEEmED']",2,7,reverse
+devilled,DELle,"['DeviLleD', 'DEviLleD', 'DeViLleD', 'DEViLleD', 'DevILleD', 'DEvILleD', 'DeVILleD', 'DEVILleD']",3,7,reverse
+solitaries,RIPER,"['soliTARIEs', 'SoliTARIEs', 'sOliTARIEs', 'SOliTARIEs', 'soLiTARIEs', 'SoLiTARIEs', 'sOLiTARIEs', 'SOLiTARIEs', 'solITARIEs', 'SolITARIEs', 'sOlITARIEs', 'SOlITARIEs', 'soLITARIEs', 'SoLITARIEs', 'sOLITARIEs', 'SOLITARIEs']",3,3,reverse
+solitaries,TRIPE,"['solitARIES', 'sOlitARIES', 'soLitARIES', 'sOLitARIES', 'solItARIES', 'sOlItARIES', 'soLItARIES', 'sOLItARIES', 'soliTARIES', 'sOliTARIES', 'soLiTARIES', 'sOLiTARIES', 'solITARIES', 'sOlITARIES', 'soLITARIES', 'sOLITARIES']",4,3,reverse
+militarily,RIPER,"['miliTARILy', 'MiliTARILy', 'mIliTARILy', 'MIliTARILy', 'miLiTARILy', 'MiLiTARILy', 'mILiTARILy', 'MILiTARILy', 'milITARILy', 'MilITARILy', 'mIlITARILy', 'MIlITARILy', 'miLITARILy', 'MiLITARILy', 'mILITARILy', 'MILITARILy']",3,3,reverse
+mysteries,TRITE,"['mystERIES', 'mYstERIES', 'myStERIES', 'mYStERIES', 'mysTERIES', 'mYsTERIES', 'mySTERIES', 'mYSTERIES']",3,3,reverse
+dieted,LEDUM,"['dieTED', 'dIeTED']",1,7,reverse
+serpents,YENTA,"['SerpENTS', 'SErpENTS', 'SeRpENTS', 'SERpENTS', 'SerPENTS', 'SErPENTS', 'SeRPENTS', 'SERPENTS']",3,3,reverse
+sussed,SegUe,"['SUsSed', 'SUsSeD']",0,1,reverse
+smelled,EDleM,"['smeLlED', 'SmeLlED', 'sMeLlED', 'SMeLlED']",1,7,reverse
+mongoloid,congo,"['mongoloId', 'MongoloId', 'mOngoloId', 'MOngoloId', 'mongoloID', 'MongoloID', 'mOngoloID', 'MOngoloID']",1,4,reverse
+squashes,gAUGe,"['SqUAshes', 'SqUAsHes', 'SqUAshEs', 'SqUAsHEs', 'SqUAsheS', 'SqUAsHeS', 'SqUAshES', 'SqUAsHES']",0,1,reverse
+gigue,SUsIs,['gIgUe'],0,1,reverse
+tallet,TULle,"['TaLleT', 'TALleT']",1,7,reverse
+wielded,EDLeM,"['WieLdED', 'WIeLdED']",1,7,reverse
+whitethorn,BETER,"['whiTETHOrn', 'WhiTETHOrn', 'wHiTETHOrn', 'WHiTETHOrn', 'whITETHOrn', 'WhITETHOrn', 'wHITETHOrn', 'WHITETHOrn', 'whiTETHORn', 'WhiTETHORn', 'wHiTETHORn', 'WHiTETHORn', 'whITETHORn', 'WhITETHORn', 'wHITETHORn', 'WHITETHORn', 'whiTETHOrN', 'WhiTETHOrN', 'wHiTETHOrN', 'WHiTETHOrN', 'whITETHOrN', 'WhITETHOrN', 'wHITETHOrN', 'WHITETHOrN', 'whiTETHORN', 'WhiTETHORN', 'wHiTETHORN', 'WHiTETHORN', 'whITETHORN', 'WhITETHORN', 'wHITETHORN', 'WHITETHORN']",2,3,reverse
+tenues,TUNTE,['tENUES'],0,3,reverse
+prudential,PRENT,"['prudeNTIAL', 'pRudeNTIAL', 'prUdeNTIAL', 'pRUdeNTIAL', 'pruDeNTIAL', 'pRuDeNTIAL', 'prUDeNTIAL', 'pRUDeNTIAL', 'prudENTIAL', 'pRudENTIAL', 'prUdENTIAL', 'pRUdENTIAL', 'pruDENTIAL', 'pRuDENTIAL', 'prUDENTIAL', 'pRUDENTIAL']",4,3,reverse
+beseeching,aSSeS,"['beSeeChing', 'BeSeeChing', 'beSeeCHing', 'BeSeeCHing', 'beSeeChIng', 'BeSeeChIng', 'beSeeCHIng', 'BeSeeCHIng', 'beSeeChiNg', 'BeSeeChiNg', 'beSeeCHiNg', 'BeSeeCHiNg', 'beSeeChINg', 'BeSeeChINg', 'beSeeCHINg', 'BeSeeCHINg', 'beSeeChinG', 'BeSeeChinG', 'beSeeCHinG', 'BeSeeCHinG', 'beSeeChInG', 'BeSeeChInG', 'beSeeCHInG', 'BeSeeCHInG', 'beSeeChiNG', 'BeSeeChiNG', 'beSeeCHiNG', 'BeSeeCHiNG', 'beSeeChING', 'BeSeeChING', 'beSeeCHING', 'BeSeeCHING']",1,1,reverse
+ciggie,jinni,"['ciggie', 'cIggie']",1,4,reverse
+ciggie,SIssI,"['cIggIe', 'CIggIe']",1,1,reverse
+cemetery,LUMmE,"['cEmeTery', 'CEmeTery', 'cEmeTeRy', 'CEmeTeRy', 'cEmeTerY', 'CEmeTerY', 'cEmeTeRY', 'CEmeTeRY']",0,7,reverse
+cemetery,DUMmE,"['cEmeTEry', 'CEmeTEry', 'cEmeTERy', 'CEmeTERy', 'cEmeTErY', 'CEmeTErY', 'cEmeTERY', 'CEmeTERY']",0,7,reverse
+eluded,DELETe,['ELUDeD'],0,7,reverse
+sauced,SaUCe,"['SaUCed', 'SaUCeD']",0,1,reverse
+supervene,MITAU,"['suPERVEne', 'SuPERVEne', 'sUPERVEne', 'SUPERVEne', 'suPERVEnE', 'SuPERVEnE', 'sUPERVEnE', 'SUPERVEnE']",1,3,reverse
+guitarist,RIPER,"['guiTARISt', 'GuiTARISt', 'gUiTARISt', 'GUiTARISt', 'guITARISt', 'GuITARISt', 'gUITARISt', 'GUITARISt']",2,3,reverse
+militarist,RIPER,"['miliTARISt', 'MiliTARISt', 'mIliTARISt', 'MIliTARISt', 'miLiTARISt', 'MiLiTARISt', 'mILiTARISt', 'MILiTARISt', 'milITARISt', 'MilITARISt', 'mIlITARISt', 'MIlITARISt', 'miLITARISt', 'MiLITARISt', 'mILITARISt', 'MILITARISt']",3,3,reverse
+rehydrate,TEPID,"['RehydRATE', 'REhydRATE', 'ReHydRATE', 'REHydRATE', 'RehYdRATE', 'REhYdRATE', 'ReHYdRATE', 'REHYdRATE', 'RehyDRATE', 'REhyDRATE', 'ReHyDRATE', 'REHyDRATE', 'RehYDRATE', 'REhYDRATE', 'ReHYDRATE', 'REHYDRATE']",4,3,reverse
+sauntering,RITEN,"['saunTERINg', 'SaunTERINg', 'sAunTERINg', 'SAunTERINg', 'saUnTERINg', 'SaUnTERINg', 'sAUnTERINg', 'SAUnTERINg', 'sauNTERINg', 'SauNTERINg', 'sAuNTERINg', 'SAuNTERINg', 'saUNTERINg', 'SaUNTERINg', 'sAUNTERINg', 'SAUNTERINg']",3,3,reverse
+biggie,jinni,"['biggie', 'bIggie']",1,4,reverse
+biggie,SIssI,"['bIggIe', 'BIggIe']",1,1,reverse
+modello,mädeL,"['modeLLO', 'mOdeLLO', 'moDeLLO', 'mODeLLO']",2,7,reverse
+scrimmages,eSsAY,"['scrimMAgeS', 'ScrimMAgeS', 'sCrimMAgeS', 'SCrimMAgeS', 'scRimMAgeS', 'ScRimMAgeS', 'sCRimMAgeS', 'SCRimMAgeS', 'scrImMAgeS', 'ScrImMAgeS', 'sCrImMAgeS', 'SCrImMAgeS', 'scRImMAgeS', 'ScRImMAgeS', 'sCRImMAgeS', 'SCRImMAgeS', 'scriMMAgeS', 'ScriMMAgeS', 'sCriMMAgeS', 'SCriMMAgeS', 'scRiMMAgeS', 'ScRiMMAgeS', 'sCRiMMAgeS', 'SCRiMMAgeS', 'scrIMMAgeS', 'ScrIMMAgeS', 'sCrIMMAgeS', 'SCrIMMAgeS', 'scRIMMAgeS', 'ScRIMMAgeS', 'sCRIMMAgeS', 'SCRIMMAgeS']",5,1,reverse
+appetizers,KRETA,"['appETIZErs', 'AppETIZErs', 'aPpETIZErs', 'APpETIZErs', 'apPETIZErs', 'ApPETIZErs', 'aPPETIZErs', 'APPETIZErs', 'appETIZErS', 'AppETIZErS', 'aPpETIZErS', 'APpETIZErS', 'apPETIZErS', 'ApPETIZErS', 'aPPETIZErS', 'APPETIZErS']",2,3,reverse
+defraying,SPILT,"['deFRAYIng', 'DeFRAYIng', 'dEFRAYIng', 'DEFRAYIng', 'deFRAYInG', 'DeFRAYInG', 'dEFRAYInG', 'DEFRAYInG']",1,3,reverse
+marketed,lEDUM,"['markeTED', 'mArkeTED', 'maRkeTED', 'mARkeTED', 'marKeTED', 'mArKeTED', 'maRKeTED', 'mARKeTED']",3,7,reverse
+classicist,eIcKe,"['clasSicISt', 'ClasSicISt', 'cLasSicISt', 'CLasSicISt', 'clAsSicISt', 'ClAsSicISt', 'cLAsSicISt', 'CLAsSicISt', 'claSSicISt', 'ClaSSicISt', 'cLaSSicISt', 'CLaSSicISt', 'clASSicISt', 'ClASSicISt', 'cLASSicISt', 'CLASSicISt', 'clasSicIST', 'ClasSicIST', 'cLasSicIST', 'CLasSicIST', 'clAsSicIST', 'ClAsSicIST', 'cLAsSicIST', 'CLAsSicIST', 'claSSicIST', 'ClaSSicIST', 'cLaSSicIST', 'CLaSSicIST', 'clASSicIST', 'ClASSicIST', 'cLASSicIST', 'CLASSicIST']",4,1,reverse
+dwelled,DELle,"['DweLleD', 'DWeLleD', 'DwELleD', 'DWELleD']",2,7,reverse
+evolute,ELUTe,"['EvoLUTe', 'EVoLUTe', 'EvOLUTe', 'EVOLUTe']",2,7,reverse
+itemize,RÖTER,"['iTEMiZe', 'ITEMiZe']",0,3,reverse
+itemize,KRÖTE,"['itEMiZE', 'iTEMiZE']",1,3,reverse
+hydrate,TEPID,"['HydRATE', 'HYdRATE', 'HyDRATE', 'HYDRATE']",2,3,reverse
+antigens,TÜREN,"['anTIGeNs', 'AnTIGeNs', 'aNTIGeNs', 'ANTIGeNs']",1,3,reverse
+quelled,EDleM,"['queLlED', 'QueLlED', 'qUeLlED', 'QUeLlED']",1,7,reverse
+gawked,SkuAs,"['gAWked', 'gAWkeD']",0,1,reverse
+mentation,REPENT,"['meNTATIOn', 'MeNTATIOn', 'mENTATIOn', 'MENTATIOn', 'meNTATION', 'MeNTATION', 'mENTATION', 'MENTATION']",1,3,reverse
+nitriding,DRIER,"['niTRIDIng', 'NiTRIDIng', 'nITRIDIng', 'NITRIDIng', 'niTRIDInG', 'NiTRIDInG', 'nITRIDInG', 'NITRIDInG']",1,3,reverse
+metalled,dELle,"['MetaLleD', 'MEtaLleD', 'MeTaLleD', 'METaLleD', 'MetALleD', 'MEtALleD', 'MeTALleD', 'METALleD']",3,7,reverse
+expatriate,EPACT,"['eXPATRiate', 'EXPATRiate', 'eXPATRiAte', 'EXPATRiAte', 'eXPATRiaTe', 'EXPATRiaTe', 'eXPATRiATe', 'EXPATRiATe', 'eXPATRiatE', 'EXPATRiatE', 'eXPATRiAtE', 'EXPATRiAtE', 'eXPATRiaTE', 'EXPATRiaTE', 'eXPATRiATE', 'EXPATRiATE']",0,3,reverse
+centering,RITEN,"['cenTERINg', 'CenTERINg', 'cEnTERINg', 'CEnTERINg', 'ceNTERINg', 'CeNTERINg', 'cENTERINg', 'CENTERINg']",2,3,reverse
+catteries,TRITE,"['cattERIES', 'cAttERIES', 'caTtERIES', 'cATtERIES', 'catTERIES', 'cAtTERIES', 'caTTERIES', 'cATTERIES']",3,3,reverse
+mullet,dULde,"['MuLLeT', 'MULLeT']",1,7,reverse
+pummelled,EDleM,"['pummeLlED', 'PummeLlED', 'pUmmeLlED', 'PUmmeLlED', 'puMmeLlED', 'PuMmeLlED', 'pUMmeLlED', 'PUMmeLlED', 'pumMeLlED', 'PumMeLlED', 'pUmMeLlED', 'PUmMeLlED', 'puMMeLlED', 'PuMMeLlED', 'pUMMeLlED', 'PUMMeLlED']",3,7,reverse
+distilled,DELle,"['DistiLleD', 'DIstiLleD', 'DiStiLleD', 'DIStiLleD', 'DisTiLleD', 'DIsTiLleD', 'DiSTiLleD', 'DISTiLleD', 'DistILleD', 'DIstILleD', 'DiStILleD', 'DIStILleD', 'DisTILleD', 'DIsTILleD', 'DiSTILleD', 'DISTILleD']",4,7,reverse
+integer,TÜTEN,"['inTEGeR', 'iNTEGeR']",1,3,reverse
+mulled,dELle,"['MuLleD', 'MULleD']",1,7,reverse
+austenite,ERNTE,"['austENITE', 'aUstENITE', 'auStENITE', 'aUStENITE', 'ausTENITE', 'aUsTENITE', 'auSTENITE', 'aUSTENITE']",3,3,reverse
+stepfather,PLATE,"['stEPFATher', 'StEPFATher', 'sTEPFATher', 'STEPFATher', 'stEPFAThEr', 'StEPFAThEr', 'sTEPFAThEr', 'STEPFAThEr', 'stEPFATheR', 'StEPFATheR', 'sTEPFATheR', 'STEPFATheR', 'stEPFAThER', 'StEPFAThER', 'sTEPFAThER', 'STEPFAThER']",1,3,reverse
+demoiselle,EDleM,"['DemoiseLlE', 'DEmoiseLlE', 'DeMoiseLlE', 'DEMoiseLlE', 'DemOiseLlE', 'DEmOiseLlE', 'DeMOiseLlE', 'DEMOiseLlE', 'DemoIseLlE', 'DEmoIseLlE', 'DeMoIseLlE', 'DEMoIseLlE', 'DemOIseLlE', 'DEmOIseLlE', 'DeMOIseLlE', 'DEMOIseLlE', 'DemoiSeLlE', 'DEmoiSeLlE', 'DeMoiSeLlE', 'DEMoiSeLlE', 'DemOiSeLlE', 'DEmOiSeLlE', 'DeMOiSeLlE', 'DEMOiSeLlE', 'DemoISeLlE', 'DEmoISeLlE', 'DeMoISeLlE', 'DEMoISeLlE', 'DemOISeLlE', 'DEmOISeLlE', 'DeMOISeLlE', 'DEMOISeLlE']",5,7,reverse
+affray,SPILL,"['AfFRAY', 'AFFRAY']",1,3,reverse
+fertilizes,FREIT,"['feRTILIzes', 'FeRTILIzes', 'fERTILIzes', 'FERTILIzes', 'feRTILIzEs', 'FeRTILIzEs', 'fERTILIzEs', 'FERTILIzEs', 'feRTILIzeS', 'FeRTILIzeS', 'fERTILIzeS', 'FERTILIzeS', 'feRTILIzES', 'FeRTILIzES', 'fERTILIzES', 'FERTILIzES']",1,3,reverse
+varietal,PETRI,"['varIETAL', 'vArIETAL', 'vaRIETAL', 'vARIETAL']",2,3,reverse
+stemmed,MEmeL,"['steMmEd', 'SteMmEd', 'sTeMmEd', 'STeMmEd']",1,7,reverse
+militaria,RIPER,"['miliTARIA', 'mIliTARIA', 'miLiTARIA', 'mILiTARIA', 'milITARIA', 'mIlITARIA', 'miLITARIA', 'mILITARIA']",3,3,reverse
+flatteries,TRITE,"['flattERIES', 'fLattERIES', 'flAttERIES', 'fLAttERIES', 'flaTtERIES', 'fLaTtERIES', 'flATtERIES', 'fLATtERIES', 'flatTERIES', 'fLatTERIES', 'flAtTERIES', 'fLAtTERIES', 'flaTTERIES', 'fLaTTERIES', 'flATTERIES', 'fLATTERIES']",4,3,reverse
+parallelly,deLle,"['paraLleLLy', 'ParaLleLLy', 'pAraLleLLy', 'PAraLleLLy', 'paRaLleLLy', 'PaRaLleLLy', 'pARaLleLLy', 'PARaLleLLy', 'parALleLLy', 'ParALleLLy', 'pArALleLLy', 'PArALleLLy', 'paRALleLLy', 'PaRALleLLy', 'pARALleLLy', 'PARALleLLy', 'paraLleLLY', 'ParaLleLLY', 'pAraLleLLY', 'PAraLleLLY', 'paRaLleLLY', 'PaRaLleLLY', 'pARaLleLLY', 'PARaLleLLY', 'parALleLLY', 'ParALleLLY', 'pArALleLLY', 'PArALleLLY', 'paRALleLLY', 'PaRALleLLY', 'pARALleLLY', 'PARALleLLY']",2,7,reverse
+tertia,REITE,['tERTIA'],0,3,reverse
+militaries,RIPER,"['miliTARIEs', 'MiliTARIEs', 'mIliTARIEs', 'MIliTARIEs', 'miLiTARIEs', 'MiLiTARIEs', 'mILiTARIEs', 'MILiTARIEs', 'milITARIEs', 'MilITARIEs', 'mIlITARIEs', 'MIlITARIEs', 'miLITARIEs', 'MiLITARIEs', 'mILITARIEs', 'MILITARIEs']",3,3,reverse
+militaries,TRIPE,"['militARIES', 'mIlitARIES', 'miLitARIES', 'mILitARIES', 'milItARIES', 'mIlItARIES', 'miLItARIES', 'mILItARIES', 'miliTARIES', 'mIliTARIES', 'miLiTARIES', 'mILiTARIES', 'milITARIES', 'mIlITARIES', 'miLITARIES', 'mILITARIES']",4,3,reverse
+taupe,TAUPE,['TAUPE'],0,3,reverse
+tokamak,kAYAk,"['tokAMAk', 'TokAMAk', 'tOkAMAk', 'TOkAMAk']",2,1,reverse
+meeker,SiSSY,"['MeeKer', 'MeeKeR']",0,1,reverse
+judicial,chili,"['judicial', 'jUdicial', 'juDicial', 'jUDicial', 'judIcial', 'jUdIcial', 'juDIcial', 'jUDIcial']",3,4,reverse
+substitute,TEUER,"['SubstiTUTE', 'SUbstiTUTE', 'SuBstiTUTE', 'SUBstiTUTE', 'SubStiTUTE', 'SUbStiTUTE', 'SuBStiTUTE', 'SUBStiTUTE', 'SubsTiTUTE', 'SUbsTiTUTE', 'SuBsTiTUTE', 'SUBsTiTUTE', 'SubSTiTUTE', 'SUbSTiTUTE', 'SuBSTiTUTE', 'SUBSTiTUTE', 'SubstITUTE', 'SUbstITUTE', 'SuBstITUTE', 'SUBstITUTE', 'SubStITUTE', 'SUbStITUTE', 'SuBStITUTE', 'SUBStITUTE', 'SubsTITUTE', 'SUbsTITUTE', 'SuBsTITUTE', 'SUBsTITUTE', 'SubSTITUTE', 'SUbSTITUTE', 'SuBSTITUTE', 'SUBSTITUTE']",5,3,reverse
+coterie,TRITE,"['CotERIE', 'COtERIE', 'CoTERIE', 'COTERIE']",2,3,reverse
+classical,AcKee,"['claSSicAl', 'ClaSSicAl', 'cLaSSicAl', 'CLaSSicAl', 'clASSicAl', 'ClASSicAl', 'cLASSicAl', 'CLASSicAl', 'claSSicAL', 'ClaSSicAL', 'cLaSSicAL', 'CLaSSicAL', 'clASSicAL', 'ClASSicAL', 'cLASSicAL', 'CLASSicAL']",3,1,reverse
+wysiwyg,sOwIe,"['wySIwyg', 'WySIwyg', 'wYSIwyg', 'WYSIwyg']",2,1,reverse
+winterize,RITEN,"['winTERIZe', 'WinTERIZe', 'wInTERIZe', 'WInTERIZe', 'wiNTERIZe', 'WiNTERIZe', 'wINTERIZe', 'WINTERIZe']",2,3,reverse
+gamay,MAYAs,['gAMAY'],0,1,reverse
+strenuous,UNTIE,"['stRENUOus', 'StRENUOus', 'sTRENUOus', 'STRENUOus', 'stRENUOUs', 'StRENUOUs', 'sTRENUOUs', 'STRENUOUs', 'stRENUOuS', 'StRENUOuS', 'sTRENUOuS', 'STRENUOuS', 'stRENUOUS', 'StRENUOUS', 'sTRENUOUS', 'STRENUOUS']",1,3,reverse
+sicked,SicKe,"['SicKed', 'SicKeD']",0,1,reverse
+megastars,gAsSY,"['MegAstars', 'MegAsTars', 'MegAstArs', 'MegAsTArs', 'MegAstaRs', 'MegAsTaRs', 'MegAstARs', 'MegAsTARs', 'MegAstarS', 'MegAsTarS', 'MegAstArS', 'MegAsTArS', 'MegAstaRS', 'MegAsTaRS', 'MegAstARS', 'MegAsTARS']",0,1,reverse
+cantrips,ARIEN,"['canTRIPS', 'cAnTRIPS', 'caNTRIPS', 'cANTRIPS']",2,3,reverse
+presbytery,SITES,"['PresbyTERY', 'PResbyTERY', 'PrEsbyTERY', 'PREsbyTERY', 'PreSbyTERY', 'PReSbyTERY', 'PrESbyTERY', 'PRESbyTERY', 'PresByTERY', 'PResByTERY', 'PrEsByTERY', 'PREsByTERY', 'PreSByTERY', 'PReSByTERY', 'PrESByTERY', 'PRESByTERY', 'PresbYTERY', 'PResbYTERY', 'PrEsbYTERY', 'PREsbYTERY', 'PreSbYTERY', 'PReSbYTERY', 'PrESbYTERY', 'PRESbYTERY', 'PresBYTERY', 'PResBYTERY', 'PrEsBYTERY', 'PREsBYTERY', 'PreSBYTERY', 'PReSBYTERY', 'PrESBYTERY', 'PRESBYTERY']",5,3,reverse
+hemicycle,cOcKY,"['heMicycle', 'HeMicycle', 'hEMicycle', 'HEMicycle', 'heMicycLe', 'HeMicycLe', 'hEMicycLe', 'HEMicycLe', 'heMicyclE', 'HeMicyclE', 'hEMicyclE', 'HEMicyclE', 'heMicycLE', 'HeMicycLE', 'hEMicycLE', 'HEMicycLE']",2,1,reverse
+itemizing,RÖTER,"['iTEMiZing', 'ITEMiZing', 'iTEMiZiNg', 'ITEMiZiNg', 'iTEMiZinG', 'ITEMiZinG', 'iTEMiZiNG', 'ITEMiZiNG']",0,3,reverse
+itemizing,KRÖTE,"['itEMiZIng', 'ItEMiZIng', 'iTEMiZIng', 'ITEMiZIng', 'itEMiZInG', 'ItEMiZInG', 'iTEMiZInG', 'ITEMiZInG']",1,3,reverse
+anterior,RITEN,"['anTERIOr', 'AnTERIOr', 'aNTERIOr', 'ANTERIOr', 'anTERIOR', 'AnTERIOR', 'aNTERIOR', 'ANTERIOR']",1,3,reverse
+yelled,EDleM,"['yeLlED', 'YeLlED']",0,7,reverse
+bettered,TEETH,"['bETTERed', 'BETTERed', 'bETTEReD', 'BETTEReD']",0,3,reverse
+licentiate,PRENT,"['liceNTIATe', 'LiceNTIATe', 'lIceNTIATe', 'LIceNTIATe', 'liCeNTIATe', 'LiCeNTIATe', 'lICeNTIATe', 'LICeNTIATe', 'licENTIATe', 'LicENTIATe', 'lIcENTIATe', 'LIcENTIATe', 'liCENTIATe', 'LiCENTIATe', 'lICENTIATe', 'LICENTIATe']",3,3,reverse
+vestibule,FUHRE,"['vestIBULE', 'vEstIBULE', 'veStIBULE', 'vEStIBULE', 'vesTIBULE', 'vEsTIBULE', 'veSTIBULE', 'vESTIBULE']",3,3,reverse
+hostelries,TRIFT,"['hosteLRIES', 'hOsteLRIES', 'hoSteLRIES', 'hOSteLRIES', 'hosTeLRIES', 'hOsTeLRIES', 'hoSTeLRIES', 'hOSTeLRIES', 'hostELRIES', 'hOstELRIES', 'hoStELRIES', 'hOStELRIES', 'hosTELRIES', 'hOsTELRIES', 'hoSTELRIES', 'hOSTELRIES']",4,3,reverse
+palooka,mooch,"['palooka', 'Palooka', 'pAlooka', 'PAlooka']",0,4,reverse
+antiphons,BAREN,"['anTIPHOns', 'AnTIPHOns', 'aNTIPHOns', 'ANTIPHOns', 'anTIPHONs', 'AnTIPHONs', 'aNTIPHONs', 'ANTIPHONs', 'anTIPHOnS', 'AnTIPHOnS', 'aNTIPHOnS', 'ANTIPHOnS', 'anTIPHONS', 'AnTIPHONS', 'aNTIPHONS', 'ANTIPHONS']",1,3,reverse
+mayas,gAMAY,['MAYAs'],0,1,reverse
+mongoloids,congo,"['mongoloIds', 'MongoloIds', 'mOngoloIds', 'MOngoloIds', 'mongoloIDs', 'MongoloIDs', 'mOngoloIDs', 'MOngoloIDs', 'mongoloIdS', 'MongoloIdS', 'mOngoloIdS', 'MOngoloIdS', 'mongoloIDS', 'MongoloIDS', 'mOngoloIDS', 'MOngoloIDS']",1,4,reverse
+supervisor,MITAU,"['suPERVIsor', 'SuPERVIsor', 'sUPERVIsor', 'SUPERVIsor', 'suPERVIsOr', 'SuPERVIsOr', 'sUPERVIsOr', 'SUPERVIsOr', 'suPERVIsoR', 'SuPERVIsoR', 'sUPERVIsoR', 'SUPERVIsoR', 'suPERVIsOR', 'SuPERVIsOR', 'sUPERVIsOR', 'SUPERVIsOR']",1,3,reverse
+micelle,eDleM,"['MiceLlE', 'MIceLlE', 'MiCeLlE', 'MICeLlE']",2,7,reverse
+tenpenny,TANTE,"['tENPENny', 'TENPENny', 'tENPENnY', 'TENPENnY']",0,3,reverse
+nosegay,MAsSe,"['noSegAY', 'NoSegAY', 'nOSegAY', 'NOSegAY']",2,1,reverse
+skyward,AwOke,"['SkywArd', 'SkywARd', 'SkywArD', 'SkywARD']",0,1,reverse
+hypnagogic,linon,"['hypnagogic', 'hYpnagogic', 'hyPnagogic', 'hYPnagogic', 'hypNagogic', 'hYpNagogic', 'hyPNagogic', 'hYPNagogic', 'hypnAgogic', 'hYpnAgogic', 'hyPnAgogic', 'hYPnAgogic', 'hypNAgogic', 'hYpNAgogic', 'hyPNAgogic', 'hYPNAgogic', 'hypnaGogic', 'hYpnaGogic', 'hyPnaGogic', 'hYPnaGogic', 'hypNaGogic', 'hYpNaGogic', 'hyPNaGogic', 'hYPNaGogic', 'hypnAGogic', 'hYpnAGogic', 'hyPnAGogic', 'hYPnAGogic', 'hypNAGogic', 'hYpNAGogic', 'hyPNAGogic', 'hYPNAGogic']",4,4,reverse
+contention,ENTEN,"['conTENTIon', 'ConTENTIon', 'cOnTENTIon', 'COnTENTIon', 'coNTENTIon', 'CoNTENTIon', 'cONTENTIon', 'CONTENTIon', 'conTENTIoN', 'ConTENTIoN', 'cOnTENTIoN', 'COnTENTIoN', 'coNTENTIoN', 'CoNTENTIoN', 'cONTENTIoN', 'CONTENTIoN']",2,3,reverse
+contention,RENTE,"['contENTIOn', 'ContENTIOn', 'cOntENTIOn', 'COntENTIOn', 'coNtENTIOn', 'CoNtENTIOn', 'cONtENTIOn', 'CONtENTIOn', 'conTENTIOn', 'ConTENTIOn', 'cOnTENTIOn', 'COnTENTIOn', 'coNTENTIOn', 'CoNTENTIOn', 'cONTENTIOn', 'CONTENTIOn', 'contENTION', 'ContENTION', 'cOntENTION', 'COntENTION', 'coNtENTION', 'CoNtENTION', 'cONtENTION', 'CONtENTION', 'conTENTION', 'ConTENTION', 'cOnTENTION', 'COnTENTION', 'coNTENTION', 'CoNTENTION', 'cONTENTION', 'CONTENTION']",3,3,reverse
+contention,RENTEN,"['conTENTIOn', 'ConTENTIOn', 'cOnTENTIOn', 'COnTENTIOn', 'coNTENTIOn', 'CoNTENTIOn', 'cONTENTIOn', 'CONTENTIOn', 'conTENTION', 'ConTENTION', 'cOnTENTION', 'COnTENTION', 'coNTENTION', 'CoNTENTION', 'cONTENTION', 'CONTENTION']",2,3,reverse
+mallee,mELde,"['maLLeE', 'mALLeE']",1,7,reverse
+sapient,ENTRAP,"['SaPIENT', 'SAPIENT']",1,3,reverse
+hummels,eMmeT,"['hUMmeLs', 'HUMmeLs', 'hUMmeLS', 'HUMmeLS']",0,7,reverse
+beseeches,aSSeS,"['beSeeChes', 'BeSeeChes', 'beSeeCHes', 'BeSeeCHes', 'beSeeChEs', 'BeSeeChEs', 'beSeeCHEs', 'BeSeeCHEs', 'beSeeCheS', 'BeSeeCheS', 'beSeeCHeS', 'BeSeeCHeS', 'beSeeChES', 'BeSeeChES', 'beSeeCHES', 'BeSeeCHES']",1,1,reverse
+seething,BETTY,"['sEETHIng', 'SEETHIng', 'sEETHInG', 'SEETHInG']",0,3,reverse
+fertilised,FREIT,"['feRTILIsed', 'FeRTILIsed', 'fERTILIsed', 'FERTILIsed', 'feRTILIsEd', 'FeRTILIsEd', 'fERTILIsEd', 'FERTILIsEd', 'feRTILIseD', 'FeRTILIseD', 'fERTILIseD', 'FERTILIseD', 'feRTILIsED', 'FeRTILIsED', 'fERTILIsED', 'FERTILIsED']",1,3,reverse
+allele,DeLle,"['aLleLE', 'ALleLE']",0,7,reverse
+lolled,dELle,"['LoLleD', 'LOLleD']",1,7,reverse
+credential,PRENT,"['credeNTIAL', 'cRedeNTIAL', 'crEdeNTIAL', 'cREdeNTIAL', 'creDeNTIAL', 'cReDeNTIAL', 'crEDeNTIAL', 'cREDeNTIAL', 'credENTIAL', 'cRedENTIAL', 'crEdENTIAL', 'cREdENTIAL', 'creDENTIAL', 'cReDENTIAL', 'crEDENTIAL', 'cREDENTIAL']",4,3,reverse
+betterment,TEETH,"['bETTERment', 'BETTERment', 'bETTERmEnt', 'BETTERmEnt', 'bETTERmeNt', 'BETTERmeNt', 'bETTERmENt', 'BETTERmENt', 'bETTERmenT', 'BETTERmenT', 'bETTERmEnT', 'BETTERmEnT', 'bETTERmeNT', 'BETTERmeNT', 'bETTERmENT', 'BETTERmENT']",0,3,reverse
+lemel,leMeL,['leMeL'],0,7,reverse
+emmet,LUMme,['eMmeT'],0,7,reverse
+emmet,DUMme,['EMmeT'],0,7,reverse
+perithecia,BERIT,"['peRITHEcia', 'PeRITHEcia', 'pERITHEcia', 'PERITHEcia', 'peRITHEcIa', 'PeRITHEcIa', 'pERITHEcIa', 'PERITHEcIa', 'peRITHEciA', 'PeRITHEciA', 'pERITHEciA', 'PERITHEciA', 'peRITHEcIA', 'PeRITHEcIA', 'pERITHEcIA', 'PERITHEcIA']",1,3,reverse
+bummed,EMmeT,"['bUMmeD', 'BUMmeD']",0,7,reverse
+kaikai,KAiKAi,['KAiKAi'],0,1,reverse
+marshalled,dELle,"['MarshaLleD', 'MArshaLleD', 'MaRshaLleD', 'MARshaLleD', 'MarShaLleD', 'MArShaLleD', 'MaRShaLleD', 'MARShaLleD', 'MarsHaLleD', 'MArsHaLleD', 'MaRsHaLleD', 'MARsHaLleD', 'MarSHaLleD', 'MArSHaLleD', 'MaRSHaLleD', 'MARSHaLleD', 'MarshALleD', 'MArshALleD', 'MaRshALleD', 'MARshALleD', 'MarShALleD', 'MArShALleD', 'MaRShALleD', 'MARShALleD', 'MarsHALleD', 'MArsHALleD', 'MaRsHALleD', 'MARsHALleD', 'MarSHALleD', 'MArSHALleD', 'MaRSHALleD', 'MARSHALleD']",5,7,reverse
+nostalgic,linch,"['nostalgic', 'nOstalgic', 'noStalgic', 'nOStalgic', 'nosTalgic', 'nOsTalgic', 'noSTalgic', 'nOSTalgic', 'nostAlgic', 'nOstAlgic', 'noStAlgic', 'nOStAlgic', 'nosTAlgic', 'nOsTAlgic', 'noSTAlgic', 'nOSTAlgic']",4,4,reverse
+pummel,eMmeT,"['pUMmeL', 'PUMmeL']",0,7,reverse
+cheeriest,TRITT,"['cheERIESt', 'CheERIESt', 'cHeERIESt', 'CHeERIESt', 'chEERIESt', 'ChEERIESt', 'cHEERIESt', 'CHEERIESt']",2,3,reverse
+peptic,REATA,['pEPTIC'],0,3,reverse
+martello,mädeL,"['marteLLO', 'mArteLLO', 'maRteLLO', 'mARteLLO', 'marTeLLO', 'mArTeLLO', 'maRTeLLO', 'mARTeLLO']",3,7,reverse
+defrayed,SPILT,"['deFRAYEd', 'DeFRAYEd', 'dEFRAYEd', 'DEFRAYEd']",1,3,reverse
+detentions,RENTE,"['detENTIOns', 'DetENTIOns', 'dEtENTIOns', 'DEtENTIOns', 'deTENTIOns', 'DeTENTIOns', 'dETENTIOns', 'DETENTIOns', 'detENTIONs', 'DetENTIONs', 'dEtENTIONs', 'DEtENTIONs', 'deTENTIONs', 'DeTENTIONs', 'dETENTIONs', 'DETENTIONs', 'detENTIOnS', 'DetENTIOnS', 'dEtENTIOnS', 'DEtENTIOnS', 'deTENTIOnS', 'DeTENTIOnS', 'dETENTIOnS', 'DETENTIOnS', 'detENTIONS', 'DetENTIONS', 'dEtENTIONS', 'DEtENTIONS', 'deTENTIONS', 'DeTENTIONS', 'dETENTIONS', 'DETENTIONS']",2,3,reverse
+micky,MicKY,['MicKY'],0,1,reverse
+seethed,BETTY,"['sEETHEd', 'SEETHEd']",0,3,reverse
+celled,EDleM,"['ceLlED', 'CeLlED']",0,7,reverse
+dissolute,ELUTe,"['DissoLUTe', 'DIssoLUTe', 'DiSsoLUTe', 'DISsoLUTe', 'DisSoLUTe', 'DIsSoLUTe', 'DiSSoLUTe', 'DISSoLUTe', 'DissOLUTe', 'DIssOLUTe', 'DiSsOLUTe', 'DISsOLUTe', 'DisSOLUTe', 'DIsSOLUTe', 'DiSSOLUTe', 'DISSOLUTe']",4,7,reverse
+guitarists,RIPER,"['guiTARISts', 'GuiTARISts', 'gUiTARISts', 'GUiTARISts', 'guITARISts', 'GuITARISts', 'gUITARISts', 'GUITARISts', 'guiTARIStS', 'GuiTARIStS', 'gUiTARIStS', 'GUiTARIStS', 'guITARIStS', 'GuITARIStS', 'gUITARIStS', 'GUITARIStS']",2,3,reverse
+meted,lEDUM,['meTED'],0,7,reverse
+muleteers,ELUDe,"['muLETeErs', 'MuLETeErs', 'mULETeErs', 'MULETeErs', 'muLETeERs', 'MuLETeERs', 'mULETeERs', 'MULETeERs', 'muLETeErS', 'MuLETeErS', 'mULETeErS', 'MULETeErS', 'muLETeERS', 'MuLETeERS', 'mULETeERS', 'MULETeERS']",1,7,reverse
+gentian,PRENT,"['geNTIAN', 'gENTIAN']",1,3,reverse
+drilled,DELle,"['DriLleD', 'DRiLleD', 'DrILleD', 'DRILleD']",2,7,reverse
+septa,PEATY,['SEPTA'],0,3,reverse
+moulded,dELLe,"['MouLdeD', 'MOuLdeD', 'MoULdeD', 'MOULdeD']",2,7,reverse
+millet,dULde,"['MiLLeT', 'MILLeT']",1,7,reverse
+skywards,AwOke,"['SkywArds', 'SkywARds', 'SkywArDs', 'SkywARDs', 'SkywArdS', 'SkywARdS', 'SkywArDS', 'SkywARDS']",0,1,reverse
+polyuria,PRIUS,"['PolyURIA', 'POlyURIA', 'PoLyURIA', 'POLyURIA', 'PolYURIA', 'POlYURIA', 'PoLYURIA', 'POLYURIA']",3,3,reverse
+barbettes,TEETH,"['barbETTES', 'bArbETTES', 'baRbETTES', 'bARbETTES', 'barBETTES', 'bArBETTES', 'baRBETTES', 'bARBETTES']",3,3,reverse
+integers,TÜTEN,"['inTEGeRs', 'InTEGeRs', 'iNTEGeRs', 'INTEGeRs']",1,3,reverse
+militarize,RIPER,"['miliTARIZe', 'MiliTARIZe', 'mIliTARIZe', 'MIliTARIZe', 'miLiTARIZe', 'MiLiTARIZe', 'mILiTARIZe', 'MILiTARIZe', 'milITARIZe', 'MilITARIZe', 'mIlITARIZe', 'MIlITARIZe', 'miLITARIZe', 'MiLITARIZe', 'mILITARIZe', 'MILITARIZe']",3,3,reverse
+untethered,BETEN,"['unTETHEred', 'UnTETHEred', 'uNTETHEred', 'UNTETHEred', 'unTETHErEd', 'UnTETHErEd', 'uNTETHErEd', 'UNTETHErEd', 'unTETHEreD', 'UnTETHEreD', 'uNTETHEreD', 'UNTETHEreD', 'unTETHErED', 'UnTETHErED', 'uNTETHErED', 'UNTETHErED']",1,3,reverse
+triste,EYRIE,['tRISTE'],0,3,reverse
+watertight,REITE,"['watERTIGHt', 'WatERTIGHt', 'wAtERTIGHt', 'WAtERTIGHt', 'waTERTIGHt', 'WaTERTIGHt', 'wATERTIGHt', 'WATERTIGHt', 'watERTIGHT', 'WatERTIGHT', 'wAtERTIGHT', 'WAtERTIGHT', 'waTERTIGHT', 'WaTERTIGHT', 'wATERTIGHT', 'WATERTIGHT']",2,3,reverse
+loiterers,TITER,"['loiTERERs', 'LoiTERERs', 'lOiTERERs', 'LOiTERERs', 'loITERERs', 'LoITERERs', 'lOITERERs', 'LOITERERs']",2,3,reverse
+intermezzo,VITEN,"['inTERMEzzo', 'InTERMEzzo', 'iNTERMEzzo', 'INTERMEzzo', 'inTERMEzZo', 'InTERMEzZo', 'iNTERMEzZo', 'INTERMEzZo', 'inTERMEzzO', 'InTERMEzzO', 'iNTERMEzzO', 'INTERMEzzO', 'inTERMEzZO', 'InTERMEzZO', 'iNTERMEzZO', 'INTERMEzZO']",1,3,reverse
+fertilized,FREIT,"['feRTILIzed', 'FeRTILIzed', 'fERTILIzed', 'FERTILIzed', 'feRTILIzEd', 'FeRTILIzEd', 'fERTILIzEd', 'FERTILIzEd', 'feRTILIzeD', 'FeRTILIzeD', 'fERTILIzeD', 'FERTILIzeD', 'feRTILIzED', 'FeRTILIzED', 'fERTILIzED', 'FERTILIzED']",1,3,reverse
+skewering,SuSie,"['SKeWering', 'SKeWeRing', 'SKeWerIng', 'SKeWeRIng', 'SKeWeriNg', 'SKeWeRiNg', 'SKeWerINg', 'SKeWeRINg', 'SKeWerinG', 'SKeWeRinG', 'SKeWerInG', 'SKeWeRInG', 'SKeWeriNG', 'SKeWeRiNG', 'SKeWerING', 'SKeWeRING']",0,1,reverse
+wintering,RITEN,"['winTERINg', 'WinTERINg', 'wInTERINg', 'WInTERINg', 'wiNTERINg', 'WiNTERINg', 'wINTERINg', 'WINTERINg']",2,3,reverse
+flypaper,TAPAS,"['flyPAPER', 'fLyPAPER', 'flYPAPER', 'fLYPAPER']",2,3,reverse
+swelled,EDleM,"['sweLlED', 'SweLlED', 'sWeLlED', 'SWeLlED']",1,7,reverse
+resolutely,eLUTe,"['resoLUTeLy', 'ResoLUTeLy', 'rEsoLUTeLy', 'REsoLUTeLy', 'reSoLUTeLy', 'ReSoLUTeLy', 'rESoLUTeLy', 'RESoLUTeLy', 'resOLUTeLy', 'ResOLUTeLy', 'rEsOLUTeLy', 'REsOLUTeLy', 'reSOLUTeLy', 'ReSOLUTeLy', 'rESOLUTeLy', 'RESOLUTeLy', 'resoLUTeLY', 'ResoLUTeLY', 'rEsoLUTeLY', 'REsoLUTeLY', 'reSoLUTeLY', 'ReSoLUTeLY', 'rESoLUTeLY', 'RESoLUTeLY', 'resOLUTeLY', 'ResOLUTeLY', 'rEsOLUTeLY', 'REsOLUTeLY', 'reSOLUTeLY', 'ReSOLUTeLY', 'rESOLUTeLY', 'RESOLUTeLY']",3,7,reverse
+disseisin,KeKSe,"['disSeiSin', 'DisSeiSin', 'dIsSeiSin', 'DIsSeiSin', 'diSSeiSin', 'DiSSeiSin', 'dISSeiSin', 'DISSeiSin', 'disSeiSiN', 'DisSeiSiN', 'dIsSeiSiN', 'DIsSeiSiN', 'diSSeiSiN', 'DiSSeiSiN', 'dISSeiSiN', 'DISSeiSiN']",3,1,reverse
+vesical,CaKeS,"['veSiCal', 'VeSiCal', 'veSiCaL', 'VeSiCaL']",1,1,reverse
+whimsical,CaKeY,"['whiMSiCal', 'WhiMSiCal', 'wHiMSiCal', 'WHiMSiCal', 'whIMSiCal', 'WhIMSiCal', 'wHIMSiCal', 'WHIMSiCal', 'whiMSiCaL', 'WhiMSiCaL', 'wHiMSiCaL', 'WHiMSiCaL', 'whIMSiCaL', 'WhIMSiCaL', 'wHIMSiCaL', 'WHIMSiCaL']",3,1,reverse
+entity,SEREN,"['EnTITY', 'ENTITY']",1,3,reverse
+fruitarian,RIPER,"['fruiTARIAn', 'FruiTARIAn', 'fRuiTARIAn', 'FRuiTARIAn', 'frUiTARIAn', 'FrUiTARIAn', 'fRUiTARIAn', 'FRUiTARIAn', 'fruITARIAn', 'FruITARIAn', 'fRuITARIAn', 'FRuITARIAn', 'frUITARIAn', 'FrUITARIAn', 'fRUITARIAn', 'FRUITARIAn']",3,3,reverse
+better,TEETH,['bETTER'],0,3,reverse
+sitarist,RIPER,"['siTARISt', 'SiTARISt', 'sITARISt', 'SITARISt']",1,3,reverse
+hyperacute,PITAS,"['hyPERACute', 'HyPERACute', 'hYPERACute', 'HYPERACute', 'hyPERACuTe', 'HyPERACuTe', 'hYPERACuTe', 'HYPERACuTe', 'hyPERACutE', 'HyPERACutE', 'hYPERACutE', 'HYPERACutE', 'hyPERACuTE', 'HyPERACuTE', 'hYPERACuTE', 'HYPERACuTE']",1,3,reverse
+tertiary,REITE,"['tERTIAry', 'TERTIAry', 'tERTIArY', 'TERTIArY']",0,3,reverse
+dementia,PRENT,"['DemeNTIA', 'DEmeNTIA', 'DeMeNTIA', 'DEMeNTIA', 'DemENTIA', 'DEmENTIA', 'DeMENTIA', 'DEMENTIA']",3,3,reverse
+interiors,RITEN,"['inTERIOrs', 'InTERIOrs', 'iNTERIOrs', 'INTERIOrs', 'inTERIORs', 'InTERIORs', 'iNTERIORs', 'INTERIORs', 'inTERIOrS', 'InTERIOrS', 'iNTERIOrS', 'INTERIOrS', 'inTERIORS', 'InTERIORS', 'iNTERIORS', 'INTERIORS']",1,3,reverse
+pressie,SIegS,"['presSIe', 'PresSIe', 'pResSIe', 'PResSIe']",2,1,reverse
+essentials,PRENT,"['esseNTIALs', 'EsseNTIALs', 'eSseNTIALs', 'ESseNTIALs', 'esSeNTIALs', 'EsSeNTIALs', 'eSSeNTIALs', 'ESSeNTIALs', 'essENTIALs', 'EssENTIALs', 'eSsENTIALs', 'ESsENTIALs', 'esSENTIALs', 'EsSENTIALs', 'eSSENTIALs', 'ESSENTIALs']",3,3,reverse
+potentials,RENTE,"['potENTIAls', 'PotENTIAls', 'pOtENTIAls', 'POtENTIAls', 'poTENTIAls', 'PoTENTIAls', 'pOTENTIAls', 'POTENTIAls', 'potENTIAlS', 'PotENTIAlS', 'pOtENTIAlS', 'POtENTIAlS', 'poTENTIAlS', 'PoTENTIAlS', 'pOTENTIAlS', 'POTENTIAlS']",1,3,reverse
+potentials,PRENT,"['poteNTIALs', 'PoteNTIALs', 'pOteNTIALs', 'POteNTIALs', 'poTeNTIALs', 'PoTeNTIALs', 'pOTeNTIALs', 'POTeNTIALs', 'potENTIALs', 'PotENTIALs', 'pOtENTIALs', 'POtENTIALs', 'poTENTIALs', 'PoTENTIALs', 'pOTENTIALs', 'POTENTIALs']",2,3,reverse
+untypical,RASEN,"['unTYPICal', 'UnTYPICal', 'uNTYPICal', 'UNTYPICal', 'unTYPICaL', 'UnTYPICaL', 'uNTYPICaL', 'UNTYPICaL']",1,3,reverse
+intentions,ENTEN,"['inTENTIons', 'InTENTIons', 'iNTENTIons', 'INTENTIons', 'inTENTIoNs', 'InTENTIoNs', 'iNTENTIoNs', 'INTENTIoNs', 'inTENTIonS', 'InTENTIonS', 'iNTENTIonS', 'INTENTIonS', 'inTENTIoNS', 'InTENTIoNS', 'iNTENTIoNS', 'INTENTIoNS']",1,3,reverse
+intentions,RENTE,"['intENTIOns', 'IntENTIOns', 'iNtENTIOns', 'INtENTIOns', 'inTENTIOns', 'InTENTIOns', 'iNTENTIOns', 'INTENTIOns', 'intENTIONs', 'IntENTIONs', 'iNtENTIONs', 'INtENTIONs', 'inTENTIONs', 'InTENTIONs', 'iNTENTIONs', 'INTENTIONs', 'intENTIOnS', 'IntENTIOnS', 'iNtENTIOnS', 'INtENTIOnS', 'inTENTIOnS', 'InTENTIOnS', 'iNTENTIOnS', 'INTENTIOnS', 'intENTIONS', 'IntENTIONS', 'iNtENTIONS', 'INtENTIONS', 'inTENTIONS', 'InTENTIONS', 'iNTENTIONS', 'INTENTIONS']",2,3,reverse
+intentions,RENTEN,"['inTENTIOns', 'InTENTIOns', 'iNTENTIOns', 'INTENTIOns', 'inTENTIONs', 'InTENTIONs', 'iNTENTIONs', 'INTENTIONs', 'inTENTIOnS', 'InTENTIOnS', 'iNTENTIOnS', 'INTENTIOnS', 'inTENTIONS', 'InTENTIONS', 'iNTENTIONS', 'INTENTIONS']",1,3,reverse
+ciggy,OssIa,['CIggy'],0,1,reverse
+enamelled,DELle,"['EnameLleD', 'ENameLleD', 'EnAmeLleD', 'ENAmeLleD', 'EnaMeLleD', 'ENaMeLleD', 'EnAMeLleD', 'ENAMeLleD', 'EnamELleD', 'ENamELleD', 'EnAmELleD', 'ENAmELleD', 'EnaMELleD', 'ENaMELleD', 'EnAMELleD', 'ENAMELleD']",4,7,reverse
+cafetiere,TITRE,"['CafetIERE', 'CAfetIERE', 'CaFetIERE', 'CAFetIERE', 'CafEtIERE', 'CAfEtIERE', 'CaFEtIERE', 'CAFEtIERE', 'CafeTIERE', 'CAfeTIERE', 'CaFeTIERE', 'CAFeTIERE', 'CafETIERE', 'CAfETIERE', 'CaFETIERE', 'CAFETIERE']",4,3,reverse
+brickyards,AMicI,"['brIcKYArds', 'BrIcKYArds', 'bRIcKYArds', 'BRIcKYArds', 'brIcKYARds', 'BrIcKYARds', 'bRIcKYARds', 'BRIcKYARds', 'brIcKYArDs', 'BrIcKYArDs', 'bRIcKYArDs', 'BRIcKYArDs', 'brIcKYARDs', 'BrIcKYARDs', 'bRIcKYARDs', 'BRIcKYARDs', 'brIcKYArdS', 'BrIcKYArdS', 'bRIcKYArdS', 'BRIcKYArdS', 'brIcKYARdS', 'BrIcKYARdS', 'bRIcKYARdS', 'BRIcKYARdS', 'brIcKYArDS', 'BrIcKYArDS', 'bRIcKYArDS', 'BRIcKYArDS', 'brIcKYARDS', 'BrIcKYARDS', 'bRIcKYARDS', 'BRIcKYARDS']",2,1,reverse
+teemed,MEmEL,['teEmEd'],0,7,reverse
+teemed,TEEmED,['TEEmED'],0,7,reverse
+sanitarium,RIPER,"['saniTARIUm', 'SaniTARIUm', 'sAniTARIUm', 'SAniTARIUm', 'saNiTARIUm', 'SaNiTARIUm', 'sANiTARIUm', 'SANiTARIUm', 'sanITARIUm', 'SanITARIUm', 'sAnITARIUm', 'SAnITARIUm', 'saNITARIUm', 'SaNITARIUm', 'sANITARIUm', 'SANITARIUm']",3,3,reverse
+institute,TEUER,"['InstiTUTE', 'INstiTUTE', 'InStiTUTE', 'INStiTUTE', 'InsTiTUTE', 'INsTiTUTE', 'InSTiTUTE', 'INSTiTUTE', 'InstITUTE', 'INstITUTE', 'InStITUTE', 'INStITUTE', 'InsTITUTE', 'INsTITUTE', 'InSTITUTE', 'INSTITUTE']",4,3,reverse
+wheedled,EDlEM,"['WheeDlED', 'WHeeDlED', 'WhEeDlED', 'WHEeDlED']",2,7,reverse
+attention,RENTE,"['attENTIOn', 'AttENTIOn', 'aTtENTIOn', 'ATtENTIOn', 'atTENTIOn', 'AtTENTIOn', 'aTTENTIOn', 'ATTENTIOn', 'attENTION', 'AttENTION', 'aTtENTION', 'ATtENTION', 'atTENTION', 'AtTENTION', 'aTTENTION', 'ATTENTION']",2,3,reverse
+antiphonal,BAREN,"['anTIPHOnal', 'AnTIPHOnal', 'aNTIPHOnal', 'ANTIPHOnal', 'anTIPHONal', 'AnTIPHONal', 'aNTIPHONal', 'ANTIPHONal', 'anTIPHOnAl', 'AnTIPHOnAl', 'aNTIPHOnAl', 'ANTIPHOnAl', 'anTIPHONAl', 'AnTIPHONAl', 'aNTIPHONAl', 'ANTIPHONAl', 'anTIPHOnaL', 'AnTIPHOnaL', 'aNTIPHOnaL', 'ANTIPHOnaL', 'anTIPHONaL', 'AnTIPHONaL', 'aNTIPHONaL', 'ANTIPHONaL', 'anTIPHOnAL', 'AnTIPHOnAL', 'aNTIPHOnAL', 'ANTIPHOnAL', 'anTIPHONAL', 'AnTIPHONAL', 'aNTIPHONAL', 'ANTIPHONAL']",1,3,reverse
+peerages,PITTA,"['pEERAGEs', 'PEERAGEs', 'pEERAGES', 'PEERAGES']",0,3,reverse
+cantrip,ARIEN,"['CanTRIP', 'CAnTRIP', 'CaNTRIP', 'CANTRIP']",2,3,reverse
+ledum,meTED,['lEDUM'],0,7,reverse
+mephitis,ERBAT,"['mePHITIs', 'MePHITIs', 'mEPHITIs', 'MEPHITIs']",1,3,reverse
+intermarry,VITEN,"['inTERMArry', 'InTERMArry', 'iNTERMArry', 'INTERMArry', 'inTERMArRy', 'InTERMArRy', 'iNTERMArRy', 'INTERMArRy', 'inTERMArrY', 'InTERMArrY', 'iNTERMArrY', 'INTERMArrY', 'inTERMArRY', 'InTERMArRY', 'iNTERMArRY', 'INTERMArRY']",1,3,reverse
+antiphon,BAREN,"['anTIPHOn', 'AnTIPHOn', 'aNTIPHOn', 'ANTIPHOn', 'anTIPHON', 'AnTIPHON', 'aNTIPHON', 'ANTIPHON']",1,3,reverse
+itemizes,RÖTER,"['iTEMiZes', 'ITEMiZes', 'iTEMiZeS', 'ITEMiZeS']",0,3,reverse
+itemizes,KRÖTE,"['itEMiZEs', 'ItEMiZEs', 'iTEMiZEs', 'ITEMiZEs']",1,3,reverse
+gawkers,SkuAs,"['gAWkers', 'gAWkeRs', 'gAWkerS', 'gAWkeRS']",0,1,reverse
+cascara,CaeCa,"['CaSCara', 'CaSCaRa', 'CaSCarA', 'CaSCaRA']",0,1,reverse
+dehydrate,TEPID,"['DehydRATE', 'DEhydRATE', 'DeHydRATE', 'DEHydRATE', 'DehYdRATE', 'DEhYdRATE', 'DeHYdRATE', 'DEHYdRATE', 'DehyDRATE', 'DEhyDRATE', 'DeHyDRATE', 'DEHyDRATE', 'DehYDRATE', 'DEhYDRATE', 'DeHYDRATE', 'DEHYDRATE']",4,3,reverse
+bejewelled,EDleM,"['bejeweLlED', 'BejeweLlED', 'bEjeweLlED', 'BEjeweLlED', 'beJeweLlED', 'BeJeweLlED', 'bEJeweLlED', 'BEJeweLlED', 'bejEweLlED', 'BejEweLlED', 'bEjEweLlED', 'BEjEweLlED', 'beJEweLlED', 'BeJEweLlED', 'bEJEweLlED', 'BEJEweLlED', 'bejeWeLlED', 'BejeWeLlED', 'bEjeWeLlED', 'BEjeWeLlED', 'beJeWeLlED', 'BeJeWeLlED', 'bEJeWeLlED', 'BEJeWeLlED', 'bejEWeLlED', 'BejEWeLlED', 'bEjEWeLlED', 'BEjEWeLlED', 'beJEWeLlED', 'BeJEWeLlED', 'bEJEWeLlED', 'BEJEWeLlED']",4,7,reverse
+ossia,CIggy,['OssIa'],0,1,reverse
+rhinoceros,logia,"['rhinoceros', 'Rhinoceros', 'rHinoceros', 'RHinoceros', 'rhinoceRos', 'RhinoceRos', 'rHinoceRos', 'RHinoceRos', 'rhinocerOs', 'RhinocerOs', 'rHinocerOs', 'RHinocerOs', 'rhinoceROs', 'RhinoceROs', 'rHinoceROs', 'RHinoceROs', 'rhinoceroS', 'RhinoceroS', 'rHinoceroS', 'RHinoceroS', 'rhinoceRoS', 'RhinoceRoS', 'rHinoceRoS', 'RHinoceRoS', 'rhinocerOS', 'RhinocerOS', 'rHinocerOS', 'RHinocerOS', 'rhinoceROS', 'RhinoceROS', 'rHinoceROS', 'RHinoceROS']",1,4,reverse
+appetizer,KRETA,"['appETIZEr', 'AppETIZEr', 'aPpETIZEr', 'APpETIZEr', 'apPETIZEr', 'ApPETIZEr', 'aPPETIZEr', 'APPETIZEr']",2,3,reverse
+arteries,TRITE,"['artERIES', 'aRtERIES', 'arTERIES', 'aRTERIES']",2,3,reverse
+dyspeptic,REATA,"['dyspEPTIC', 'dYspEPTIC', 'dySpEPTIC', 'dYSpEPTIC', 'dysPEPTIC', 'dYsPEPTIC', 'dySPEPTIC', 'dYSPEPTIC']",3,3,reverse
+notaries,TRIPE,"['notARIES', 'nOtARIES', 'noTARIES', 'nOTARIES']",2,3,reverse
+ladled,dELlE,"['LaDleD', 'LADleD']",1,7,reverse
+brassica,AcKee,"['braSSicA', 'BraSSicA', 'bRaSSicA', 'BRaSSicA', 'brASSicA', 'BrASSicA', 'bRASSicA', 'BRASSicA']",3,1,reverse
+saluted,ELUTe,"['saLUTeD', 'SaLUTeD', 'sALUTeD', 'SALUTeD']",1,7,reverse
+excelled,DELle,"['ExceLleD', 'EXceLleD', 'ExCeLleD', 'EXCeLleD', 'ExcELleD', 'EXcELleD', 'ExCELleD', 'EXCELleD']",3,7,reverse
+assays,eMCee,"['aSSaYS', 'ASSaYS']",1,1,reverse
+seeress,TITTY,"['sEERESs', 'SEERESs']",0,3,reverse
+lumme,eMmeT,['LUMme'],0,7,reverse
+militarism,RIPER,"['miliTARISm', 'MiliTARISm', 'mIliTARISm', 'MIliTARISm', 'miLiTARISm', 'MiLiTARISm', 'mILiTARISm', 'MILiTARISm', 'milITARISm', 'MilITARISm', 'mIlITARISm', 'MIlITARISm', 'miLITARISm', 'MiLITARISm', 'mILITARISm', 'MILITARISm']",3,3,reverse
+modelled,dELle,"['ModeLleD', 'MOdeLleD', 'MoDeLleD', 'MODeLleD', 'ModELleD', 'MOdELleD', 'MoDELleD', 'MODELleD']",3,7,reverse
+expatiate,EPACT,"['eXPATIate', 'EXPATIate', 'eXPATIaTe', 'EXPATIaTe', 'eXPATIatE', 'EXPATIatE', 'eXPATIaTE', 'EXPATIaTE']",0,3,reverse
+winterized,RITEN,"['winTERIZed', 'WinTERIZed', 'wInTERIZed', 'WInTERIZed', 'wiNTERIZed', 'WiNTERIZed', 'wINTERIZed', 'WINTERIZed', 'winTERIZeD', 'WinTERIZeD', 'wInTERIZeD', 'WInTERIZeD', 'wiNTERIZeD', 'WiNTERIZeD', 'wINTERIZeD', 'WINTERIZeD']",2,3,reverse
+lulled,dELle,"['LuLleD', 'LULleD']",1,7,reverse
+tenrecs,TINTE,"['tENRECs', 'TENRECs']",0,3,reverse
+riptide,DREAR,"['riPTIDE', 'rIPTIDE']",1,3,reverse
+interment,VITEN,"['inTERMEnt', 'InTERMEnt', 'iNTERMEnt', 'INTERMEnt', 'inTERMEnT', 'InTERMEnT', 'iNTERMEnT', 'INTERMEnT']",1,3,reverse
+elute,ELUTe,['ELUTe'],0,7,reverse
+vanitas,YPERN,"['VanITAS', 'VAnITAS', 'VaNITAS', 'VANITAS']",2,3,reverse
+wittily,FREER,"['wiTTILY', 'wITTILY']",1,3,reverse
+docketed,LEDUM,"['dockeTED', 'dOckeTED', 'doCkeTED', 'dOCkeTED', 'docKeTED', 'dOcKeTED', 'doCKeTED', 'dOCKeTED']",3,7,reverse
+skewer,SuSie,"['SKeWer', 'SKeWeR']",0,1,reverse
+patristics,EYRIE,"['patRISTIcs', 'PatRISTIcs', 'pAtRISTIcs', 'PAtRISTIcs', 'paTRISTIcs', 'PaTRISTIcs', 'pATRISTIcs', 'PATRISTIcs', 'patRISTIcS', 'PatRISTIcS', 'pAtRISTIcS', 'PAtRISTIcS', 'paTRISTIcS', 'PaTRISTIcS', 'pATRISTIcS', 'PATRISTIcS']",1,3,reverse
+beseeched,aSSeS,"['beSeeChed', 'BeSeeChed', 'beSeeCHed', 'BeSeeCHed', 'beSeeChEd', 'BeSeeChEd', 'beSeeCHEd', 'BeSeeCHEd', 'beSeeCheD', 'BeSeeCheD', 'beSeeCHeD', 'BeSeeCHeD', 'beSeeChED', 'BeSeeChED', 'beSeeCHED', 'BeSeeCHED']",1,1,reverse
+dulled,DELle,"['DuLleD', 'DULleD']",1,7,reverse
+rescuer,SWagS,"['resCuer', 'ResCuer', 'resCueR', 'ResCueR']",1,1,reverse
+sanitaria,RIPER,"['saniTARIA', 'sAniTARIA', 'saNiTARIA', 'sANiTARIA', 'sanITARIA', 'sAnITARIA', 'saNITARIA', 'sANITARIA']",3,3,reverse
+fertilize,FREIT,"['feRTILIze', 'FeRTILIze', 'fERTILIze', 'FERTILIze', 'feRTILIzE', 'FeRTILIzE', 'fERTILIzE', 'FERTILIzE']",1,3,reverse
+convoluted,ELUTe,"['convoLUTeD', 'ConvoLUTeD', 'cOnvoLUTeD', 'COnvoLUTeD', 'coNvoLUTeD', 'CoNvoLUTeD', 'cONvoLUTeD', 'CONvoLUTeD', 'conVoLUTeD', 'ConVoLUTeD', 'cOnVoLUTeD', 'COnVoLUTeD', 'coNVoLUTeD', 'CoNVoLUTeD', 'cONVoLUTeD', 'CONVoLUTeD', 'convOLUTeD', 'ConvOLUTeD', 'cOnvOLUTeD', 'COnvOLUTeD', 'coNvOLUTeD', 'CoNvOLUTeD', 'cONvOLUTeD', 'CONvOLUTeD', 'conVOLUTeD', 'ConVOLUTeD', 'cOnVOLUTeD', 'COnVOLUTeD', 'coNVOLUTeD', 'CoNVOLUTeD', 'cONVOLUTeD', 'CONVOLUTeD']",4,7,reverse
+causeway,MAuSe,"['cauSeWAY', 'CauSeWAY', 'cAuSeWAY', 'CAuSeWAY', 'caUSeWAY', 'CaUSeWAY', 'cAUSeWAY', 'CAUSeWAY']",3,1,reverse
+impenitent,ENTER,"['ImpeniTENT', 'IMpeniTENT', 'ImPeniTENT', 'IMPeniTENT', 'ImpEniTENT', 'IMpEniTENT', 'ImPEniTENT', 'IMPEniTENT', 'ImpeNiTENT', 'IMpeNiTENT', 'ImPeNiTENT', 'IMPeNiTENT', 'ImpENiTENT', 'IMpENiTENT', 'ImPENiTENT', 'IMPENiTENT', 'ImpenITENT', 'IMpenITENT', 'ImPenITENT', 'IMPenITENT', 'ImpEnITENT', 'IMpEnITENT', 'ImPEnITENT', 'IMPEnITENT', 'ImpeNITENT', 'IMpeNITENT', 'ImPeNITENT', 'IMPeNITENT', 'ImpENITENT', 'IMpENITENT', 'ImPENITENT', 'IMPENITENT']",5,3,reverse
+impenitent,ENTERN,"['ImpenITENT', 'IMpenITENT', 'ImPenITENT', 'IMPenITENT', 'ImpEnITENT', 'IMpEnITENT', 'ImPEnITENT', 'IMPEnITENT', 'ImpeNITENT', 'IMpeNITENT', 'ImPeNITENT', 'IMPeNITENT', 'ImpENITENT', 'IMpENITENT', 'ImPENITENT', 'IMPENITENT']",4,3,reverse
+stuntman,VENUE,"['stUNTMAn', 'StUNTMAn', 'sTUNTMAn', 'STUNTMAn']",1,3,reverse
+cadential,PRENT,"['cadeNTIAL', 'cAdeNTIAL', 'caDeNTIAL', 'cADeNTIAL', 'cadENTIAL', 'cAdENTIAL', 'caDENTIAL', 'cADENTIAL']",3,3,reverse
+dialled,DELle,"['DiaLleD', 'DIaLleD', 'DiALleD', 'DIALleD']",2,7,reverse
+spatial,REPAY,"['sPATIAl', 'SPATIAl']",0,3,reverse
+spatial,PREPAY,['sPATIAL'],0,3,reverse
+enteritis,RITEN,"['enTERITis', 'EnTERITis', 'eNTERITis', 'ENTERITis', 'enTERITiS', 'EnTERITiS', 'eNTERITiS', 'ENTERITiS']",1,3,reverse
+itemised,RÖTER,"['iTEMiSed', 'ITEMiSed', 'iTEMiSeD', 'ITEMiSeD']",0,3,reverse
+cascading,CaeCa,"['CaSCading', 'CaSCaDing', 'CaSCadIng', 'CaSCaDIng', 'CaSCadiNg', 'CaSCaDiNg', 'CaSCadINg', 'CaSCaDINg', 'CaSCadinG', 'CaSCaDinG', 'CaSCadInG', 'CaSCaDInG', 'CaSCadiNG', 'CaSCaDiNG', 'CaSCadING', 'CaSCaDING']",0,1,reverse
+spatiality,REPAY,"['sPATIAlity', 'SPATIAlity', 'sPATIAlIty', 'SPATIAlIty', 'sPATIAliTy', 'SPATIAliTy', 'sPATIAlITy', 'SPATIAlITy', 'sPATIAlitY', 'SPATIAlitY', 'sPATIAlItY', 'SPATIAlItY', 'sPATIAliTY', 'SPATIAliTY', 'sPATIAlITY', 'SPATIAlITY']",0,3,reverse
+spatiality,PREPAY,"['sPATIALity', 'SPATIALity', 'sPATIALiTy', 'SPATIALiTy', 'sPATIALitY', 'SPATIALitY', 'sPATIALiTY', 'SPATIALiTY']",0,3,reverse
+alleles,DeLle,"['aLleLEs', 'ALleLEs', 'aLleLES', 'ALleLES']",0,7,reverse
+lanthanide,bigha,"['Lanthanide', 'LAnthanide', 'LaNthanide', 'LANthanide', 'LanThanide', 'LAnThanide', 'LaNThanide', 'LANThanide', 'LantHanide', 'LAntHanide', 'LaNtHanide', 'LANtHanide', 'LanTHanide', 'LAnTHanide', 'LaNTHanide', 'LANTHanide']",4,4,reverse
+doggie,SIssy,"['dOggIe', 'DOggIe']",1,1,reverse
+systemized,KRÖTE,"['systEMiZEd', 'SystEMiZEd', 'sYstEMiZEd', 'SYstEMiZEd', 'syStEMiZEd', 'SyStEMiZEd', 'sYStEMiZEd', 'SYStEMiZEd', 'sysTEMiZEd', 'SysTEMiZEd', 'sYsTEMiZEd', 'SYsTEMiZEd', 'sySTEMiZEd', 'SySTEMiZEd', 'sYSTEMiZEd', 'SYSTEMiZEd']",3,3,reverse
+schlock,local,"['schlock', 'Schlock', 'sChlock', 'SChlock']",1,4,reverse
+vesica,CaKeS,"['veSiCa', 'VeSiCa']",1,1,reverse
+pityriasis,RISER,"['piTYRIAsis', 'PiTYRIAsis', 'pITYRIAsis', 'PITYRIAsis', 'piTYRIAsIs', 'PiTYRIAsIs', 'pITYRIAsIs', 'PITYRIAsIs', 'piTYRIAsiS', 'PiTYRIAsiS', 'pITYRIAsiS', 'PITYRIAsiS', 'piTYRIAsIS', 'PiTYRIAsIS', 'pITYRIAsIS', 'PITYRIAsIS']",1,3,reverse
+pityriasis,PRISE,"['pitYRIASis', 'PitYRIASis', 'pItYRIASis', 'PItYRIASis', 'piTYRIASis', 'PiTYRIASis', 'pITYRIASis', 'PITYRIASis', 'pitYRIASiS', 'PitYRIASiS', 'pItYRIASiS', 'PItYRIASiS', 'piTYRIASiS', 'PiTYRIASiS', 'pITYRIASiS', 'PITYRIASiS']",2,3,reverse
+penitents,ENTER,"['peniTENTS', 'pEniTENTS', 'peNiTENTS', 'pENiTENTS', 'penITENTS', 'pEnITENTS', 'peNITENTS', 'pENITENTS']",3,3,reverse
+penitents,ENTERN,"['penITENTS', 'pEnITENTS', 'peNITENTS', 'pENITENTS']",2,3,reverse
+woefully,töTeT,"['wOeFULly', 'WOeFULly', 'wOeFULlY', 'WOeFULlY']",0,4,forward
+batteries,TRITE,"['battERIES', 'bAttERIES', 'baTtERIES', 'bATtERIES', 'batTERIES', 'bAtTERIES', 'baTTERIES', 'bATTERIES']",3,3,reverse
+septal,PEATY,['sEPTAL'],0,3,reverse
+cascade,CaeCa,"['CaSCade', 'CaSCaDe', 'CaSCadE', 'CaSCaDE']",0,1,reverse
+betters,TEETH,"['bETTERs', 'BETTERs']",0,3,reverse
+cantering,RITEN,"['canTERINg', 'CanTERINg', 'cAnTERINg', 'CAnTERINg', 'caNTERINg', 'CaNTERINg', 'cANTERINg', 'CANTERINg']",2,3,reverse
+assegai,KAsSe,"['asSegAi', 'AsSegAi', 'aSSegAi', 'ASSegAi']",2,1,reverse
+squashy,gAUGe,"['SqUAshy', 'SqUAsHy', 'SqUAshY', 'SqUAsHY']",0,1,reverse
+saucepan,SaUCe,"['SaUCePan', 'SaUCepAn', 'SaUCePAn', 'SaUCePaN', 'SaUCepAN', 'SaUCePAN']",0,1,reverse
+commercial,child,"['commercial', 'cOmmercial', 'coMmercial', 'cOMmercial', 'comMercial', 'cOmMercial', 'coMMercial', 'cOMMercial', 'commErcial', 'cOmmErcial', 'coMmErcial', 'cOMmErcial', 'comMErcial', 'cOmMErcial', 'coMMErcial', 'cOMMErcial', 'commeRcial', 'cOmmeRcial', 'coMmeRcial', 'cOMmeRcial', 'comMeRcial', 'cOmMeRcial', 'coMMeRcial', 'cOMMeRcial', 'commERcial', 'cOmmERcial', 'coMmERcial', 'cOMmERcial', 'comMERcial', 'cOmMERcial', 'coMMERcial', 'cOMMERcial']",5,4,reverse
+mouthpiece,TRABE,"['moutHPIECe', 'MoutHPIECe', 'mOutHPIECe', 'MOutHPIECe', 'moUtHPIECe', 'MoUtHPIECe', 'mOUtHPIECe', 'MOUtHPIECe', 'mouTHPIECe', 'MouTHPIECe', 'mOuTHPIECe', 'MOuTHPIECe', 'moUTHPIECe', 'MoUTHPIECe', 'mOUTHPIECe', 'MOUTHPIECe']",3,3,reverse
+lidded,dELLE,"['LiDdeD', 'LIDdeD']",1,7,reverse
+jessie,SIegS,"['jesSIe', 'JesSIe']",1,1,reverse
+squash,gAUGe,"['SqUAsh', 'SqUAsH']",0,1,reverse
+eyrie,TRIST,['EYRIE'],0,3,reverse
+multum,meTTe,"['muLTUM', 'mULTUM']",1,7,reverse
+hummed,EMmeT,"['hUMmeD', 'HUMmeD']",0,7,reverse
+welled,EDleM,['WeLlED'],0,7,reverse
+detention,RENTE,"['detENTIOn', 'DetENTIOn', 'dEtENTIOn', 'DEtENTIOn', 'deTENTIOn', 'DeTENTIOn', 'dETENTIOn', 'DETENTIOn', 'detENTION', 'DetENTION', 'dEtENTION', 'DEtENTION', 'deTENTION', 'DeTENTION', 'dETENTION', 'DETENTION']",2,3,reverse
+dispelled,DELle,"['DispeLleD', 'DIspeLleD', 'DiSpeLleD', 'DISpeLleD', 'DisPeLleD', 'DIsPeLleD', 'DiSPeLleD', 'DISPeLleD', 'DispELleD', 'DIspELleD', 'DiSpELleD', 'DISpELleD', 'DisPELleD', 'DIsPELleD', 'DiSPELleD', 'DISPELleD']",4,7,reverse
+seethes,BETTY,"['sEETHEs', 'SEETHEs']",0,3,reverse
+gawker,SkuAs,"['gAWker', 'gAWkeR']",0,1,reverse
+contents,ENTEN,"['conTENTS', 'cOnTENTS', 'coNTENTS', 'cONTENTS']",2,3,reverse
+altricial,chili,"['altricial', 'aLtricial', 'alTricial', 'aLTricial', 'altRicial', 'aLtRicial', 'alTRicial', 'aLTRicial', 'altrIcial', 'aLtrIcial', 'alTrIcial', 'aLTrIcial', 'altRIcial', 'aLtRIcial', 'alTRIcial', 'aLTRIcial']",4,4,reverse
+evidential,PRENT,"['evideNTIAL', 'eVideNTIAL', 'evIdeNTIAL', 'eVIdeNTIAL', 'eviDeNTIAL', 'eViDeNTIAL', 'evIDeNTIAL', 'eVIDeNTIAL', 'evidENTIAL', 'eVidENTIAL', 'evIdENTIAL', 'eVIdENTIAL', 'eviDENTIAL', 'eViDENTIAL', 'evIDENTIAL', 'eVIDENTIAL']",4,3,reverse
+beneficial,chili,"['beneficial', 'bEneficial', 'beNeficial', 'bENeficial', 'benEficial', 'bEnEficial', 'beNEficial', 'bENEficial', 'beneFicial', 'bEneFicial', 'beNeFicial', 'bENeFicial', 'benEFicial', 'bEnEFicial', 'beNEFicial', 'bENEFicial', 'benefIcial', 'bEnefIcial', 'beNefIcial', 'bENefIcial', 'benEfIcial', 'bEnEfIcial', 'beNEfIcial', 'bENEfIcial', 'beneFIcial', 'bEneFIcial', 'beNeFIcial', 'bENeFIcial', 'benEFIcial', 'bEnEFIcial', 'beNEFIcial', 'bENEFIcial']",5,4,reverse
+skywave,AwOke,"['SkywAve', 'SkywAVe', 'SkywAvE', 'SkywAVE']",0,1,reverse
+tenting,RENTE,"['tENTINg', 'TENTINg']",0,3,reverse
+etape,TAPET,['ETAPE'],0,3,reverse
+distention,RENTE,"['distENTIOn', 'DistENTIOn', 'dIstENTIOn', 'DIstENTIOn', 'diStENTIOn', 'DiStENTIOn', 'dIStENTIOn', 'DIStENTIOn', 'disTENTIOn', 'DisTENTIOn', 'dIsTENTIOn', 'DIsTENTIOn', 'diSTENTIOn', 'DiSTENTIOn', 'dISTENTIOn', 'DISTENTIOn', 'distENTION', 'DistENTION', 'dIstENTION', 'DIstENTION', 'diStENTION', 'DiStENTION', 'dIStENTION', 'DIStENTION', 'disTENTION', 'DisTENTION', 'dIsTENTION', 'DIsTENTION', 'diSTENTION', 'DiSTENTION', 'dISTENTION', 'DISTENTION']",3,3,reverse
+piggie,SIssI,"['pIggIe', 'PIggIe']",1,1,reverse
+fertilises,FREIT,"['feRTILIses', 'FeRTILIses', 'fERTILIses', 'FERTILIses', 'feRTILIsEs', 'FeRTILIsEs', 'fERTILIsEs', 'FERTILIsEs', 'feRTILIseS', 'FeRTILIseS', 'fERTILIseS', 'FERTILIseS', 'feRTILIsES', 'FeRTILIsES', 'fERTILIsES', 'FERTILIsES']",1,3,reverse
+mongol,congo,"['mongol', 'mOngol']",1,4,reverse
+messier,SIegS,"['mesSIer', 'MesSIer', 'mesSIeR', 'MesSIeR']",1,1,reverse
+essential,PRENT,"['esseNTIAL', 'eSseNTIAL', 'esSeNTIAL', 'eSSeNTIAL', 'essENTIAL', 'eSsENTIAL', 'esSENTIAL', 'eSSENTIAL']",3,3,reverse
+parietal,PETRI,"['parIETAL', 'pArIETAL', 'paRIETAL', 'pARIETAL']",1,3,reverse
+fortepiano,PRATE,"['fortEPIANo', 'FortEPIANo', 'fOrtEPIANo', 'FOrtEPIANo', 'foRtEPIANo', 'FoRtEPIANo', 'fORtEPIANo', 'FORtEPIANo', 'forTEPIANo', 'ForTEPIANo', 'fOrTEPIANo', 'FOrTEPIANo', 'foRTEPIANo', 'FoRTEPIANo', 'fORTEPIANo', 'FORTEPIANo']",3,3,reverse
+disquieted,LEDUM,"['disquieTED', 'dIsquieTED', 'diSquieTED', 'dISquieTED', 'disQuieTED', 'dIsQuieTED', 'diSQuieTED', 'dISQuieTED', 'disqUieTED', 'dIsqUieTED', 'diSqUieTED', 'dISqUieTED', 'disQUieTED', 'dIsQUieTED', 'diSQUieTED', 'dISQUieTED', 'disquIeTED', 'dIsquIeTED', 'diSquIeTED', 'dISquIeTED', 'disQuIeTED', 'dIsQuIeTED', 'diSQuIeTED', 'dISQuIeTED', 'disqUIeTED', 'dIsqUIeTED', 'diSqUIeTED', 'dISqUIeTED', 'disQUIeTED', 'dIsQUIeTED', 'diSQUIeTED', 'dISQUIeTED']",5,7,reverse
+tertius,REITE,"['tERTIUs', 'TERTIUs']",0,3,reverse
+expats,EPACT,['eXPATS'],0,3,reverse
+megaspores,gAsSY,"['MegAspores', 'MegAsPores', 'MegAspOres', 'MegAsPOres', 'MegAspoRes', 'MegAsPoRes', 'MegAspORes', 'MegAsPORes', 'MegAsporEs', 'MegAsPorEs', 'MegAspOrEs', 'MegAsPOrEs', 'MegAspoREs', 'MegAsPoREs', 'MegAspOREs', 'MegAsPOREs', 'MegAsporeS', 'MegAsPoreS', 'MegAspOreS', 'MegAsPOreS', 'MegAspoReS', 'MegAsPoReS', 'MegAspOReS', 'MegAsPOReS', 'MegAsporES', 'MegAsPorES', 'MegAspOrES', 'MegAsPOrES', 'MegAspoRES', 'MegAsPoRES', 'MegAspORES', 'MegAsPORES']",0,1,reverse
+countering,RITEN,"['counTERINg', 'CounTERINg', 'cOunTERINg', 'COunTERINg', 'coUnTERINg', 'CoUnTERINg', 'cOUnTERINg', 'COUnTERINg', 'couNTERINg', 'CouNTERINg', 'cOuNTERINg', 'COuNTERINg', 'coUNTERINg', 'CoUNTERINg', 'cOUNTERINg', 'COUNTERINg']",3,3,reverse
+butternut,UNITE,"['buttERNUT', 'bUttERNUT', 'buTtERNUT', 'bUTtERNUT', 'butTERNUT', 'bUtTERNUT', 'buTTERNUT', 'bUTTERNUT']",3,3,reverse
+enthralled,DELle,"['EnthraLleD', 'ENthraLleD', 'EnThraLleD', 'ENThraLleD', 'EntHraLleD', 'ENtHraLleD', 'EnTHraLleD', 'ENTHraLleD', 'EnthRaLleD', 'ENthRaLleD', 'EnThRaLleD', 'ENThRaLleD', 'EntHRaLleD', 'ENtHRaLleD', 'EnTHRaLleD', 'ENTHRaLleD', 'EnthrALleD', 'ENthrALleD', 'EnThrALleD', 'ENThrALleD', 'EntHrALleD', 'ENtHrALleD', 'EnTHrALleD', 'ENTHrALleD', 'EnthRALleD', 'ENthRALleD', 'EnThRALleD', 'ENThRALleD', 'EntHRALleD', 'ENtHRALleD', 'EnTHRALleD', 'ENTHRALleD']",5,7,reverse
+intermezzi,VITEN,"['inTERMEzzi', 'InTERMEzzi', 'iNTERMEzzi', 'INTERMEzzi', 'inTERMEzZi', 'InTERMEzZi', 'iNTERMEzZi', 'INTERMEzZi', 'inTERMEzzI', 'InTERMEzzI', 'iNTERMEzzI', 'INTERMEzzI', 'inTERMEzZI', 'InTERMEzZI', 'iNTERMEzZI', 'INTERMEzZI']",1,3,reverse
+vestibules,FUHRE,"['vestIBULEs', 'VestIBULEs', 'vEstIBULEs', 'VEstIBULEs', 'veStIBULEs', 'VeStIBULEs', 'vEStIBULEs', 'VEStIBULEs', 'vesTIBULEs', 'VesTIBULEs', 'vEsTIBULEs', 'VEsTIBULEs', 'veSTIBULEs', 'VeSTIBULEs', 'vESTIBULEs', 'VESTIBULEs']",3,3,reverse
+nonentity,SEREN,"['NonenTITY', 'NOnenTITY', 'NoNenTITY', 'NONenTITY', 'NonEnTITY', 'NOnEnTITY', 'NoNEnTITY', 'NONEnTITY', 'NoneNTITY', 'NOneNTITY', 'NoNeNTITY', 'NONeNTITY', 'NonENTITY', 'NOnENTITY', 'NoNENTITY', 'NONENTITY']",4,3,reverse
+dawdled,DELlE,"['DawDleD', 'DAwDleD', 'DaWDleD', 'DAWDleD']",2,7,reverse
+contenting,ENTEN,"['conTENTIng', 'ConTENTIng', 'cOnTENTIng', 'COnTENTIng', 'coNTENTIng', 'CoNTENTIng', 'cONTENTIng', 'CONTENTIng', 'conTENTInG', 'ConTENTInG', 'cOnTENTInG', 'COnTENTInG', 'coNTENTInG', 'CoNTENTInG', 'cONTENTInG', 'CONTENTInG']",2,3,reverse
+contenting,RENTE,"['contENTINg', 'ContENTINg', 'cOntENTINg', 'COntENTINg', 'coNtENTINg', 'CoNtENTINg', 'cONtENTINg', 'CONtENTINg', 'conTENTINg', 'ConTENTINg', 'cOnTENTINg', 'COnTENTINg', 'coNTENTINg', 'CoNTENTINg', 'cONTENTINg', 'CONTENTINg']",3,3,reverse
+contenting,RENTEN,"['conTENTINg', 'ConTENTINg', 'cOnTENTINg', 'COnTENTINg', 'coNTENTINg', 'CoNTENTINg', 'cONTENTINg', 'CONTENTINg']",2,3,reverse
+tristesse,EYRIE,"['tRISTEsse', 'TRISTEsse', 'tRISTEsSe', 'TRISTEsSe', 'tRISTEssE', 'TRISTEssE', 'tRISTEsSE', 'TRISTEsSE']",0,3,reverse
+fertile,FREIT,"['feRTILE', 'fERTILE']",1,3,reverse
+steeping,RATTE,"['stEEPINg', 'StEEPINg', 'sTEEPINg', 'STEEPINg']",1,3,reverse
+fertilizer,FREIT,"['feRTILIzer', 'FeRTILIzer', 'fERTILIzer', 'FERTILIzer', 'feRTILIzEr', 'FeRTILIzEr', 'fERTILIzEr', 'FERTILIzEr', 'feRTILIzeR', 'FeRTILIzeR', 'fERTILIzeR', 'FERTILIzeR', 'feRTILIzER', 'FeRTILIzER', 'fERTILIzER', 'FERTILIzER']",1,3,reverse
+tuque,TUQUE,['TUQUE'],0,3,reverse
+mausoleum,emULe,"['MausoLeUm', 'MAusoLeUm', 'MaUsoLeUm', 'MAUsoLeUm', 'MauSoLeUm', 'MAuSoLeUm', 'MaUSoLeUm', 'MAUSoLeUm', 'MausOLeUm', 'MAusOLeUm', 'MaUsOLeUm', 'MAUsOLeUm', 'MauSOLeUm', 'MAuSOLeUm', 'MaUSOLeUm', 'MAUSOLeUm']",4,7,reverse
+transient,ENTRY,"['TransIENT', 'TRansIENT', 'TrAnsIENT', 'TRAnsIENT', 'TraNsIENT', 'TRaNsIENT', 'TrANsIENT', 'TRANsIENT', 'TranSIENT', 'TRanSIENT', 'TrAnSIENT', 'TRAnSIENT', 'TraNSIENT', 'TRaNSIENT', 'TrANSIENT', 'TRANSIENT']",4,3,reverse
+fertiliser,FREIT,"['feRTILIser', 'FeRTILIser', 'fERTILIser', 'FERTILIser', 'feRTILIsEr', 'FeRTILIsEr', 'fERTILIsEr', 'FERTILIsEr', 'feRTILIseR', 'FeRTILIseR', 'fERTILIseR', 'FERTILIseR', 'feRTILIsER', 'FeRTILIsER', 'fERTILIsER', 'FERTILIsER']",1,3,reverse
+artificial,chili,"['artificial', 'aRtificial', 'arTificial', 'aRTificial', 'artIficial', 'aRtIficial', 'arTIficial', 'aRTIficial', 'artiFicial', 'aRtiFicial', 'arTiFicial', 'aRTiFicial', 'artIFicial', 'aRtIFicial', 'arTIFicial', 'aRTIFicial', 'artifIcial', 'aRtifIcial', 'arTifIcial', 'aRTifIcial', 'artIfIcial', 'aRtIfIcial', 'arTIfIcial', 'aRTIfIcial', 'artiFIcial', 'aRtiFIcial', 'arTiFIcial', 'aRTiFIcial', 'artIFIcial', 'aRtIFIcial', 'arTIFIcial', 'aRTIFIcial']",5,4,reverse
+eateries,TRITE,"['eatERIES', 'eAtERIES', 'eaTERIES', 'eATERIES']",2,3,reverse
+unredeemed,MEmEL,"['unredeEmEd', 'uNredeEmEd', 'unRedeEmEd', 'uNRedeEmEd', 'unrEdeEmEd', 'uNrEdeEmEd', 'unREdeEmEd', 'uNREdeEmEd', 'unreDeEmEd', 'uNreDeEmEd', 'unReDeEmEd', 'uNReDeEmEd', 'unrEDeEmEd', 'uNrEDeEmEd', 'unREDeEmEd', 'uNREDeEmEd']",4,7,reverse
+unredeemed,TEEmED,"['UnredEEmED', 'UNredEEmED', 'UnRedEEmED', 'UNRedEEmED', 'UnrEdEEmED', 'UNrEdEEmED', 'UnREdEEmED', 'UNREdEEmED', 'UnreDEEmED', 'UNreDEEmED', 'UnReDEEmED', 'UNReDEEmED', 'UnrEDEEmED', 'UNrEDEEmED', 'UnREDEEmED', 'UNREDEEmED']",4,7,reverse
+trist,EYRIE,['TRIST'],0,3,reverse
+sickens,SicKe,"['SicKens', 'SicKeNs', 'SicKenS', 'SicKeNS']",0,1,reverse
+squashing,gAUGe,"['SqUAshing', 'SqUAsHing', 'SqUAshIng', 'SqUAsHIng', 'SqUAshiNg', 'SqUAsHiNg', 'SqUAshINg', 'SqUAsHINg', 'SqUAshinG', 'SqUAsHinG', 'SqUAshInG', 'SqUAsHInG', 'SqUAshiNG', 'SqUAsHiNG', 'SqUAshING', 'SqUAsHING']",0,1,reverse
+lotteries,TRITE,"['lottERIES', 'lOttERIES', 'loTtERIES', 'lOTtERIES', 'lotTERIES', 'lOtTERIES', 'loTTERIES', 'lOTTERIES']",3,3,reverse
+sicken,SicKe,"['SicKen', 'SicKeN']",0,1,reverse
+bettering,TEETH,"['bETTERing', 'BETTERing', 'bETTERiNg', 'BETTERiNg', 'bETTERinG', 'BETTERinG', 'bETTERiNG', 'BETTERiNG']",0,3,reverse
+vesicular,WaKeS,"['veSiCular', 'VeSiCular', 'veSiCuLar', 'VeSiCuLar', 'veSiCulAr', 'VeSiCulAr', 'veSiCuLAr', 'VeSiCuLAr', 'veSiCulaR', 'VeSiCulaR', 'veSiCuLaR', 'VeSiCuLaR', 'veSiCulAR', 'VeSiCulAR', 'veSiCuLAR', 'VeSiCuLAR']",1,1,reverse
+empanelled,DELle,"['EmpaneLleD', 'EMpaneLleD', 'EmPaneLleD', 'EMPaneLleD', 'EmpAneLleD', 'EMpAneLleD', 'EmPAneLleD', 'EMPAneLleD', 'EmpaNeLleD', 'EMpaNeLleD', 'EmPaNeLleD', 'EMPaNeLleD', 'EmpANeLleD', 'EMpANeLleD', 'EmPANeLleD', 'EMPANeLleD', 'EmpanELleD', 'EMpanELleD', 'EmPanELleD', 'EMPanELleD', 'EmpAnELleD', 'EMpAnELleD', 'EmPAnELleD', 'EMPAnELleD', 'EmpaNELleD', 'EMpaNELleD', 'EmPaNELleD', 'EMPaNELleD', 'EmpANELleD', 'EMpANELleD', 'EmPANELleD', 'EMPANELleD']",4,7,reverse
+mallet,dULde,"['MaLLeT', 'MALLeT']",1,7,reverse
+wedded,EDLEM,['WeDdED'],0,7,reverse
+abstention,RENTE,"['abstENTIOn', 'AbstENTIOn', 'aBstENTIOn', 'ABstENTIOn', 'abStENTIOn', 'AbStENTIOn', 'aBStENTIOn', 'ABStENTIOn', 'absTENTIOn', 'AbsTENTIOn', 'aBsTENTIOn', 'ABsTENTIOn', 'abSTENTIOn', 'AbSTENTIOn', 'aBSTENTIOn', 'ABSTENTIOn', 'abstENTION', 'AbstENTION', 'aBstENTION', 'ABstENTION', 'abStENTION', 'AbStENTION', 'aBStENTION', 'ABStENTION', 'absTENTION', 'AbsTENTION', 'aBsTENTION', 'ABsTENTION', 'abSTENTION', 'AbSTENTION', 'aBSTENTION', 'ABSTENTION']",3,3,reverse
+unshielded,EDLeM,"['unshieLdED', 'uNshieLdED', 'unShieLdED', 'uNShieLdED', 'unsHieLdED', 'uNsHieLdED', 'unSHieLdED', 'uNSHieLdED', 'unshIeLdED', 'uNshIeLdED', 'unShIeLdED', 'uNShIeLdED', 'unsHIeLdED', 'uNsHIeLdED', 'unSHIeLdED', 'uNSHIeLdED']",4,7,reverse
+matchlocks,local,"['matchlocks', 'Matchlocks', 'mAtchlocks', 'MAtchlocks', 'maTchlocks', 'MaTchlocks', 'mATchlocks', 'MATchlocks', 'matChlocks', 'MatChlocks', 'mAtChlocks', 'MAtChlocks', 'maTChlocks', 'MaTChlocks', 'mATChlocks', 'MATChlocks', 'matchlockS', 'MatchlockS', 'mAtchlockS', 'MAtchlockS', 'maTchlockS', 'MaTchlockS', 'mATchlockS', 'MATchlockS', 'matChlockS', 'MatChlockS', 'mAtChlockS', 'MAtChlockS', 'maTChlockS', 'MaTChlockS', 'mATChlockS', 'MATChlockS']",3,4,reverse
+cascades,CaeCa,"['CaSCades', 'CaSCaDes', 'CaSCadEs', 'CaSCaDEs', 'CaSCadeS', 'CaSCaDeS', 'CaSCadES', 'CaSCaDES']",0,1,reverse
+teeth,BETTE,['TEETH'],0,3,reverse
+myalgic,linch,"['myalgic', 'mYalgic', 'myAlgic', 'mYAlgic']",2,4,reverse
+medalled,dELle,"['MedaLleD', 'MEdaLleD', 'MeDaLleD', 'MEDaLleD', 'MedALleD', 'MEdALleD', 'MeDALleD', 'MEDALleD']",3,7,reverse
+barbette,TEETH,"['BarbETTE', 'BArbETTE', 'BaRbETTE', 'BARbETTE', 'BarBETTE', 'BArBETTE', 'BaRBETTE', 'BARBETTE']",3,3,reverse
+sentential,ENTEN,"['senTENTIal', 'SenTENTIal', 'sEnTENTIal', 'SEnTENTIal', 'seNTENTIal', 'SeNTENTIal', 'sENTENTIal', 'SENTENTIal', 'senTENTIaL', 'SenTENTIaL', 'sEnTENTIaL', 'SEnTENTIaL', 'seNTENTIaL', 'SeNTENTIaL', 'sENTENTIaL', 'SENTENTIaL']",2,3,reverse
+sentential,RENTE,"['sentENTIAl', 'SentENTIAl', 'sEntENTIAl', 'SEntENTIAl', 'seNtENTIAl', 'SeNtENTIAl', 'sENtENTIAl', 'SENtENTIAl', 'senTENTIAl', 'SenTENTIAl', 'sEnTENTIAl', 'SEnTENTIAl', 'seNTENTIAl', 'SeNTENTIAl', 'sENTENTIAl', 'SENTENTIAl']",3,3,reverse
+sentential,RENTEN,"['senTENTIAl', 'SenTENTIAl', 'sEnTENTIAl', 'SEnTENTIAl', 'seNTENTIAl', 'SeNTENTIAl', 'sENTENTIAl', 'SENTENTIAl']",2,3,reverse
+sentential,PRENT,"['senteNTIAL', 'sEnteNTIAL', 'seNteNTIAL', 'sENteNTIAL', 'senTeNTIAL', 'sEnTeNTIAL', 'seNTeNTIAL', 'sENTeNTIAL', 'sentENTIAL', 'sEntENTIAL', 'seNtENTIAL', 'sENtENTIAL', 'senTENTIAL', 'sEnTENTIAL', 'seNTENTIAL', 'sENTENTIAL']",4,3,reverse
+linoleum,emULe,"['LinoLeUm', 'LInoLeUm', 'LiNoLeUm', 'LINoLeUm', 'LinOLeUm', 'LInOLeUm', 'LiNOLeUm', 'LINOLeUm']",3,7,reverse
+sentries,TRIENT,"['seNTRIES', 'sENTRIES']",1,3,reverse
+extolled,DELle,"['ExtoLleD', 'EXtoLleD', 'ExToLleD', 'EXToLleD', 'ExtOLleD', 'EXtOLleD', 'ExTOLleD', 'EXTOLleD']",3,7,reverse
+tentation,REPENT,"['teNTATIOn', 'TeNTATIOn', 'tENTATIOn', 'TENTATIOn', 'teNTATION', 'TeNTATION', 'tENTATION', 'TENTATION']",1,3,reverse
+molded,dELLe,"['MoLdeD', 'MOLdeD']",1,7,reverse
+sickened,SicKe,"['SicKened', 'SicKeNed', 'SicKenEd', 'SicKeNEd', 'SicKeneD', 'SicKeNeD', 'SicKenED', 'SicKeNED']",0,1,reverse
+infertile,FREIT,"['infeRTILE', 'iNfeRTILE', 'inFeRTILE', 'iNFeRTILE', 'infERTILE', 'iNfERTILE', 'inFERTILE', 'iNFERTILE']",3,3,reverse
+cascabel,CaeCa,"['CaSCabel', 'CaSCaBel', 'CaSCabEl', 'CaSCaBEl', 'CaSCabeL', 'CaSCaBeL', 'CaSCabEL', 'CaSCaBEL']",0,1,reverse
+peaty,SEPTA,['PEATY'],0,3,reverse
+masteries,TRITE,"['mastERIES', 'mAstERIES', 'maStERIES', 'mAStERIES', 'masTERIES', 'mAsTERIES', 'maSTERIES', 'mASTERIES']",3,3,reverse
+seeping,RATTY,"['sEEPINg', 'SEEPINg']",0,3,reverse
+libelled,dELle,"['LibeLleD', 'LIbeLleD', 'LiBeLleD', 'LIBeLleD', 'LibELleD', 'LIbELleD', 'LiBELleD', 'LIBELleD']",3,7,reverse
+steerer,TITTE,"['stEERER', 'sTEERER']",1,3,reverse
+austenitic,ERNTE,"['austENITIc', 'AustENITIc', 'aUstENITIc', 'AUstENITIc', 'auStENITIc', 'AuStENITIc', 'aUStENITIc', 'AUStENITIc', 'ausTENITIc', 'AusTENITIc', 'aUsTENITIc', 'AUsTENITIc', 'auSTENITIc', 'AuSTENITIc', 'aUSTENITIc', 'AUSTENITIc']",3,3,reverse
+itemized,RÖTER,"['iTEMiZed', 'ITEMiZed', 'iTEMiZeD', 'ITEMiZeD']",0,3,reverse
+itemized,KRÖTE,"['itEMiZEd', 'ItEMiZEd', 'iTEMiZEd', 'ITEMiZEd']",1,3,reverse
+ratepayer,SPATE,"['ratEPAYEr', 'RatEPAYEr', 'rAtEPAYEr', 'RAtEPAYEr', 'raTEPAYEr', 'RaTEPAYEr', 'rATEPAYEr', 'RATEPAYEr']",2,3,reverse
+sickening,SicKe,"['SicKening', 'SicKeNing', 'SicKenIng', 'SicKeNIng', 'SicKeniNg', 'SicKeNiNg', 'SicKenINg', 'SicKeNINg', 'SicKeninG', 'SicKeNinG', 'SicKenInG', 'SicKeNInG', 'SicKeniNG', 'SicKeNiNG', 'SicKenING', 'SicKeNING']",0,1,reverse
+tasselled,EDleM,"['tasseLlED', 'tAsseLlED', 'taSseLlED', 'tASseLlED', 'tasSeLlED', 'tAsSeLlED', 'taSSeLlED', 'tASSeLlED']",3,7,reverse
+seethe,BETTY,['sEETHE'],0,3,reverse
+fossae,SAggy,"['fOssAe', 'FOssAe']",1,1,reverse
+creepiest,TRATT,"['creEPIESt', 'CreEPIESt', 'cReEPIESt', 'CReEPIESt', 'crEEPIESt', 'CrEEPIESt', 'cREEPIESt', 'CREEPIESt']",2,3,reverse
+nitrided,DRIER,"['niTRIDEd', 'NiTRIDEd', 'nITRIDEd', 'NITRIDEd']",1,3,reverse
+skewered,SuSie,"['SKeWered', 'SKeWeRed', 'SKeWerEd', 'SKeWeREd', 'SKeWereD', 'SKeWeReD', 'SKeWerED', 'SKeWeRED']",0,1,reverse
+valeted,ELUDe,"['VaLETeD', 'VALETeD']",1,7,reverse
+nectaries,TRIPE,"['nectARIES', 'nEctARIES', 'neCtARIES', 'nECtARIES', 'necTARIES', 'nEcTARIES', 'neCTARIES', 'nECTARIES']",3,3,reverse
+steering,RITTE,"['stEERINg', 'StEERINg', 'sTEERINg', 'STEERINg']",1,3,reverse
+dentaries,RIPEN,"['denTARIEs', 'DenTARIEs', 'dEnTARIEs', 'DEnTARIEs', 'deNTARIEs', 'DeNTARIEs', 'dENTARIEs', 'DENTARIEs']",2,3,reverse
+dentaries,TRIPE,"['dentARIES', 'dEntARIES', 'deNtARIES', 'dENtARIES', 'denTARIES', 'dEnTARIES', 'deNTARIES', 'dENTARIES']",3,3,reverse
+patenting,RENTE,"['patENTINg', 'PatENTINg', 'pAtENTINg', 'PAtENTINg', 'paTENTINg', 'PaTENTINg', 'pATENTINg', 'PATENTINg']",1,3,reverse
+riptides,DREAR,"['riPTIDEs', 'RiPTIDEs', 'rIPTIDEs', 'RIPTIDEs']",1,3,reverse
+supervise,MITAU,"['suPERVIse', 'SuPERVIse', 'sUPERVIse', 'SUPERVIse', 'suPERVIsE', 'SuPERVIsE', 'sUPERVIsE', 'SUPERVIsE']",1,3,reverse
+levelled,dELle,"['LeveLleD', 'LEveLleD', 'LeVeLleD', 'LEVeLleD', 'LevELleD', 'LEvELleD', 'LeVELleD', 'LEVELleD']",3,7,reverse
+defray,SPILT,"['DeFRAY', 'DEFRAY']",1,3,reverse
+saucer,SaUCe,"['SaUCer', 'SaUCeR']",0,1,reverse
+torrential,PRENT,"['torreNTIAL', 'tOrreNTIAL', 'toRreNTIAL', 'tORreNTIAL', 'torReNTIAL', 'tOrReNTIAL', 'toRReNTIAL', 'tORReNTIAL', 'torrENTIAL', 'tOrrENTIAL', 'toRrENTIAL', 'tORrENTIAL', 'torRENTIAL', 'tOrRENTIAL', 'toRRENTIAL', 'tORRENTIAL']",4,3,reverse
+marvelled,dELle,"['MarveLleD', 'MArveLleD', 'MaRveLleD', 'MARveLleD', 'MarVeLleD', 'MArVeLleD', 'MaRVeLleD', 'MARVeLleD', 'MarvELleD', 'MArvELleD', 'MaRvELleD', 'MARvELleD', 'MarVELleD', 'MArVELleD', 'MaRVELleD', 'MARVELleD']",4,7,reverse
+eyeballed,DELle,"['EyebaLleD', 'EYebaLleD', 'EyEbaLleD', 'EYEbaLleD', 'EyeBaLleD', 'EYeBaLleD', 'EyEBaLleD', 'EYEBaLleD', 'EyebALleD', 'EYebALleD', 'EyEbALleD', 'EYEbALleD', 'EyeBALleD', 'EYeBALleD', 'EyEBALleD', 'EYEBALleD']",4,7,reverse
+stenting,RENTE,"['stENTINg', 'StENTINg', 'sTENTINg', 'STENTINg']",1,3,reverse
+duelled,DELle,"['DueLleD', 'DUeLleD', 'DuELleD', 'DUELleD']",2,7,reverse
+parietals,PETRI,"['parIETALs', 'ParIETALs', 'pArIETALs', 'PArIETALs', 'paRIETALs', 'PaRIETALs', 'pARIETALs', 'PARIETALs']",1,3,reverse
+demerara,PIPIT,"['DemeRARA', 'DEmeRARA', 'DeMeRARA', 'DEMeRARA', 'DemERARA', 'DEmERARA', 'DeMERARA', 'DEMERARA']",3,3,reverse
+untether,BETEN,"['unTETHEr', 'UnTETHEr', 'uNTETHEr', 'UNTETHEr']",1,3,reverse
+antigen,TÜREN,"['anTIGeN', 'aNTIGeN']",1,3,reverse
+officially,chili,"['officially', 'Officially', 'oFficially', 'OFficially', 'ofFicially', 'OfFicially', 'oFFicially', 'OFFicially', 'offIcially', 'OffIcially', 'oFfIcially', 'OFfIcially', 'ofFIcially', 'OfFIcially', 'oFFIcially', 'OFFIcially', 'officiallY', 'OfficiallY', 'oFficiallY', 'OFficiallY', 'ofFiciallY', 'OfFiciallY', 'oFFiciallY', 'OFFiciallY', 'offIciallY', 'OffIciallY', 'oFfIciallY', 'OFfIciallY', 'ofFIciallY', 'OfFIciallY', 'oFFIciallY', 'OFFIciallY']",3,4,reverse
+rummages,eSsAY,"['rumMAgeS', 'RumMAgeS', 'rUmMAgeS', 'RUmMAgeS', 'ruMMAgeS', 'RuMMAgeS', 'rUMMAgeS', 'RUMMAgeS']",3,1,reverse
+melded,dELLe,"['MeLdeD', 'MELdeD']",1,7,reverse
+dressier,SIegS,"['dresSIer', 'DresSIer', 'dResSIer', 'DResSIer', 'dresSIeR', 'DresSIeR', 'dResSIeR', 'DResSIeR']",2,1,reverse
+chapelries,TRIFT,"['chapeLRIES', 'cHapeLRIES', 'chApeLRIES', 'cHApeLRIES', 'chaPeLRIES', 'cHaPeLRIES', 'chAPeLRIES', 'cHAPeLRIES', 'chapELRIES', 'cHapELRIES', 'chApELRIES', 'cHApELRIES', 'chaPELRIES', 'cHaPELRIES', 'chAPELRIES', 'cHAPELRIES']",4,3,reverse
+hydrates,TEPID,"['hydRATES', 'hYdRATES', 'hyDRATES', 'hYDRATES']",2,3,reverse
+emcees,eSSaYS,['eMCeeS'],0,1,reverse
+emcees,eSSaY,"['eMCeeS', 'EMCeeS']",1,1,reverse
+absolutely,eLUTe,"['absoLUTeLy', 'AbsoLUTeLy', 'aBsoLUTeLy', 'ABsoLUTeLy', 'abSoLUTeLy', 'AbSoLUTeLy', 'aBSoLUTeLy', 'ABSoLUTeLy', 'absOLUTeLy', 'AbsOLUTeLy', 'aBsOLUTeLy', 'ABsOLUTeLy', 'abSOLUTeLy', 'AbSOLUTeLy', 'aBSOLUTeLy', 'ABSOLUTeLy', 'absoLUTeLY', 'AbsoLUTeLY', 'aBsoLUTeLY', 'ABsoLUTeLY', 'abSoLUTeLY', 'AbSoLUTeLY', 'aBSoLUTeLY', 'ABSoLUTeLY', 'absOLUTeLY', 'AbsOLUTeLY', 'aBsOLUTeLY', 'ABsOLUTeLY', 'abSOLUTeLY', 'AbSOLUTeLY', 'aBSOLUTeLY', 'ABSOLUTeLY']",3,7,reverse
+architects,EXTER,"['archiTECTS', 'aRchiTECTS', 'arChiTECTS', 'aRChiTECTS', 'arcHiTECTS', 'aRcHiTECTS', 'arCHiTECTS', 'aRCHiTECTS', 'archITECTS', 'aRchITECTS', 'arChITECTS', 'aRChITECTS', 'arcHITECTS', 'aRcHITECTS', 'arCHITECTS', 'aRCHITECTS']",4,3,reverse
+assaying,IMAge,"['aSsAYIng', 'ASsAYIng', 'aSsAYINg', 'ASsAYINg', 'aSsAYInG', 'ASsAYInG', 'aSsAYING', 'ASsAYING']",1,1,reverse
+potteries,TRITE,"['pottERIES', 'pOttERIES', 'poTtERIES', 'pOTtERIES', 'potTERIES', 'pOtTERIES', 'poTTERIES', 'pOTTERIES']",2,3,reverse
+iliacus,gUcCI,"['ilIacUs', 'IlIacUs', 'iLIacUs', 'ILIacUs']",2,1,reverse
+amnesiac,cAKeS,"['amneSiAc', 'AmneSiAc', 'aMneSiAc', 'AMneSiAc', 'amNeSiAc', 'AmNeSiAc', 'aMNeSiAc', 'AMNeSiAc']",3,1,reverse
+tangential,PRENT,"['tangeNTIAL', 'tAngeNTIAL', 'taNgeNTIAL', 'tANgeNTIAL', 'tanGeNTIAL', 'tAnGeNTIAL', 'taNGeNTIAL', 'tANGeNTIAL', 'tangENTIAL', 'tAngENTIAL', 'taNgENTIAL', 'tANgENTIAL', 'tanGENTIAL', 'tAnGENTIAL', 'taNGENTIAL', 'tANGENTIAL']",4,3,reverse
+polydipsia,YARDS,"['polyDIPSIa', 'PolyDIPSIa', 'pOlyDIPSIa', 'POlyDIPSIa', 'poLyDIPSIa', 'PoLyDIPSIa', 'pOLyDIPSIa', 'POLyDIPSIa', 'polYDIPSIa', 'PolYDIPSIa', 'pOlYDIPSIa', 'POlYDIPSIa', 'poLYDIPSIa', 'PoLYDIPSIa', 'pOLYDIPSIa', 'POLYDIPSIa']",2,3,reverse
+images,eSsAY,"['iMAgeS', 'IMAgeS']",1,1,reverse
+constitute,TEUER,"['ConstiTUTE', 'COnstiTUTE', 'CoNstiTUTE', 'CONstiTUTE', 'ConStiTUTE', 'COnStiTUTE', 'CoNStiTUTE', 'CONStiTUTE', 'ConsTiTUTE', 'COnsTiTUTE', 'CoNsTiTUTE', 'CONsTiTUTE', 'ConSTiTUTE', 'COnSTiTUTE', 'CoNSTiTUTE', 'CONSTiTUTE', 'ConstITUTE', 'COnstITUTE', 'CoNstITUTE', 'CONstITUTE', 'ConStITUTE', 'COnStITUTE', 'CoNStITUTE', 'CONStITUTE', 'ConsTITUTE', 'COnsTITUTE', 'CoNsTITUTE', 'CONsTITUTE', 'ConSTITUTE', 'COnSTITUTE', 'CoNSTITUTE', 'CONSTITUTE']",5,3,reverse
+squashed,gAUGe,"['SqUAshed', 'SqUAsHed', 'SqUAshEd', 'SqUAsHEd', 'SqUAsheD', 'SqUAsHeD', 'SqUAshED', 'SqUAsHED']",0,1,reverse
+nitrile,FRIER,"['niTRILE', 'nITRILE']",1,3,reverse
+centrist,EYRIE,"['CentRIST', 'CEntRIST', 'CeNtRIST', 'CENtRIST', 'CenTRIST', 'CEnTRIST', 'CeNTRIST', 'CENTRIST']",3,3,reverse
+loggia,CIssy,"['lOggIa', 'LOggIa']",1,1,reverse
+quantity,SEREN,"['QuanTITY', 'QUanTITY', 'QuAnTITY', 'QUAnTITY', 'QuaNTITY', 'QUaNTITY', 'QuANTITY', 'QUANTITY']",3,3,reverse
+ratepayers,SPATE,"['ratEPAYErs', 'RatEPAYErs', 'rAtEPAYErs', 'RAtEPAYErs', 'raTEPAYErs', 'RaTEPAYErs', 'rATEPAYErs', 'RATEPAYErs', 'ratEPAYErS', 'RatEPAYErS', 'rAtEPAYErS', 'RAtEPAYErS', 'raTEPAYErS', 'RaTEPAYErS', 'rATEPAYErS', 'RATEPAYErS']",2,3,reverse
+nitrides,DRIER,"['niTRIDEs', 'NiTRIDEs', 'nITRIDEs', 'NITRIDEs']",1,3,reverse
+sequential,PRENT,"['sequeNTIAL', 'sEqueNTIAL', 'seQueNTIAL', 'sEQueNTIAL', 'seqUeNTIAL', 'sEqUeNTIAL', 'seQUeNTIAL', 'sEQUeNTIAL', 'sequENTIAL', 'sEquENTIAL', 'seQuENTIAL', 'sEQuENTIAL', 'seqUENTIAL', 'sEqUENTIAL', 'seQUENTIAL', 'sEQUENTIAL']",4,3,reverse
+entente,ENTEN,"['enTENTE', 'eNTENTE']",1,3,reverse
+restitute,TEUER,"['RestiTUTE', 'REstiTUTE', 'ReStiTUTE', 'REStiTUTE', 'ResTiTUTE', 'REsTiTUTE', 'ReSTiTUTE', 'RESTiTUTE', 'RestITUTE', 'REstITUTE', 'ReStITUTE', 'REStITUTE', 'ResTITUTE', 'REsTITUTE', 'ReSTITUTE', 'RESTITUTE']",4,3,reverse
+demagogic,linon,"['demagogic', 'dEmagogic', 'deMagogic', 'dEMagogic', 'demAgogic', 'dEmAgogic', 'deMAgogic', 'dEMAgogic', 'demaGogic', 'dEmaGogic', 'deMaGogic', 'dEMaGogic', 'demAGogic', 'dEmAGogic', 'deMAGogic', 'dEMAGogic']",4,4,reverse
+gelded,EDLeM,['geLdED'],0,7,reverse
+transients,ENTRY,"['transIENTS', 'tRansIENTS', 'trAnsIENTS', 'tRAnsIENTS', 'traNsIENTS', 'tRaNsIENTS', 'trANsIENTS', 'tRANsIENTS', 'tranSIENTS', 'tRanSIENTS', 'trAnSIENTS', 'tRAnSIENTS', 'traNSIENTS', 'tRaNSIENTS', 'trANSIENTS', 'tRANSIENTS']",4,3,reverse
+hemmed,MEmeL,"['heMmEd', 'HeMmEd']",0,7,reverse
+essay,MAgeS,['eSsAY'],0,1,reverse
+centrists,EYRIE,"['centRISTS', 'cEntRISTS', 'ceNtRISTS', 'cENtRISTS', 'cenTRISTS', 'cEnTRISTS', 'ceNTRISTS', 'cENTRISTS']",3,3,reverse
+fertilise,FREIT,"['feRTILIse', 'FeRTILIse', 'fERTILIse', 'FERTILIse', 'feRTILIsE', 'FeRTILIsE', 'fERTILIsE', 'FERTILIsE']",1,3,reverse
+appetizing,KRETA,"['appETIZIng', 'AppETIZIng', 'aPpETIZIng', 'APpETIZIng', 'apPETIZIng', 'ApPETIZIng', 'aPPETIZIng', 'APPETIZIng', 'appETIZInG', 'AppETIZInG', 'aPpETIZInG', 'APpETIZInG', 'apPETIZInG', 'ApPETIZInG', 'aPPETIZInG', 'APPETIZInG']",2,3,reverse
+milled,dELle,"['MiLleD', 'MILleD']",1,7,reverse
+enfolded,DELLe,"['EnfoLdeD', 'ENfoLdeD', 'EnFoLdeD', 'ENFoLdeD', 'EnfOLdeD', 'ENfOLdeD', 'EnFOLdeD', 'ENFOLdeD']",3,7,reverse
+megastar,gAsSY,"['MegAstar', 'MegAsTar', 'MegAstAr', 'MegAsTAr', 'MegAstaR', 'MegAsTaR', 'MegAstAR', 'MegAsTAR']",0,1,reverse
+rescued,SWagS,"['resCued', 'ResCued', 'resCueD', 'ResCueD']",1,1,reverse
+dementias,PRENT,"['demeNTIAS', 'dEmeNTIAS', 'deMeNTIAS', 'dEMeNTIAS', 'demENTIAS', 'dEmENTIAS', 'deMENTIAS', 'dEMENTIAS']",3,3,reverse
+potential,RENTE,"['potENTIAl', 'PotENTIAl', 'pOtENTIAl', 'POtENTIAl', 'poTENTIAl', 'PoTENTIAl', 'pOTENTIAl', 'POTENTIAl']",1,3,reverse
+potential,PRENT,"['poteNTIAL', 'pOteNTIAL', 'poTeNTIAL', 'pOTeNTIAL', 'potENTIAL', 'pOtENTIAL', 'poTENTIAL', 'pOTENTIAL']",2,3,reverse
+expelled,DELle,"['ExpeLleD', 'EXpeLleD', 'ExPeLleD', 'EXPeLleD', 'ExpELleD', 'EXpELleD', 'ExPELleD', 'EXPELleD']",3,7,reverse
+friary,SIPRI,"['FrIARY', 'FRIARY']",1,3,reverse
+undiluted,ELUTe,"['undiLUTeD', 'uNdiLUTeD', 'unDiLUTeD', 'uNDiLUTeD', 'undILUTeD', 'uNdILUTeD', 'unDILUTeD', 'uNDILUTeD']",3,7,reverse
+bifid,bifid,['bifid'],0,4,reverse
+draping,RAPID,"['dRAPINg', 'DRAPINg']",0,3,reverse
+deemed,DEEmED,['DEEmED'],0,7,reverse
+needled,EDlEM,"['neeDlED', 'nEeDlED']",1,7,reverse
+apiarist,RIPRAP,"['aPIARISt', 'APIARISt']",0,3,reverse
+attentive,RENTE,"['attENTIVe', 'AttENTIVe', 'aTtENTIVe', 'ATtENTIVe', 'atTENTIVe', 'AtTENTIVe', 'aTTENTIVe', 'ATTENTIVe']",2,3,reverse
+labelled,dELle,"['LabeLleD', 'LAbeLleD', 'LaBeLleD', 'LABeLleD', 'LabELleD', 'LAbELleD', 'LaBELleD', 'LABELleD']",3,7,reverse
+cascaded,CaeCa,"['CaSCaded', 'CaSCaDed', 'CaSCadEd', 'CaSCaDEd', 'CaSCadeD', 'CaSCaDeD', 'CaSCadED', 'CaSCaDED']",0,1,reverse
+adulteries,TRITE,"['adultERIES', 'aDultERIES', 'adUltERIES', 'aDUltERIES', 'aduLtERIES', 'aDuLtERIES', 'adULtERIES', 'aDULtERIES', 'adulTERIES', 'aDulTERIES', 'adUlTERIES', 'aDUlTERIES', 'aduLTERIES', 'aDuLTERIES', 'adULTERIES', 'aDULTERIES']",4,3,reverse
+yielded,EDLeM,"['yieLdED', 'YieLdED', 'yIeLdED', 'YIeLdED']",1,7,reverse
+enrolled,DELle,"['EnroLleD', 'ENroLleD', 'EnRoLleD', 'ENRoLleD', 'EnrOLleD', 'ENrOLleD', 'EnROLleD', 'ENROLleD']",3,7,reverse
+neuralgic,linch,"['neuralgic', 'nEuralgic', 'neUralgic', 'nEUralgic', 'neuRalgic', 'nEuRalgic', 'neURalgic', 'nEURalgic', 'neurAlgic', 'nEurAlgic', 'neUrAlgic', 'nEUrAlgic', 'neuRAlgic', 'nEuRAlgic', 'neURAlgic', 'nEURAlgic']",4,4,reverse
+stuntmen,VENUE,"['stUNTMEn', 'StUNTMEn', 'sTUNTMEn', 'STUNTMEn']",1,3,reverse
+retentive,RENTE,"['retENTIVe', 'RetENTIVe', 'rEtENTIVe', 'REtENTIVe', 'reTENTIVe', 'ReTENTIVe', 'rETENTIVe', 'RETENTIVe']",2,3,reverse
+entering,RITEN,"['enTERINg', 'EnTERINg', 'eNTERINg', 'ENTERINg']",1,3,reverse
+processual,AUgeS,"['proceSsUAl', 'ProceSsUAl', 'pRoceSsUAl', 'PRoceSsUAl', 'prOceSsUAl', 'PrOceSsUAl', 'pROceSsUAl', 'PROceSsUAl', 'proCeSsUAl', 'ProCeSsUAl', 'pRoCeSsUAl', 'PRoCeSsUAl', 'prOCeSsUAl', 'PrOCeSsUAl', 'pROCeSsUAl', 'PROCeSsUAl', 'proceSsUAL', 'ProceSsUAL', 'pRoceSsUAL', 'PRoceSsUAL', 'prOceSsUAL', 'PrOceSsUAL', 'pROceSsUAL', 'PROceSsUAL', 'proCeSsUAL', 'ProCeSsUAL', 'pRoCeSsUAL', 'PRoCeSsUAL', 'prOCeSsUAL', 'PrOCeSsUAL', 'pROCeSsUAL', 'PROCeSsUAL']",4,1,reverse
+rotaries,TRIPE,"['rotARIES', 'rOtARIES', 'roTARIES', 'rOTARIES']",2,3,reverse
+intention,ENTEN,"['inTENTIon', 'InTENTIon', 'iNTENTIon', 'INTENTIon', 'inTENTIoN', 'InTENTIoN', 'iNTENTIoN', 'INTENTIoN']",1,3,reverse
+intention,RENTE,"['intENTIOn', 'IntENTIOn', 'iNtENTIOn', 'INtENTIOn', 'inTENTIOn', 'InTENTIOn', 'iNTENTIOn', 'INTENTIOn', 'intENTION', 'IntENTION', 'iNtENTION', 'INtENTION', 'inTENTION', 'InTENTION', 'iNTENTION', 'INTENTION']",2,3,reverse
+intention,RENTEN,"['inTENTIOn', 'InTENTIOn', 'iNTENTIOn', 'INTENTIOn', 'inTENTION', 'InTENTION', 'iNTENTION', 'INTENTION']",1,3,reverse
+decoys,gOyaS,"['deCOys', 'DeCOys']",1,1,reverse
+saucerful,SaUCe,"['SaUCerful', 'SaUCeRful', 'SaUCerFul', 'SaUCeRFul', 'SaUCerfUl', 'SaUCeRfUl', 'SaUCerFUl', 'SaUCeRFUl', 'SaUCerfuL', 'SaUCeRfuL', 'SaUCerFuL', 'SaUCeRFuL', 'SaUCerfUL', 'SaUCeRfUL', 'SaUCerFUL', 'SaUCeRFUL']",0,1,reverse
+essays,eMCeeS,['eSSaYS'],0,1,reverse
+essays,eMCee,"['eSSaYS', 'ESSaYS']",1,1,reverse
+penitent,ENTER,"['PeniTENT', 'PEniTENT', 'PeNiTENT', 'PENiTENT', 'PenITENT', 'PEnITENT', 'PeNITENT', 'PENITENT']",3,3,reverse
+penitent,ENTERN,"['PenITENT', 'PEnITENT', 'PeNITENT', 'PENITENT']",2,3,reverse
+interiorly,RITEN,"['inTERIOrly', 'InTERIOrly', 'iNTERIOrly', 'INTERIOrly', 'inTERIORly', 'InTERIORly', 'iNTERIORly', 'INTERIORly', 'inTERIOrLy', 'InTERIOrLy', 'iNTERIOrLy', 'INTERIOrLy', 'inTERIORLy', 'InTERIORLy', 'iNTERIORLy', 'INTERIORLy', 'inTERIOrlY', 'InTERIOrlY', 'iNTERIOrlY', 'INTERIOrlY', 'inTERIORlY', 'InTERIORlY', 'iNTERIORlY', 'INTERIORlY', 'inTERIOrLY', 'InTERIOrLY', 'iNTERIOrLY', 'INTERIOrLY', 'inTERIORLY', 'InTERIORLY', 'iNTERIORLY', 'INTERIORLY']",1,3,reverse
+quadrate,TEPID,"['QuadRATE', 'QUadRATE', 'QuAdRATE', 'QUAdRATE', 'QuaDRATE', 'QUaDRATE', 'QuADRATE', 'QUADRATE']",3,3,reverse
+brethren,TIBET,"['breTHREN', 'bReTHREN', 'brETHREN', 'bRETHREN']",2,3,reverse
+discontent,ENTEN,"['DisconTENT', 'DIsconTENT', 'DiSconTENT', 'DISconTENT', 'DisConTENT', 'DIsConTENT', 'DiSConTENT', 'DISConTENT', 'DiscOnTENT', 'DIscOnTENT', 'DiScOnTENT', 'DIScOnTENT', 'DisCOnTENT', 'DIsCOnTENT', 'DiSCOnTENT', 'DISCOnTENT', 'DiscoNTENT', 'DIscoNTENT', 'DiScoNTENT', 'DIScoNTENT', 'DisCoNTENT', 'DIsCoNTENT', 'DiSCoNTENT', 'DISCoNTENT', 'DiscONTENT', 'DIscONTENT', 'DiScONTENT', 'DIScONTENT', 'DisCONTENT', 'DIsCONTENT', 'DiSCONTENT', 'DISCONTENT']",5,3,reverse
+sintering,RITEN,"['sinTERINg', 'SinTERINg', 'sInTERINg', 'SInTERINg', 'siNTERINg', 'SiNTERINg', 'sINTERINg', 'SINTERINg']",2,3,reverse
+seether,BETTY,"['sEETHEr', 'SEETHEr']",0,3,reverse
+titre,TIERE,['TITRE'],0,3,reverse
+enteric,RITEN,"['enTERIC', 'eNTERIC']",1,3,reverse
+antigay,SPÜRE,"['AntIGaY', 'ANtIGaY', 'AnTIGaY', 'ANTIGaY']",2,3,reverse
+antigay,SPÜREN,"['AnTIGaY', 'ANTIGaY']",1,3,reverse
+eerie,TRITT,['EERIE'],0,3,reverse
+physicists,eIcKe,"['phySicISts', 'PhySicISts', 'pHySicISts', 'PHySicISts', 'phYSicISts', 'PhYSicISts', 'pHYSicISts', 'PHYSicISts', 'phySicISTs', 'PhySicISTs', 'pHySicISTs', 'PHySicISTs', 'phYSicISTs', 'PhYSicISTs', 'pHYSicISTs', 'PHYSicISTs', 'phySicIStS', 'PhySicIStS', 'pHySicIStS', 'PHySicIStS', 'phYSicIStS', 'PhYSicIStS', 'pHYSicIStS', 'PHYSicIStS', 'phySicISTS', 'PhySicISTS', 'pHySicISTS', 'PHySicISTS', 'phYSicISTS', 'PhYSicISTS', 'pHYSicISTS', 'PHYSicISTS']",3,1,reverse
+malcontent,ENTEN,"['MalconTENT', 'MAlconTENT', 'MaLconTENT', 'MALconTENT', 'MalConTENT', 'MAlConTENT', 'MaLConTENT', 'MALConTENT', 'MalcOnTENT', 'MAlcOnTENT', 'MaLcOnTENT', 'MALcOnTENT', 'MalCOnTENT', 'MAlCOnTENT', 'MaLCOnTENT', 'MALCOnTENT', 'MalcoNTENT', 'MAlcoNTENT', 'MaLcoNTENT', 'MALcoNTENT', 'MalCoNTENT', 'MAlCoNTENT', 'MaLCoNTENT', 'MALCoNTENT', 'MalcONTENT', 'MAlcONTENT', 'MaLcONTENT', 'MALcONTENT', 'MalCONTENT', 'MAlCONTENT', 'MaLCONTENT', 'MALCONTENT']",5,3,reverse
+tentative,REPENT,"['teNTATIVe', 'TeNTATIVe', 'tENTATIVe', 'TENTATIVe']",1,3,reverse
+cemeteries,LUMmE,"['cEmeTeries', 'CEmeTeries', 'cEmeTeRies', 'CEmeTeRies', 'cEmeTerIes', 'CEmeTerIes', 'cEmeTeRIes', 'CEmeTeRIes', 'cEmeTeriEs', 'CEmeTeriEs', 'cEmeTeRiEs', 'CEmeTeRiEs', 'cEmeTerIEs', 'CEmeTerIEs', 'cEmeTeRIEs', 'CEmeTeRIEs', 'cEmeTerieS', 'CEmeTerieS', 'cEmeTeRieS', 'CEmeTeRieS', 'cEmeTerIeS', 'CEmeTerIeS', 'cEmeTeRIeS', 'CEmeTeRIeS', 'cEmeTeriES', 'CEmeTeriES', 'cEmeTeRiES', 'CEmeTeRiES', 'cEmeTerIES', 'CEmeTerIES', 'cEmeTeRIES', 'CEmeTeRIES']",0,7,reverse
+cemeteries,DUMmE,"['cEmeTEries', 'CEmeTEries', 'cEmeTERies', 'CEmeTERies', 'cEmeTErIes', 'CEmeTErIes', 'cEmeTERIes', 'CEmeTERIes', 'cEmeTEriEs', 'CEmeTEriEs', 'cEmeTERiEs', 'CEmeTERiEs', 'cEmeTErIEs', 'CEmeTErIEs', 'cEmeTERIEs', 'CEmeTERIEs', 'cEmeTErieS', 'CEmeTErieS', 'cEmeTERieS', 'CEmeTERieS', 'cEmeTErIeS', 'CEmeTErIeS', 'cEmeTERIeS', 'CEmeTERIeS', 'cEmeTEriES', 'CEmeTEriES', 'cEmeTERiES', 'CEmeTERiES', 'cEmeTErIES', 'CEmeTErIES', 'cEmeTERIES', 'CEmeTERIES']",0,7,reverse
+cemeteries,TRITE,"['cemetERIES', 'cEmetERIES', 'ceMetERIES', 'cEMetERIES', 'cemEtERIES', 'cEmEtERIES', 'ceMEtERIES', 'cEMEtERIES', 'cemeTERIES', 'cEmeTERIES', 'ceMeTERIES', 'cEMeTERIES', 'cemETERIES', 'cEmETERIES', 'ceMETERIES', 'cEMETERIES']",4,3,reverse
+saucers,SaUCe,"['SaUCers', 'SaUCeRs', 'SaUCerS', 'SaUCeRS']",0,1,reverse
+intermix,VITEN,"['inTERMIx', 'InTERMIx', 'iNTERMIx', 'INTERMIx']",1,3,reverse
+interior,RITEN,"['inTERIOr', 'InTERIOr', 'iNTERIOr', 'INTERIOr', 'inTERIOR', 'InTERIOR', 'iNTERIOR', 'INTERIOR']",1,3,reverse
+shielded,EDLeM,"['shieLdED', 'ShieLdED', 'sHieLdED', 'SHieLdED', 'shIeLdED', 'ShIeLdED', 'sHIeLdED', 'SHIeLdED']",2,7,reverse
+tenue,TUNTE,['TENUE'],0,3,reverse
+podiatrist,EYRIE,"['PodiatRIST', 'POdiatRIST', 'PoDiatRIST', 'PODiatRIST', 'PodIatRIST', 'POdIatRIST', 'PoDIatRIST', 'PODIatRIST', 'PodiAtRIST', 'POdiAtRIST', 'PoDiAtRIST', 'PODiAtRIST', 'PodIAtRIST', 'POdIAtRIST', 'PoDIAtRIST', 'PODIAtRIST', 'PodiaTRIST', 'POdiaTRIST', 'PoDiaTRIST', 'PODiaTRIST', 'PodIaTRIST', 'POdIaTRIST', 'PoDIaTRIST', 'PODIaTRIST', 'PodiATRIST', 'POdiATRIST', 'PoDiATRIST', 'PODiATRIST', 'PodIATRIST', 'POdIATRIST', 'PoDIATRIST', 'PODIATRIST']",5,3,reverse
+counselled,EDleM,"['counseLlED', 'CounseLlED', 'cOunseLlED', 'COunseLlED', 'coUnseLlED', 'CoUnseLlED', 'cOUnseLlED', 'COUnseLlED', 'couNseLlED', 'CouNseLlED', 'cOuNseLlED', 'COuNseLlED', 'coUNseLlED', 'CoUNseLlED', 'cOUNseLlED', 'COUNseLlED', 'counSeLlED', 'CounSeLlED', 'cOunSeLlED', 'COunSeLlED', 'coUnSeLlED', 'CoUnSeLlED', 'cOUnSeLlED', 'COUnSeLlED', 'couNSeLlED', 'CouNSeLlED', 'cOuNSeLlED', 'COuNSeLlED', 'coUNSeLlED', 'CoUNSeLlED', 'cOUNSeLlED', 'COUNSeLlED']",4,7,reverse
