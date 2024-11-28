@@ -6,10 +6,12 @@ class MyTestCase(unittest.TestCase):
     def test_word_to_binary(self):
         self.assertEqual(text_to_binary('hello'), '0110100001100101011011000110110001101111')
 
+
     def test_generate_case_variations(self):
         self.assertSetEqual(
             set(generate_case_variations('hel')),
             {'hel', 'Hel', 'hEl', 'heL', 'HEl', 'HeL', 'hEL', 'HEL'})
+
 
     def test_check_char_pair(self):
         valid_pairs = {}
@@ -18,6 +20,7 @@ class MyTestCase(unittest.TestCase):
         check_char_pair('pa')
         self.assertEqual(valid_pairs, {'ab': [('C', 1, 'reverse'), ('h', 4, 'reverse'), ('X', 6, 'forward')]})
         self.assertEqual(non_valid_pairs, {'pa'})
+
 
     def test_word_to_pairs(self):
         word = 'Feuerwehrmanneinsatzfahrzeug'
@@ -28,6 +31,7 @@ class MyTestCase(unittest.TestCase):
         self.assertIn(27, pairs)
         self.assertEqual(pairs[0], [('f', 4, 'forward'), ('f', 4, 'reverse'), ('L', 7, 'reverse')])
         self.assertEqual(pairs[27], [('s', 1, 'reverse'), ('t', 4, 'forward')])
+
 
     def test_pairs_to_sequences(self):
         word = 'Feuerwehrmanneinsatzfahrzeug'
@@ -63,6 +67,7 @@ class MyTestCase(unittest.TestCase):
             self.assertEqual(len(row['char']), len(row['offset']))
             self.assertEqual(len(row['char']), len(row['direction']))
 
+
     def test_handle_non_valid_pairs(self):
         pairs = {0: [('a', 1, 'forward')], 1: None, 2: [('a', 1, 'forward')], 3: [('b', 2, 'reverse')],
                  4: [('c', 3, 'forward')], 5: [('c', 3, 'forward')], 6: [('d', 4, 'reverse')], 7: [('e', 5, 'forward')]}
@@ -73,6 +78,7 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(result_i, 5)
         self.assertEqual(result_pairs, {0: [('a', 1, 'forward')], 1: None, 2: None, 3: None, 4: None,
                                         5: [('c', 3, 'forward')], 6: [('d', 4, 'reverse')], 7: [('e', 5, 'forward')]})
+
 
     def test_create_sequence_dataframe(self):
         sequence = {
@@ -87,29 +93,30 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(df['char'][0], ['a', 'b'])
         self.assertEqual(df['offset'][1], [3])
         self.assertEqual(df['direction'][2], ['reverse', 'forward'])
-def test_sequences_to_words(self):
-    word = 'Feuerwehrmanneinsatzfahrzeug'
-    pairs, potential_length = word_to_pairs(word)
-    pair_sequences = pairs_to_sequences(pairs, potential_length)
-    new_words = sequences_to_words(pair_sequences)
 
-    self.assertIsInstance(new_words, pd.DataFrame)
-    self.assertEqual(list(new_words.columns), ['new_word', 'starting_letter', 'offset', 'direction'])
-    self.assertGreater(len(new_words), 0)
 
-    # Test all generated words
-    for _, row in new_words.iterrows():
-        generated_word = row['new_word']
-        direction = row['direction']
+    def test_sequences_to_words(self):
+        word = 'Feuerwehrmanneinsatzfahrzeug'
+        pairs, potential_length = word_to_pairs(word)
+        pair_sequences = pairs_to_sequences(pairs, potential_length)
+        new_words = sequences_to_words(pair_sequences)
 
-        self.assertTrue(
-            verify_generated_word(word, generated_word, direction),
-            f"Failed to verify '{generated_word}' in '{word}' with direction '{direction}'"
-        )
+        self.assertIsInstance(new_words, pd.DataFrame)
+        self.assertEqual(list(new_words.columns), ['new_word', 'starting_letter', 'offset', 'direction'])
+        self.assertGreater(len(new_words), 0)
 
-    # Additional checks for DataFrame structure and content
-    self.assertTrue(all(new_words['starting_letter'].between(0, len(word) - 1)))
-    self.assertTrue(all(new_words['offset'].between(1, 7)))
-    self.assertTrue(all(new_words['direction'].isin(['forward', 'reverse'])))
-    self.assertTrue(all(new_words['new_word'].str.len() >= 4))
+        # Test all generated words
+        for _, row in new_words.iterrows():
+            generated_word = row['new_word']
+            direction = row['direction']
 
+            self.assertTrue(
+                verify_generated_word(word, generated_word, direction),
+                f"Failed to verify '{generated_word}' in '{word}' with direction '{direction}'"
+            )
+
+        # Additional checks for DataFrame structure and content
+        self.assertTrue(all(new_words['starting_letter'].between(0, len(word) - 1)))
+        self.assertTrue(all(new_words['offset'].between(1, 7)))
+        self.assertTrue(all(new_words['direction'].isin(['forward', 'reverse'])))
+        self.assertTrue(all(new_words['new_word'].str.len() >= 4))

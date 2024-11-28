@@ -8,8 +8,10 @@ from multiprocessing import Pool, cpu_count
 
 warnings.filterwarnings("ignore")
 
+
 def process_word_wrapper(word):
     return process_word(word, check_vocab)
+
 
 def run_raas(name, input_vocab, check_vocab):
     output_dir = 'matches'
@@ -36,6 +38,7 @@ def run_raas(name, input_vocab, check_vocab):
 
     print(f"Found {len(all_new_words)} new words for {name}.")
     print(f"Results saved in {output_dir}/{name}.csv")
+
 
 if __name__ == '__main__':
     en = load_word_list('preprocess/vocabularies/meaningful_words/en.txt')

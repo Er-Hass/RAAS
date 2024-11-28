@@ -3,6 +3,7 @@ from cache.load import *
 import pandas as pd
 import numpy as np
 
+
 def generate_case_variations(word):
     variations = []
     for i in range(2**len(word)):
@@ -11,8 +12,10 @@ def generate_case_variations(word):
         variations.append(variation)
     return variations
 
+
 def text_to_binary(word):
     return ''.join(format(ord(c), '08b') for c in word)
+
 
 def check_char_pair(pair):
     pair_b = text_to_binary(pair)
@@ -39,7 +42,8 @@ def check_char_pair(pair):
     if not valid:
         non_valid_pairs.add(pair)
 
-def handle_non_valid_pairs(pairs, potential_length, i):
+
+def handle_non_valid_pairs(pairs, potential_length, i, min_length):
     pairs[i] = None
 
     # Throw away all pairs between 2 None pairs
@@ -52,12 +56,12 @@ def handle_non_valid_pairs(pairs, potential_length, i):
         none_distance = last_none - second_last_none - 1
         rotational_none_distance = (len(pairs) - last_none + first_none) % len(pairs)
 
-        if none_distance < 5 or rotational_none_distance < 5:  # Less than 5 pairs between
-            if none_distance < 5:
+        if none_distance < min_length or rotational_none_distance < min_length:  # Less than 5 pairs between
+            if none_distance < min_length:
                 for j in range(second_last_none + 1, last_none):
                     pairs[j] = None
                     potential_length -= 1
-            if rotational_none_distance < 5:
+            if rotational_none_distance < min_length:
                 for j in range(last_none + 1, len(pairs)):
                     pairs[j] = None
                     potential_length -= 1
@@ -67,17 +71,18 @@ def handle_non_valid_pairs(pairs, potential_length, i):
 
     return pairs, potential_length-1, i+1
 
-def word_to_pairs(word):
+
+def word_to_pairs(word, min_length):
     word_length = len(word)
     potential_length = word_length
     pairs = {}
 
     i = 0
-    while potential_length >= 5 and i < word_length:
+    while potential_length >= min_length and i < word_length:
         pair = word[i] + word[(i + 1) % word_length]
 
         if pair in non_valid_pairs:
-            pairs, potential_length, i = handle_non_valid_pairs(pairs, potential_length, i)
+            pairs, potential_length, i = handle_non_valid_pairs(pairs, potential_length, i, min_length)
             continue
 
         elif pair in valid_pairs:
@@ -89,7 +94,8 @@ def word_to_pairs(word):
 
     return pairs, potential_length
 
-def pairs_to_sequences(pairs, potential_length):
+
+def pairs_to_sequences(pairs):
     # Create the pair sequences
     pair_sequences = []
     none_indices = [j for j, v in pairs.items() if v is None]
@@ -115,6 +121,7 @@ def pairs_to_sequences(pairs, potential_length):
 
     return pair_sequences
 
+
 def create_sequence_dataframe(sequence):
     df_data = []
     for pair_index, pair_data in sequence.items():
@@ -126,7 +133,8 @@ def create_sequence_dataframe(sequence):
         })
     return pd.DataFrame(df_data)
 
-def sequences_to_words(pair_sequences):
+
+def sequences_to_words(pair_sequences, min_length):
     new_words_data = []
 
     for sequence in pair_sequences:
@@ -144,7 +152,7 @@ def sequences_to_words(pair_sequences):
                     if matching_chars:
                         word += matching_chars[0]  # Add the first matching character
                     else:
-                        if len(word) >= 5:
+                        if len(word) >= min_length:
                             for i in range(len(word) - 3):
                                 new_word = word[i:]
                                 if direction == 'reverse':
@@ -157,7 +165,7 @@ def sequences_to_words(pair_sequences):
                                 })
                         word = ''
                 
-                if len(word) >= 5:
+                if len(word) >= min_length:
                     for i in range(len(word) - 3):
                         new_word = word[i:]
                         if direction == 'reverse':
@@ -171,14 +179,16 @@ def sequences_to_words(pair_sequences):
 
     return pd.DataFrame(new_words_data)
 
-def generate_new_words(word):
-    pairs, potential_length = word_to_pairs(word)
-    if potential_length < 5:
+
+def generate_new_words(word, min_length=5):
+    pairs, potential_length = word_to_pairs(word, min_length)
+    if potential_length < min_length:
         return pd.DataFrame()
-    pair_sequences = pairs_to_sequences(pairs, potential_length)
-    new_words = sequences_to_words(pair_sequences)
+    pair_sequences = pairs_to_sequences(pairs)
+    new_words = sequences_to_words(pair_sequences, min_length)
 
     return new_words
+
 
 def add_or_update_entry(word, new_word_data, case_variation, valid_new_words):
     key = (word, new_word_data['new_word'])  # Use tuple of 'original_word' and 'new_word' as unique key
@@ -199,6 +209,7 @@ def add_or_update_entry(word, new_word_data, case_variation, valid_new_words):
 
     return valid_new_words
 
+
 def process_word(word, check_vocab):
     valid_new_words = {}
     case_variations = generate_case_variations(word)
@@ -212,6 +223,7 @@ def process_word(word, check_vocab):
                     valid_new_words = add_or_update_entry(word, new_words.iloc[ind], case_variation, valid_new_words)
 
     return pd.DataFrame.from_dict(valid_new_words, orient='index').reset_index(drop=True)
+
 
 def verify_generated_word(original_word, new_word, direction):
     original_binary = text_to_binary(original_word)
@@ -227,13 +239,15 @@ def verify_generated_word(original_word, new_word, direction):
 
 
 if __name__ == '__main__':
-    word = 'Feuerwehreinsatzfahrzeug'
+    word = "Großzügigkeit"
 
-    pairs, potential_length = word_to_pairs(word)
-    print(potential_length)
-    print(pairs)
-    pair_sequences = pairs_to_sequences(pairs, potential_length)
-    for sequence in pair_sequences:
-        print(sequence.to_string())
-    new_words = sequences_to_words(pair_sequences)
-    print(new_words.to_string())
+    case_variations = generate_case_variations(word)
+
+    results = set()
+    for case_variation in case_variations:
+        new_words = generate_new_words(case_variation)
+        if not new_words.empty:
+            results.update(new_words['new_word'])
+
+    for r in results:
+        print(r)
