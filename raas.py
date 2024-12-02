@@ -239,15 +239,8 @@ def verify_generated_word(original_word, new_word, direction):
 
 
 if __name__ == '__main__':
-    word = "Großzügigkeit"
+    check_vocab = load_word_list('preprocess/vocabularies/meaningful_words/check_vocab.txt')
+    word = "andersdenkender"
 
-    case_variations = generate_case_variations(word)
-
-    results = set()
-    for case_variation in case_variations:
-        new_words = generate_new_words(case_variation)
-        if not new_words.empty:
-            results.update(new_words['new_word'])
-
-    for r in results:
-        print(r)
+    results = process_word(word, check_vocab)
+    print(results)

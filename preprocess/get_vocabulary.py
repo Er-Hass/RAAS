@@ -44,7 +44,7 @@ def get_meaningful_words(language_code='en', min=4, max=9):
     return meaningful_words
 
 
-def save_meaningful_words(language_code='en', min=5, max=12):
+def save_meaningful_words(language_code='en', min=13, max=20):
     words = set(get_meaningful_words(language_code, min, max))
 
     directory = 'vocabularies/meaningful_words'
@@ -60,5 +60,14 @@ def save_meaningful_words(language_code='en', min=5, max=12):
 
 if __name__ == '__main__':
     # Save all meaningful words to files
-    print(f"English words: {len(save_meaningful_words('en'))}")
-    print(f"German words: {len(save_meaningful_words('de'))}")
+    en = save_meaningful_words('en')
+    de = save_meaningful_words('de')
+    print(f"English words: {len(en)}")
+    print(f"German words:  {len(de)}")
+
+    # Save all meaningful words to a single file
+    # with open('vocabularies/meaningful_words/check_vocab.txt', 'w', encoding='utf-8') as file:
+    #     for word in en:
+    #         file.write(f"{word}\n")
+    #     for word in de:
+    #         file.write(f"{word}\n")
