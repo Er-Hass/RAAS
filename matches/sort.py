@@ -11,6 +11,7 @@ def check_same_word(word1, word2):
     else:
         return False
 
+
 def sort_words_by_similarity(file_name):
     # Load the sentence transformer model (for both English and German words)
     model = SentenceTransformer('paraphrase-multilingual-MiniLM-L12-v2')
@@ -53,6 +54,7 @@ def sort_words_by_similarity(file_name):
     df_sorted.to_csv(output_path, index=False)
     print(f"Sorted results saved to {output_path}")
 
+
 if __name__ == '__main__':
-    # sort_words_by_similarity('en.csv')
+    sort_words_by_similarity('en.csv')
     sort_words_by_similarity('de.csv')

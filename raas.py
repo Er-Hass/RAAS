@@ -1,3 +1,5 @@
+from nltk.chat.iesha import pairs
+from itertools import product
 from preprocess.get_vocabulary import load_word_list
 from cache.load import *
 import pandas as pd
@@ -30,13 +32,13 @@ def check_char_pair(pair):
         if pb_char in valid_chars:
             if pair not in valid_pairs:
                 valid_pairs[pair] = []
-            valid_pairs[pair].append((pb_char, offset, 'forward'))
+            valid_pairs[pair].append((pb_char, offset, 'forward', pair))
             valid = True
 
         if pb_char_r in valid_chars:
             if pair not in valid_pairs:
                 valid_pairs[pair] = []
-            valid_pairs[pair].append((pb_char_r, offset, 'reverse'))
+            valid_pairs[pair].append((pb_char_r, offset, 'reverse', pair))
             valid = True
 
     if not valid:
@@ -80,17 +82,38 @@ def word_to_pairs(word, min_length):
     i = 0
     while potential_length >= min_length and i < word_length:
         pair = word[i] + word[(i + 1) % word_length]
+        cased_pairs = generate_case_variations(pair)
 
-        if pair in non_valid_pairs:
-            pairs, potential_length, i = handle_non_valid_pairs(pairs, potential_length, i, min_length)
-            continue
+        non_valid_cased = 0
+        for n, cased_pair in enumerate(cased_pairs):
+            if cased_pair in non_valid_pairs:
+                non_valid_cased += 1
 
-        elif pair in valid_pairs:
-            pairs[i] = valid_pairs[pair]
-            i += 1
+                if non_valid_cased == 4:
+                    pairs, potential_length, i = handle_non_valid_pairs(pairs, potential_length, i, min_length)
 
-        else:
-            check_char_pair(pair)
+            elif cased_pair in valid_pairs:
+                if len(pairs) == i + 1:
+                    pairs[i] = pairs[i] + valid_pairs[cased_pair]
+                else:
+                    pairs[i] = valid_pairs[cased_pair]
+
+            else:
+                check_char_pair(cased_pair)
+                if cased_pair in non_valid_pairs:
+                    non_valid_cased += 1
+
+                    if non_valid_cased == 4:
+                        pairs, potential_length, i = handle_non_valid_pairs(pairs, potential_length, i, min_length)
+
+                elif cased_pair in valid_pairs:
+                    if len(pairs) == i+1:
+                        pairs[i] = pairs[i] + valid_pairs[cased_pair]
+                    else:
+                        pairs[i] = valid_pairs[cased_pair]
+
+            if n == 3:
+                i += 1
 
     return pairs, potential_length
 
@@ -125,73 +148,80 @@ def pairs_to_sequences(pairs):
 def create_sequence_dataframe(sequence):
     df_data = []
     for pair_index, pair_data in sequence.items():
-        chars, offsets, directions = zip(*pair_data)
+        chars, offsets, directions, cased_pairs = zip(*pair_data)
         df_data.append({
             'char': list(chars),
             'offset': list(offsets),
-            'direction': list(directions)
+            'direction': list(directions),
+            'cased_pair': list(cased_pairs)
         })
     return pd.DataFrame(df_data)
 
 
-def sequences_to_words(pair_sequences, min_length):
-    new_words_data = []
 
+def sequences_to_words(word, pair_sequences, min_length, check_vocab, valid_new_words):
     for sequence in pair_sequences:
         for offset in range(1, 8):
             for direction in ['forward', 'reverse']:
-                word = ''
+                new_words = []
+                cased_ori_words = []
                 for index, row in sequence.iterrows():
                     chars = row['char']
                     offsets = row['offset']
                     directions = row['direction']
-                    
-                    matching_chars = [char for char, char_offset, char_direction in zip(chars, offsets, directions)
+                    cased_pairs = row['cased_pair']
+
+                    matching_chars = [(char, pair) for char, char_offset, char_direction, pair in
+                                      zip(chars, offsets, directions, cased_pairs)
                                       if char_offset == offset and char_direction == direction]
                     
                     if matching_chars:
-                        word += matching_chars[0]  # Add the first matching character
-                    else:
-                        if len(word) >= min_length:
-                            for i in range(len(word) - 3):
-                                new_word = word[i:]
-                                if direction == 'reverse':
-                                    new_word = new_word[::-1]  # Reverse the word if direction is 'reverse'
-                                new_words_data.append({
-                                    'new_word': new_word,
-                                    'starting_letter': index - len(word) + i,
-                                    'offset': offset,
-                                    'direction': direction
-                                })
-                        word = ''
-                
-                if len(word) >= min_length:
-                    for i in range(len(word) - 3):
-                        new_word = word[i:]
-                        if direction == 'reverse':
-                            new_word = new_word[::-1]  # Reverse the word if direction is 'reverse'
-                        new_words_data.append({
-                            'new_word': new_word,
-                            'starting_letter': sequence.index[-1] - len(word) + i + 1,
-                            'offset': offset,
-                            'direction': direction
-                        })
+                        m_new_words = []
+                        m_cased_ori_words = []
+                        for cased_ori_word, new_word in zip(cased_ori_words, new_words):
+                            for m_char, m_pair in matching_chars:
+                                if m_pair[0] == cased_ori_word[-1]:
+                                    m_cased_ori_words.append(cased_ori_word[:-1] + m_pair)
+                                    m_new_words.append(new_word + m_char)
 
-    return pd.DataFrame(new_words_data)
+                        cased_ori_words += m_cased_ori_words
+                        new_words += m_new_words
+
+                        for m_char, m_pair in matching_chars:
+                            cased_ori_words.append(m_pair)
+                            new_words.append(m_char)
+
+                # Filter and save new words
+                if direction == 'reverse':
+                    filtered_pairs = list(filter(lambda x: len(x[0]) >= min_length and x[0][::-1].lower() in check_vocab,
+                                                 zip(new_words, cased_ori_words)))
+                    if filtered_pairs:
+                        for f_new_word, f_cased_ori_word in filtered_pairs:
+                            valid_new_words = add_or_update_entry(word, valid_new_words, f_new_word[::-1], f_cased_ori_word, offset, direction)
+                else:
+                    filtered_pairs = list(filter(lambda x: len(x[0]) >= min_length and x[0].lower() in check_vocab,
+                                                 zip(new_words, cased_ori_words)))
+                    if filtered_pairs:
+                        for f_new_word, f_cased_ori_word in filtered_pairs:
+                            valid_new_words = add_or_update_entry(word, valid_new_words, f_new_word, f_cased_ori_word, offset, direction)
+
+    return valid_new_words
 
 
-def generate_new_words(word, min_length=5):
+def process_word(word, check_vocab, min_length=4):
+    valid_new_words = {}
+
     pairs, potential_length = word_to_pairs(word, min_length)
     if potential_length < min_length:
         return pd.DataFrame()
     pair_sequences = pairs_to_sequences(pairs)
-    new_words = sequences_to_words(pair_sequences, min_length)
+    valid_new_words = sequences_to_words(word, pair_sequences, min_length, check_vocab, valid_new_words)
 
-    return new_words
+    return pd.DataFrame.from_dict(valid_new_words, orient='index').reset_index(drop=True)
 
 
-def add_or_update_entry(word, new_word_data, case_variation, valid_new_words):
-    key = (word, new_word_data['new_word'])  # Use tuple of 'original_word' and 'new_word' as unique key
+def add_or_update_entry(word, valid_new_words, new_word, case_variation, offset, direction):
+    key = (word, new_word)  # Use tuple of 'original_word' and 'new_word' as unique key
 
     # If the key already exists, update case variations
     if key in valid_new_words:
@@ -200,29 +230,13 @@ def add_or_update_entry(word, new_word_data, case_variation, valid_new_words):
         # If it doesn't exist, create a new entry
         valid_new_words[key] = {
             'original_word': word,
-            'new_word': new_word_data['new_word'],
+            'new_word': new_word,
             'case_variations': [case_variation],
-            'starting_letter': new_word_data['starting_letter'],
-            'offset': new_word_data['offset'],
-            'direction': new_word_data['direction']
+            'offset': offset,
+            'direction': direction
         }
 
     return valid_new_words
-
-
-def process_word(word, check_vocab):
-    valid_new_words = {}
-    case_variations = generate_case_variations(word)
-
-    for case_variation in case_variations:
-        new_words = generate_new_words(case_variation)
-        if not new_words.empty:
-            potential_words = list(new_words['new_word'].str.lower())
-            for ind, p_word in enumerate(potential_words):
-                if p_word in (check_vocab):
-                    valid_new_words = add_or_update_entry(word, new_words.iloc[ind], case_variation, valid_new_words)
-
-    return pd.DataFrame.from_dict(valid_new_words, orient='index').reset_index(drop=True)
 
 
 def verify_generated_word(original_word, new_word, direction):
@@ -240,7 +254,7 @@ def verify_generated_word(original_word, new_word, direction):
 
 if __name__ == '__main__':
     check_vocab = load_word_list('preprocess/vocabularies/meaningful_words/check_vocab.txt')
-    word = "andersdenkender"
+    word = "materielle"
 
     results = process_word(word, check_vocab)
     print(results)

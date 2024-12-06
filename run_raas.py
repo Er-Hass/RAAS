@@ -41,9 +41,10 @@ def run_raas(name, input_vocab, check_vocab):
 
 
 if __name__ == '__main__':
+    check_vocab = load_word_list('preprocess/vocabularies/meaningful_words/check_vocab.txt')
+
     en = load_word_list('preprocess/vocabularies/meaningful_words/en.txt')
     de = load_word_list('preprocess/vocabularies/meaningful_words/de.txt')
 
-    check_vocab = en + de
     run_raas('en', en, check_vocab)
     run_raas('de', de, check_vocab)
