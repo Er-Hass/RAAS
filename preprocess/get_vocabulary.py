@@ -2,6 +2,7 @@ import spacy
 from spacy.lang.en.stop_words import STOP_WORDS as EN_STOP_WORDS
 from spacy.lang.es.stop_words import STOP_WORDS as DE_STOP_WORDS
 import os
+from tqdm import tqdm
 
 
 def load_stop_words(language_code):
@@ -41,10 +42,20 @@ def get_meaningful_words(language_code='en', min=4, max=9):
         and max >= len(word) >= min
     ]
 
-    return meaningful_words
+    # Filter out non-noun words separately, because .pos_ is slow
+    meaningful_nouns = []
+    for word in tqdm(
+            meaningful_words,
+            desc=f"Filtering words, {language_code}",
+            bar_format="\033[92m{l_bar}{bar:25}{r_bar}\033[0m"):
+
+        if nlp(word)[0].pos_ == 'NOUN':
+            meaningful_nouns.append(word)
+
+    return meaningful_nouns
 
 
-def save_meaningful_words(language_code='en', min=4, max=9):
+def save_meaningful_words(language_code='en', min=4, max=20):
     words = set(get_meaningful_words(language_code, min, max))
 
     directory = 'vocabularies/meaningful_words'
@@ -60,5 +71,15 @@ def save_meaningful_words(language_code='en', min=4, max=9):
 
 if __name__ == '__main__':
     # Save all meaningful words to files
-    print(f"English words: {len(save_meaningful_words('en'))}")
-    print(f"German words: {len(save_meaningful_words('de'))}")
+    en = save_meaningful_words('en')
+    print(f"English words: {len(en)}")
+
+    de = save_meaningful_words('de')
+    print(f"German words:  {len(de)}")
+
+    # Save all meaningful words to a single file
+    with open('vocabularies/meaningful_words/check_vocab.txt', 'w', encoding='utf-8') as file:
+        for word in en:
+            file.write(f"{word}\n")
+        for word in de:
+            file.write(f"{word}\n")
