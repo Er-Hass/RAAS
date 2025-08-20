@@ -166,6 +166,7 @@ cython_debug/
 *.png
 *.json
 *.txt
+!requirements.txt
 
 # supabase
 node_modules
