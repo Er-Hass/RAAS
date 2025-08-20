@@ -20,7 +20,7 @@ def load_word_list(file_path):
     return words
 
 
-def get_meaningful_words(language_code='en', min=4, max=9):
+def get_meaningful_words(min_length, max_length, language_code='en'):
     if language_code == 'en':
         nlp = spacy.load('en_core_web_lg')
         word_list = set(load_word_list('vocabularies/en/EOWL.txt'))
@@ -37,9 +37,9 @@ def get_meaningful_words(language_code='en', min=4, max=9):
     meaningful_words = [
         word.lower() for word in vocab.strings
         if word.isalpha() and word.lower() not in stop_words
-        and vocab[word].has_vector
-        and word.lower() in word_list
-        and max >= len(word) >= min
+           and vocab[word].has_vector
+           and word.lower() in word_list
+           and max_length >= len(word) >= min_length
     ]
 
     # Filter out non-noun words separately, because .pos_ is slow
@@ -55,8 +55,8 @@ def get_meaningful_words(language_code='en', min=4, max=9):
     return meaningful_nouns
 
 
-def save_meaningful_words(language_code='en', min=4, max=20):
-    words = set(get_meaningful_words(language_code, min, max))
+def save_meaningful_words(min_length=4, max_length=20, language_code='en'):
+    words = set(get_meaningful_words(min_length, max_length, language_code))
 
     directory = 'vocabularies/meaningful_words'
     if not os.path.exists(directory):
@@ -70,14 +70,14 @@ def save_meaningful_words(language_code='en', min=4, max=20):
 
 
 if __name__ == '__main__':
-    # Save all meaningful words to files
-    en = save_meaningful_words('en')
+    # Save meaningful words from each language to separate files
+    en = save_meaningful_words(language_code='en')
     print(f"English words: {len(en)}")
 
-    de = save_meaningful_words('de')
+    de = save_meaningful_words(language_code='de')
     print(f"German words:  {len(de)}")
 
-    # Save all meaningful words to a single file
+    # Save all meaningful words to a single file for a combined vocabulary
     with open('vocabularies/meaningful_words/check_vocab.txt', 'w', encoding='utf-8') as file:
         for word in en:
             file.write(f"{word}\n")
